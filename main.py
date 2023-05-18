@@ -430,11 +430,11 @@ def main():
     st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=100)
 
     st.sidebar.caption(f'Location: Austin, TX\n'
-               f'Email: [link](williamwcollinsjr@gmail.com)\n'
-               f'Phone: 940.503.8195\n'
-               f'LinkedIn: LinkedIn [link](linkedin.com/in/williamwcollins)\n'
-               f'discord server: [link](discord.com/channels/1108234455010787330/1108234455614754870)'
-               f'This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
+               f'Email: [link]("mailto:williamwcollinsjr@gmail.com)'
+               f'Phone: 940.503.8195'
+               f'LinkedIn: [link](https://linkedin.com/in/williamwcollins)'
+               f'discord server: [link](https://discord.com/channels/1108234455010787330/1108234455614754870)'
+               f'This application: [link](https://wwcollins-profile.streamlit.app)')
 
     st.sidebar.title("Navigation")
     page = st.sidebar.radio("Go to", tuple(pages.keys()))
