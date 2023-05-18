@@ -302,12 +302,13 @@ LinkedIn: <a href="http://www.linkedin.com/in/williamwcollins">http://www.linked
 def project_page():
     st.image('./images/tech_image_4.jpg', width=250)
     st.title("Technical Projects and Demos")
-    st.write("Projects and Demos.")
+    st.header("Projects and Demos.")
     # st.write("check out this [link](https://share.streamlit.io/mesmith027
     # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
     st.write(f'-Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
-    st.write(f'Demo: Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
-    st.write(f'Demo: Generative AI Search with Context Awareness [link](genchat.streamlit.app)')
+    st.write(f'-Demo: Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
+    st.write(f'-Demo: Generative AI Search with Context Awareness [link](genchat.streamlit.app)')
+    st.caption(f'More coming soon...')
 
 def innovation_page():
     st.image(f'./images/tech_image_innovation.jpg', width=250)
