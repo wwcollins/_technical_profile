@@ -402,8 +402,13 @@ def utilities_page():
 
 def articles_page():
     st.image('./images/tech_image_5.jpg', width=250)
-    st.title("Articles")
-    st.write("List of current Articles and those in progress.")
+    st.title("Articles:  Author:  William Collins")
+    st.write("Article 1: [IoT and Smart Dust](https://www.linkedin.com/pulse/internet-things-smart-dust-you-risk-william-collins-jr-/)")
+    st.write("Article 2: [The Internet of Things and its Application by Industry](https://www.linkedin.com/pulse/internet-things-its-application-industry-william-collins-jr-/)")
+    st.write("Article 3: [IoT Technologies and Communication Protocols - A Brief Overview and Reference](https://www.linkedin.com/pulse/iot-technologies-communication-protocols-brief-william-collins-jr-/)")
+    st.write("Article 4: [The Internet of Things and the Wine Industry - From Vineyard to Market](https://www.linkedin.com/pulse/internet-things-wine-industry-william-collins-jr-/)")
+
+
 
 def contact_page():
     st.image('./images/tech_image_2.jpg', width=250)
