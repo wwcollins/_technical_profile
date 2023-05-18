@@ -11,7 +11,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 def home_page():
 
     st.columns(2,)
-    st.image(f'./images/home_sidebar_img.jpg', width=250)
+    st.image(f'./images/home_sidebar_img.jpg', f'This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)', width=250)
     st.title("Welcome")
     st.write(f"This profile site provides basic information about William and covers core beliefs with respect"
              " to **Leadership** and **Technology** as well as thoughts and efforts regarding **Innovation** and "
