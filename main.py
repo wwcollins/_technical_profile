@@ -51,6 +51,7 @@ def utilities_page():
     st.image(f'./images/tech_image_innovation.jpg', width=250)
     st.title("Utilities")
     st.write("Useful utilities to manage your profile site...")
+    st.write (f'Convert docx file to markdown: [link](https://docx-to-markdown.streamlit.app)')
     st.caption(f'Streamlit Deployment Options [link](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)')
 
 def articles_page():
