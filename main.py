@@ -29,8 +29,14 @@ def home_page():
              )
 
 def about_page():
-    st.image(f'./images/tech_image_6.jpg', width=250)
+    st.image(f'./images/you_image.jpg', 'William Collins', width=200)
+    # st.image(f'./images/tech_image_6.jpg', width=250)
     st.title("About")
+    st.write(
+        """
+        **Innovative Transformational Leader | Multi-Industry Experience | AI & SaaS Expert | Generative AI | DevOps, AIOps, SRE & Cloud Technologies**
+        """
+    )
     st.write(f'**William Collins** is a highly experienced executive with a proven track record in building and managing software engineering teams and delivering complex applications. He has worked with both VC-funded startups and large enterprises, and has expertise in AI platform development, cloud operations, and various coding languages. His skills include managing engineering processes, leading international teams, and translating product requirements into technical deliverables. William is an excellent communicator and has a strong focus on innovation and protecting intellectual property. He is well-suited for roles requiring leadership, technical expertise, and the ability to drive results.')
     with st.expander(f'more...'):
         st.write(
@@ -231,6 +237,17 @@ def resume_page():
     # embed streamlit docs in a streamlit app
     # components.iframe("https://docx-to-markdown.streamlit.app")
 
+def project_page():
+    st.image('./images/tech_image_4.jpg', width=250)
+    st.title("Technical Portfolio")
+    st.header("Projects and Demos")
+    # st.write("check out this [link](https://share.streamlit.io/mesmith027
+    # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
+    st.write(f'-Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
+    st.write(f'-Demo: Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
+    st.write(f'-Demo: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
+    st.caption(f'More coming soon...')
+
 def beliefs_page():
     st.image('./images/tech_image_3.jpg', width=250)
     st.title("Core Beliefs")
@@ -302,7 +319,7 @@ LinkedIn: <a href="http://www.linkedin.com/in/williamwcollins">http://www.linked
     st.subheader("Answers to Common Questions")
     components.html(
     """
-    <h2>Employer Questions</h2>
+    <h2>Common Questions</h2>
 
 <h3>Question: Considering that Articulate is a diverse organization employing people from all over the world and with diverse backgrounds, talk about ways that you have worked to make others feel included.</h3>
 <p>William: In general, understanding social profiles, cultural backgrounds, work backgrounds and history, and including time zone differences. Where remote, ensuring that regular 1/1s and collective meetings are held where I can, and the team can get to know people and teams on an individual and collective basis. Pairing global team members to work on initiatives. Where budget allows, travel to meet with people 1/1, team building, sharing meals. Reading about related cultures and dynamics and how they affect people’s ability to relate to each other and team dynamics. Knowing each individual well, with 1/1s as well as skip levels up, down, and across the organization.</p>
@@ -315,21 +332,56 @@ LinkedIn: <a href="http://www.linkedin.com/in/williamwcollins">http://www.linked
 <p>William: To earn team trust. Listening carefully and absorbing everything that is said, also things that are not said. Exercise empathy. Do not be overly prescriptive with solutions - have the team come up with and "own" the solution. Practice what you preach. Critical - get to know your people, beyond just work. Get to know them as people. Work hard but play hard. Support their efforts. Be flexible. Work alongside them when possible. Know where they each want to go in their careers - assist them via mentoring/support. Show appreciation. Paint a strong vision for the future of the organization, the company, the individual.</p>
     """, height=1000)
 
-def project_page():
-    st.image('./images/tech_image_4.jpg', width=250)
-    st.title("Technical Projects and Demos")
-    st.header("Projects and Demos.")
-    # st.write("check out this [link](https://share.streamlit.io/mesmith027
-    # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
-    st.write(f'-Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
-    st.write(f'-Demo: Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
-    st.write(f'-Demo: Generative AI Search with Context Awareness [link](genchat.streamlit.app)')
-    st.caption(f'More coming soon...')
-
 def innovation_page():
     st.image(f'./images/tech_image_innovation.jpg', width=250)
     st.title("Innovation")
     st.write("Innovative moments and thoughts on innovation.")
+
+    components.html(
+        """
+        <h1>The Art of Innovation in Technology: Forging the Path of Endless Possibilities - William Collins</h1>
+
+<p>Innovation in technology is not just about creating something new; it's about pushing the boundaries of what is possible, disrupting the status quo, and shaping the future. Being an innovator requires a unique set of qualities, a relentless pursuit of excellence, and the ability to navigate through challenges. Let's explore what it means to be an innovator in technology and how it can transform industries and change the world.</p>
+
+<h2>Vision, Passion, and Connecting the Dots</h2>
+
+<p>At the heart of innovation lies vision. Innovators have the ability to see beyond the present and envision a future that others may not yet perceive. As Steve Jobs once said, "Innovation distinguishes between a leader and a follower." Visionaries are not afraid to challenge conventional wisdom and imagine new possibilities.</p>
+
+<p>Passion fuels innovation. It is the burning desire to make a difference, to solve complex problems, and to improve the world through technology. As Elon Musk once said, "I think it's very important to have a feedback loop where you're constantly thinking about what you've done and how you could be doing it better."</p>
+
+<p>Connecting the dots is another critical aspect of innovation. Innovators have the ability to identify patterns, draw insights from diverse sources, and synthesize information to create breakthrough solutions. As Steve Jobs famously said, "Creativity is just connecting things."</p>
+
+<h2>Overcoming Challenges: Embracing the Unknown</h2>
+
+<p>Innovation is not without its challenges. It requires stepping into the unknown, taking risks, and embracing failure as a learning opportunity. Thomas Edison once said, "I have not failed. I've just found 10,000 ways that won't work." Innovators persevere through setbacks and setbacks, using them as stepping stones to further refine their ideas.</p>
+
+<p>Moreover, innovators must navigate through resistance and skepticism. As Bill Gates once said, "Your most unhappy customers are your greatest source of learning." They listen to feedback, adapt their approaches, and continuously iterate to meet evolving needs.</p>
+
+<p>Resource constraints can also pose challenges. Innovators must find creative solutions within limited resources, leveraging their ingenuity and thinking outside the box. As Jeff Bezos once said, "Constraints drive innovation."</p>
+
+<h2>Marrying Innovation with Business Goals: Staying Relevant and Competitive</h2>
+
+<p>Innovation should not exist in a vacuum; it must be aligned with business goals. Innovators understand the importance of creating solutions that add value to customers and drive growth. They constantly evaluate the market landscape, identify emerging trends, and seek opportunities to disrupt and innovate.</p>
+
+<p>In today's rapidly changing technology industry, staying relevant and competitive is crucial. Innovators must continuously learn, adapt, and evolve. As Satya Nadella once said, "The industry does not respect tradition; it only respects innovation."</p>
+
+<h2>Innovation as Part of our DNA: Collaboration and Culture</h2>
+
+<p>Innovation cannot thrive in isolation. Leaders must foster a culture of innovation within their organizations, where it becomes ingrained in the DNA of the company. This requires collaboration, open communication, and an environment that encourages experimentation and taking risks.</p>
+
+<p>Leaders must work closely with their teams, peers, and engineering teams to create a collective mindset that embraces innovation. As Peter Drucker once said, "Culture eats strategy for breakfast." Innovation should not be something we plan on doing; it should be an integral part of who we are, how we think, and how we approach challenges.</p>
+
+<p>Innovation requires a diverse and inclusive environment that embraces different
+
+ perspectives and ideas. As Albert Einstein once said, "We cannot solve our problems with the same thinking we used when we created them." By fostering a culture of diversity and inclusion, leaders can unlock the full potential of their teams and drive innovation.</p>
+
+<h2>Conclusion</h2>
+
+<p>Being an innovator in technology goes beyond creating something new; it is about envisioning a better future, challenging the status quo, and making a lasting impact. Innovators possess vision, passion, and the ability to connect the dots. They overcome challenges, marry innovation with business goals, and remain relevant and competitive in a rapidly changing industry.</p>
+
+<p>By nurturing a culture of collaboration and innovation, leaders can inspire their teams to push the boundaries of what is possible and create transformative solutions. Together, we can shape the future and leave a lasting legacy in the world of technology.</p>
+""", height=1000
+    )
 
 def utilities_page():
     st.image(f'./images/tech_image_innovation.jpg', width=250)
@@ -346,20 +398,27 @@ def articles_page():
 def contact_page():
     st.image('./images/tech_image_2.jpg', width=250)
     st.title("Contact Page")
-    st.write("You can reach us through the contact page.")
+    st.image(f'./images/you_image.jpg', 'William Collins', width=100)
+
+    st.write(f'Location: Austin, TX\n'
+                       f'Email: [link](williamwcollinsjr@gmail.com)\n'
+                       f'Phone: 940.503.8195\n'
+                       f'LinkedIn: LinkedIn [link](linkedin.com/in/williamwcollins)\n'
+                       f'discord server: [link](discord.com/channels/1108234455010787330/1108234455614754870)'
+                       f'This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
 
 
 # Sidebar navigation
 pages = {
     "Home": home_page,
     "About": about_page,
-    "Resume": resume_page,
-    "Innovation": innovation_page,
-    "Core Beliefs": beliefs_page,
-    "Projects/Demos": project_page,
-    "Utilities": utilities_page,
-    "Articles": articles_page,
-    "Contact": contact_page
+    "📃Resume": resume_page,
+    "📃Technical Portfolio": project_page,
+    "💡Innovation": innovation_page,
+    "📖Core Beliefs": beliefs_page,
+    "⚙Utilities": utilities_page,
+    "📑Articles": articles_page,
+    "✍Contact": contact_page
 
 }
 
