@@ -57,7 +57,17 @@ def about_page():
          """)
 
 def resume_page():
-    st.image('./images/tech_image_2.jpg', width=250)
+    col1, col2 = st.columns(2, gap='small')
+    with col1:
+        st.image(f'./images/you_image.jpg', 'William Collins', width=200)
+    with col2:
+        st.write(f'')
+
+    st.write(
+        """
+        **Innovative Transformational Leader | Multi-Industry Experience | AI & SaaS Expert | Generative AI | DevOps, AIOps, SRE & Cloud Technologies**
+        """
+    )
     st.title("Resume")
     # st.write("You can reach us through the contact page.")
 
