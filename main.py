@@ -73,6 +73,7 @@ pages = {
     "Innovation": innovation_page,
     "Core Beliefs": beliefs_page,
     "Projects/Demos": project_page,
+    "Utilities": utilities_page,
     "Articles": articles_page,
     "Contact": contact_page
 
@@ -82,6 +83,7 @@ pages = {
 def main():
     # st.image(f'./images/home_sidebar_img.jpg')
     st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=100)
+    st.sidebar.caption(f'This application: [link]')
     st.sidebar.caption(f'Location: Austin, TX\n'
                f'Email: [link](williamwcollinsjr@gmail.com)\n'
                f'Phone: 940.503.8195\n'
