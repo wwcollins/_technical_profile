@@ -83,7 +83,8 @@ pages = {
 def main():
     # st.image(f'./images/home_sidebar_img.jpg')
     st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=100)
-    st.caption(f'This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)'
+    st.caption(f'This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
+
     st.sidebar.caption(f'Location: Austin, TX\n'
                f'Email: [link](williamwcollinsjr@gmail.com)\n'
                f'Phone: 940.503.8195\n'
