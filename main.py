@@ -235,7 +235,7 @@ def beliefs_page():
     st.image('./images/tech_image_3.jpg', width=250)
     st.title("Core Beliefs")
 
-    st.subheader("Leadership")
+    st.subheader("On Leadership")
     components.html(
         """
         <p><strong>William W. Collins, Jr.</strong><br>
@@ -260,7 +260,7 @@ LinkedIn: <a href="http://www.linkedin.com/in/williamwcollins">http://www.linked
 """, height=480
     )
 
-    st.subheader("Technology")
+    st.subheader("On Technology")
     components.html(
         """
         <h1>Being a Leader in Technology: Navigating the Frontiers of Innovation</h1>
@@ -296,8 +296,24 @@ LinkedIn: <a href="http://www.linkedin.com/in/williamwcollins">http://www.linked
 <p>Being a leader in technology requires a unique blend of technical expertise, visionary thinking, and strategic acumen. Innovation, planning, architecture, development, cloud services, microservices, artificial intelligence, and generative AI are all vital components of this role. By embracing these elements and leading organizations through digital
 
  transformation, technology leaders can shape the future and drive meaningful impact in an increasingly technology-driven world.</p>
- """, height=10000
+ """, height=800
     )
+
+    st.subheader("Answers to Common Questions")
+    components.html(
+    """
+    <h2>Employer Questions</h2>
+
+<h3>Question: Considering that Articulate is a diverse organization employing people from all over the world and with diverse backgrounds, talk about ways that you have worked to make others feel included.</h3>
+<p>William: In general, understanding social profiles, cultural backgrounds, work backgrounds and history, and including time zone differences. Where remote, ensuring that regular 1/1s and collective meetings are held where I can, and the team can get to know people and teams on an individual and collective basis. Pairing global team members to work on initiatives. Where budget allows, travel to meet with people 1/1, team building, sharing meals. Reading about related cultures and dynamics and how they affect people’s ability to relate to each other and team dynamics. Knowing each individual well, with 1/1s as well as skip levels up, down, and across the organization.</p>
+
+<h3>Question: Our culture is results-driven, what does that mean to you and how do you measure your own success?</h3>
+<p>William: Results-driven. Starting with the customer. What are our external internal customers experiencing? What are the metrics e.g attrition rates, NPS scores, individual discussions telling us? - Are we showing by action that we are "Customer Obsessed". Measure of success: Performing required planning, execution, and monitoring of results via completed milestones, meaningful OKRs/KPIs and not just reporting, but generating actionable insights that can be executed against. Be fluid and agile, assess and adjust as needed. Communicate results to all necessary parties, request ongoing feedback "in process", including customers, stakeholders, contributors.</p>
+<p>My Own Success: Are we producing according to plan and schedule, risk/mitigation awareness, resource assessment and flex, adequate communications/feedback, tracking tactical as well as strategic longer-term goals. Team morale is observed, measured e.g., standup automated recurring feedback. Are we celebrating wins? Are we celebrating reasonable failures and learning from them? Are we encouraging and allotting time for innovation? Are we automating? Are we making overall progress and enhancing the company, culture, and individual experience?</p>
+
+<h3>Question: When you’ve joined a team in the past, what have you done to earn the trust of others?</h3>
+<p>William: To earn team trust. Listening carefully and absorbing everything that is said, also things that are not said. Exercise empathy. Do not be overly prescriptive with solutions - have the team come up with and "own" the solution. Practice what you preach. Critical - get to know your people, beyond just work. Get to know them as people. Work hard but play hard. Support their efforts. Be flexible. Work alongside them when possible. Know where they each want to go in their careers - assist them via mentoring/support. Show appreciation. Paint a strong vision for the future of the organization, the company, the individual.</p>
+    """, height=1000)
 
 def project_page():
     st.image('./images/tech_image_4.jpg', width=250)
