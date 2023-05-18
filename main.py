@@ -231,11 +231,73 @@ def resume_page():
     # embed streamlit docs in a streamlit app
     # components.iframe("https://docx-to-markdown.streamlit.app")
 
-
 def beliefs_page():
     st.image('./images/tech_image_3.jpg', width=250)
     st.title("Core Beliefs")
-    st.write("You can reach us through the contact page.")
+
+    st.subheader("Leadership")
+    components.html(
+        """
+        <p><strong>William W. Collins, Jr.</strong><br>
+Austin, TX 78717<br>
+Email: williamwcollinsjr@gmail.com<br>
+Phone: 940-503-8195<br>
+LinkedIn: <a href="http://www.linkedin.com/in/williamwcollins">http://www.linkedin.com/in/williamwcollins</a></p>
+
+<h2>Technology and Software Engineering Executive Management</h2>
+<p>15+ years’ success leading global product, software/solutions development, and pre-sales engineering support teams.</p>
+<p>Management | Web App Development | APIs | Cloud | AI Machine Learning | IoT | Sales Engineering Support | Innovation</p>
+
+<h2>On Leadership Principles</h2>
+
+<p>Leadership Principles are not just a list of business objectives, but rather, they are foundational beliefs that are ingrained in how we operate in our daily lives. As a leader, it is important to start with the customer and obsess over their needs. Additionally, leaders must be owners who think long term and seek to innovate and automate wherever possible. They should always strive to simplify and streamline processes while also seeking insight from others to broaden their perspective.</p>
+
+<p>Leaders must have strong judgment and seek out diverse perspectives, while still being able to learn and be curious. To truly succeed, leaders need to hire and develop exceptional talent while also raising the performance bar for their teams. They must insist on the highest standards and continuously think big to inspire results. Leaders must also have a bias for action and be frugal, seeking to do more with less.</p>
+
+<p>It's important for leaders to build trust by listening attentively, speaking candidly, and treating others with respect. They should also dive deep into details, challenge decisions when necessary, and commit wholeheartedly once a decision is made.</p>
+
+<p>Ultimately, leaders must focus on delivering results and strive to be the best possible employer. They should work to create a safe, productive, and diverse work environment while also being mindful of their impact on their local communities, the planet, and future generations. Leaders need to continually strive to do better and be better for their customers, employees, and partners.</p>
+""", height=480
+    )
+
+    st.subheader("Technology")
+    components.html(
+        """
+        <h1>Being a Leader in Technology: Navigating the Frontiers of Innovation</h1>
+
+<p>In today's rapidly evolving digital landscape, being a leader in technology requires more than just technical expertise. It demands a unique set of skills, a visionary mindset, and the ability to navigate through complex challenges. As technology continues to reshape industries and drive unprecedented advancements, leaders in this field must embrace innovation, strategic planning, and transformative thinking to stay ahead of the curve.</p>
+
+<h2>The Power of Innovation and Vision</h2>
+
+<p>At the heart of technology leadership lies innovation. Leaders in technology must constantly seek out new ideas, challenge the status quo, and drive breakthroughs that push the boundaries of what is possible. They must foster a culture of innovation within their organizations, encouraging their teams to think creatively and experiment with novel approaches to problem-solving. By fostering an environment that nurtures innovation, leaders enable their teams to uncover new opportunities and drive meaningful change.</p>
+
+<p>Moreover, being a leader in technology requires a visionary perspective. Visionaries possess the ability to see beyond the present and anticipate future trends and challenges. They have the foresight to identify emerging technologies and their potential impact on the industry. By aligning their vision with business objectives, technology leaders can guide their organizations towards strategic initiatives that capitalize on disruptive technologies.</p>
+
+<h2>Strategic Planning and Architecture</h2>
+
+<p>A leader in technology must possess strong strategic planning skills. They understand the importance of formulating a clear roadmap that aligns technology initiatives with business goals. By establishing a strategic vision, leaders can drive organizational alignment and ensure that technology investments support long-term growth and success.</p>
+
+<p>Architecture plays a crucial role in technology leadership. Leaders must develop robust and scalable architectures that can adapt to changing business needs and technological advancements. This requires a deep understanding of emerging trends, cloud services, and microservices architecture. By leveraging cloud services and microservices, leaders can build flexible and scalable systems that enable agility, efficiency, and innovation.</p>
+
+<h2>Embracing Artificial Intelligence and Generative AI</h2>
+
+<p>Artificial intelligence (AI) has become a transformative force across industries. Technology leaders must embrace AI and recognize its potential to revolutionize processes, improve efficiency, and unlock new insights. They must stay abreast of AI advancements, understand its ethical implications, and identify opportunities for its integration within their organizations.</p>
+
+<p>Generative AI, in particular, holds great promise. This cutting-edge technology enables systems to generate novel and creative outputs, paving the way for innovation and groundbreaking solutions. Leaders in technology must explore the possibilities of generative AI, harnessing its power to drive transformation and create unique value propositions.</p>
+
+<h2>Leading Organizations through Digital Transformation</h2>
+
+<p>Digital transformation has become imperative for businesses to thrive in the digital age. Technology leaders play a pivotal role in driving this transformation. They must guide their organizations through the process of adopting new technologies, modernizing legacy systems, and reimagining business models.</p>
+
+<p>One of the critical aspects of digital transformation is the ability to attract, hire, and grow key talent. Technology leaders must identify individuals with the right skills and mindset to drive innovation and navigate the digital landscape. By fostering a culture of continuous learning and providing opportunities for professional growth, leaders can cultivate a team of talented individuals who can effectively execute the organization's digital transformation strategy.</p>
+
+<h2>Conclusion</h2>
+
+<p>Being a leader in technology requires a unique blend of technical expertise, visionary thinking, and strategic acumen. Innovation, planning, architecture, development, cloud services, microservices, artificial intelligence, and generative AI are all vital components of this role. By embracing these elements and leading organizations through digital
+
+ transformation, technology leaders can shape the future and drive meaningful impact in an increasingly technology-driven world.</p>
+ """, height=10000
+    )
 
 def project_page():
     st.image('./images/tech_image_4.jpg', width=250)
@@ -243,9 +305,9 @@ def project_page():
     st.write("Projects and Demos.")
     # st.write("check out this [link](https://share.streamlit.io/mesmith027
     # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
-    st.caption("Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)")
-    st.caption(f'Demo: Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
-    st.caption(f'Demo: Generative AI Search with Context Awareness [link](genchat.streamlit.app)')
+    st.write(f'-Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
+    st.write(f'Demo: Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
+    st.write(f'Demo: Generative AI Search with Context Awareness [link](genchat.streamlit.app)')
 
 def innovation_page():
     st.image(f'./images/tech_image_innovation.jpg', width=250)
