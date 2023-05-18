@@ -11,7 +11,7 @@ from markdownify import markdownify as md
 def convert_docx_to_md(file_path):
     doc = Document(file_path)
     paragraphs = [p.text for p in doc.paragraphs]
-    md_content = md('\n'.join(paragraphs))
+    md_content = md('\n\n'.join(paragraphs))
     return md_content
 
 
