@@ -451,8 +451,8 @@ def main():
                f'discord server: [link](https://discord.com/channels/1108234455010787330/1108234455614754870)'
                f'This application: [link](https://wwcollins-profile.streamlit.app)')
 
-    st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", tuple(pages.keys()))
+    # st.sidebar.title("Navigation")
+    page = st.sidebar.radio(f"**Navigation**", tuple(pages.keys()))
 
     # Execute the selected page function
     pages[page]()
