@@ -416,11 +416,11 @@ def contact_page():
     st.image(f'./images/you_image.jpg', 'William Collins', width=100)
 
     st.write(f'Location: Austin, TX\n'
-                       f'Email: [link](williamwcollinsjr@gmail.com)\n'
-                       f'Phone: 940.503.8195\n'
-                       f'LinkedIn: LinkedIn [link](linkedin.com/in/williamwcollins)\n'
-                       f'discord server: [link](discord.com/channels/1108234455010787330/1108234455614754870)'
-                       f'This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
+                       f' Email: [link](williamwcollinsjr@gmail.com)\n '
+                       f' Phone: 940.503.8195\n'
+                       f' LinkedIn: LinkedIn [link](linkedin.com/in/williamwcollins)\n'
+                       f' discord server: [link](discord.com/channels/1108234455010787330/1108234455614754870)'
+                       f' This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
 
 
 # Sidebar navigation
