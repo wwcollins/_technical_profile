@@ -213,7 +213,7 @@ def main():
 
 Here's a breakdown of the code:
 
-1. The code imports necessary modules, including `os`, `time`, `streamlit`, `requests`, `pyperclip`, `json`, and `dotenv`.
+1. The code imports necessary modules, including `os`, `time`, `streamlit`, `requests`, `json`, and `dotenv`.
 2. Several constants are defined, such as the API endpoint for the OpenAI API, default prompts and user information, and sample cover letter and job description texts.
 3. The code loads environment variables from a `.env` file using the `load_dotenv()` function.
 4. Some Streamlit configurations are set to hide the menu and footer.
@@ -240,18 +240,18 @@ Overall, this code sets up a web application that allows users to generate an up
     # Input fields
     st.write("Name:")
     # st.session_state.name = st.text_input("", st.session_state.name)
-    st.session_state.name = st.text_input("", st.session_state.name)
+    st.session_state.name = st.text_input("Enter your first and last name...", st.session_state.name)
 
     st.write("Engineering Prompt:")
     # st.session_state.prompt = st.text_area("prompt", st.session_state.prompt, value=DEFAULT_ENGINEERING_PROMPT)
-    st.session_state.prompt = st.text_area("prompt", st.session_state.prompt, key=generate_random_string(10))
+    st.session_state.prompt = st.text_area("You can use this prompt as is or edit it...", st.session_state.prompt, key=generate_random_string(10))
 
     st.write("Current Cover Letter:")
-    # st.session_state.cover_letter = st.text_area("cover letter", st.session_state.cover_letter, key=generate_random_string(10))
+    # st.session_state.cover_letter = st.text_area("Paste your existing coverletter here or edit...", st.session_state.cover_letter, key=generate_random_string(10))
     st.session_state.cover_letter = st.text_area("coverletter", st.session_state.cover_letter, key=generate_random_string(10))
 
     st.write("Job Description:")
-    # st.session_state.job_description = st.text_area("job description", st.session_state.job_description, key=generate_random_string(10))
+    # st.session_state.job_description = st.text_area("Paste the job description here", st.session_state.job_description, key=generate_random_string(10))
     st.session_state.job_description = st.text_area("job description", st.session_state.job_description, key=generate_random_string(10))
 
     # Generate updated cover letter when the button is clicked
@@ -259,9 +259,9 @@ Overall, this code sets up a web application that allows users to generate an up
     if st.button("Generate My Cover Letter"):
         messages = [
             {"role": "system", "content": "You are the candidate."},
-            {"role": "user", "content": DEFAULT_ENGINEERING_PROMPT}, # {"role": "user", "content": DEFAULT_ENGINEERING_PROMPT}
-            {"role": "assistant", "content": CURRENT_COVERLETTER},
-            {"role": "assistant", "content": TEST_JOB_DESCRIPTION}
+            {"role": "user", "content": st.session_state.prompt}, # {"role": "user", "content": DEFAULT_ENGINEERING_PROMPT}
+            {"role": "assistant", "content": st.session_state.cover_letter},
+            {"role": "assistant", "content": st.session_state.job_description}
         ]
 
         with st.spinner("⏳‍processing your request.."):
@@ -273,7 +273,7 @@ Overall, this code sets up a web application that allows users to generate an up
 
         col1, col2 = st.columns(2)
 
-        st.write(f'Engineering Prompt: {DEFAULT_ENGINEERING_PROMPT}')
+        st.write(f'Engineering Prompt: {st.session_state.job_description}')
 
         with col2:
             st.header("Revised")
