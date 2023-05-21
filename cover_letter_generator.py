@@ -183,7 +183,7 @@ def generate_cover_letter(prompt, cover_letter):
 def generate_chat_completion(messages, model=DEFAULT_MODEL, temperature=1, max_tokens=None):
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {OPENAI_API_KEY}",
+        "Authorization": f"Bearer {st.session_state.open_api_key}",
     }
 
     data = {
@@ -196,7 +196,7 @@ def generate_chat_completion(messages, model=DEFAULT_MODEL, temperature=1, max_t
         data["max_tokens"] = max_tokens
 
     response = requests.post(API_ENDPOINT, headers=headers, data=json.dumps(data))
-    st.caption(response.status_code)
+    # st.caption(response.status_code)
     if response.status_code == 200:
         return response.json()["choices"][0]["message"]["content"]
     else:
@@ -236,8 +236,13 @@ Overall, this code sets up a web application that allows users to generate an up
         st.session_state.cover_letter = CURRENT_COVERLETTER
     if "job_description" not in st.session_state:
         st.session_state.job_description = TEST_JOB_DESCRIPTION
+    if "open_api_key" not in st.session_state:  # TODO looking at bitwarden for secrets solution
+        st.session_state.open_api_key = ""
 
     # Input fields
+
+    # initialize session variables and assign values
+
     st.write("Name:")
     # st.session_state.name = st.text_input("", st.session_state.name)
     st.session_state.name = st.text_input("Enter your first and last name...", st.session_state.name)
@@ -253,6 +258,13 @@ Overall, this code sets up a web application that allows users to generate an up
     st.write("Job Description:")
     # st.session_state.job_description = st.text_area("Paste the job description here", st.session_state.job_description, key=generate_random_string(10))
     st.session_state.job_description = st.text_area("Paste the job description here", st.session_state.job_description, key=generate_random_string(10))
+
+    st.sidebar.subheader(f'Settings')
+
+    open_api_key_input = st.sidebar.text_input(f'Enter your OpenAPI key if you have one or get one at https://platform.openai.com/account/api-keys', type='password') # text_input("Enter a password", type="password")
+    if open_api_key_input:  # https://platform.openai.com/account/api-keys
+        st.session_state.open_api_key = open_api_key_input
+    st.sidebar.caption(st.session_state.open_api_key)
 
     # Generate updated cover letter when the button is clicked
 
