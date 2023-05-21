@@ -264,7 +264,7 @@ Overall, this code sets up a web application that allows users to generate an up
     open_api_key_input = st.sidebar.text_input(f'Enter your OpenAPI key if you have one or get one at https://platform.openai.com/account/api-keys', type='password') # text_input("Enter a password", type="password")
     if open_api_key_input:  # https://platform.openai.com/account/api-keys
         st.session_state.open_api_key = open_api_key_input
-    st.sidebar.caption(st.session_state.open_api_key)
+    # st.sidebar.caption(st.session_state.open_api_key)
 
     # Generate updated cover letter when the button is clicked
 
