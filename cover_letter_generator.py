@@ -195,12 +195,16 @@ def generate_chat_completion(messages, model=DEFAULT_MODEL, temperature=1, max_t
     if max_tokens is not None:
         data["max_tokens"] = max_tokens
 
-    response = requests.post(API_ENDPOINT, headers=headers, data=json.dumps(data))
+    try:
+        response = requests.post(API_ENDPOINT, headers=headers, data=json.dumps(data))
+    except Exception as e:
+        st.caption(f'Error getting response back from request: {e}')
+
     # st.caption(response.status_code)
     if response.status_code == 200:
         return response.json()["choices"][0]["message"]["content"]
     else:
-        raise Exception(f"Error {response.status_code}: {response.text}")
+        st.caption(f'Error with API request: {e} : {response.status_code}')
 
 
 # Create the form using Streamlit
@@ -264,7 +268,7 @@ Overall, this code sets up a web application that allows users to generate an up
     open_api_key_input = st.sidebar.text_input(f'Enter your OpenAPI key if you have one or get one at https://platform.openai.com/account/api-keys', type='password') # text_input("Enter a password", type="password")
     if open_api_key_input:  # https://platform.openai.com/account/api-keys
         st.session_state.open_api_key = open_api_key_input
-    # st.sidebar.caption(st.session_state.open_api_key)
+        st.sidebar.caption(f'Key added..')
 
     # Generate updated cover letter when the button is clicked
 
@@ -285,16 +289,14 @@ Overall, this code sets up a web application that allows users to generate an up
 
         col1, col2 = st.columns(2)
 
-        st.write(f'Engineering Prompt: {st.session_state.job_description}')
+        st.write(f'Engineering Prompt: {st.session_state.prompt}')
 
         with col2:
             st.header("Revised")
-            # st.image("https://static.streamlit.io/examples/cat.jpg")
             st.write(updated_cover_letter)
 
         with col1:
             st.header("Original Coverleter")
-            # st.image("https://static.streamlit.io/examples/dog.jpg")
             st.write(CURRENT_COVERLETTER)
 
         try:
