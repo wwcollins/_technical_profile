@@ -1,0 +1,22 @@
+William W. Collins, Jr.
+Austin, TX 
+williamwcollinsjr@gmail.com
+http://www.linkedin.com/in/williamwcollins
+
+Dear Hiring Manager,
+
+I am writing to apply for the Director of Engineering position at CharterUP. With over 15 years of experience building and managing SaaS-based applications, I am confident that my experience, skillset, and talent will enable me to lead and grow CharterUP’s world-class software engineering team.
+
+In my previous roles, I have managed and intelligently scaled software engineering teams in both VC-funded startups and established enterprises. My experience includes managing cloud operations for scalability, reliability, and security, which includes Azure, AWS, Google (GCP), Oracle, Heroku cloud services.
+
+As a seasoned leader, I have developed, improved, and managed engineering processes, applications, and software oversight in start-up and large enterprise environments. I have experience managing teams utilizing modern programming languages, data structures & algorithms, frameworks, APIs, services, and processes, including Agile/Scrum and CI/CD. I have extensive experience working closely with customers, stakeholders, sales, marketing, 3rd party organizations, and leadership to ensure alignment around all elements of product and feature delivery.
+
+My experience and expertise align with the requirements of this role as outlined in the job description. I am confident in my ability to drive alignment towards critical objectives, prioritize and sequence team efforts, mentor and coach team members to achieve high-quality results, and partner with cross-functional leaders to define goals, roadmaps and priorities. Additionally, I have a successful track record of recruiting, mentoring, and retaining strong managers and engineers. 
+
+At CharterUP, I share the same values of prioritizing customers first, creating an exceptional environment for people, setting relentlessly high standards, achieving clarity and speed, and mandating to dissent and commit. I am excited about the opportunity to work alongside some of the brightest minds in the technology and transportation industries, and to help drive the future of group travel, raise the service standards for the industry, and work towards a better future for transportation.
+
+Thank you for considering my application. I look forward to discussing further how I can contribute to the CharterUP team.
+
+Sincerely,
+
+William W. Collins, Jr.
