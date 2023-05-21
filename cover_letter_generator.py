@@ -248,11 +248,11 @@ Overall, this code sets up a web application that allows users to generate an up
 
     st.write("Current Cover Letter:")
     # st.session_state.cover_letter = st.text_area("Paste your existing coverletter here or edit...", st.session_state.cover_letter, key=generate_random_string(10))
-    st.session_state.cover_letter = st.text_area("coverletter", st.session_state.cover_letter, key=generate_random_string(10))
+    st.session_state.cover_letter = st.text_area("Paste your existing coverletter here or edit...", st.session_state.cover_letter, key=generate_random_string(10))
 
     st.write("Job Description:")
     # st.session_state.job_description = st.text_area("Paste the job description here", st.session_state.job_description, key=generate_random_string(10))
-    st.session_state.job_description = st.text_area("job description", st.session_state.job_description, key=generate_random_string(10))
+    st.session_state.job_description = st.text_area("Paste the job description here", st.session_state.job_description, key=generate_random_string(10))
 
     # Generate updated cover letter when the button is clicked
 
