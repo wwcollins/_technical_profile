@@ -6,6 +6,14 @@ import requests
 import json
 from dotenv import load_dotenv
 
+# Set page config
+st.set_page_config(
+    page_title="Generative AI Coverletter Generator",
+    page_icon="🌊",
+    layout="centered"
+)
+
+# todo - consider Redis integration: https://towardsai.net/p/machine-learning/a-step-by-step-guide-to-developing-a-streamlit-application-with-redis-data-storage-and-deploying-it-using-docker
 
 API_ENDPOINT = "https://api.openai.com/v1/chat/completions"
 DEFAULT_ENGINEERING_PROMPT = "create a professional updated cover letter from the current cover letter and the job description"
@@ -117,6 +125,18 @@ Once we agree, we enthusiastically move together as a team
 DEFAULT_MODEL = "gpt-3.5-turbo"
 DEFAULT_TEMPERATURE = 0.5
 
+SHOW_SUMMARIES = True
+EXPANDER_DEFAULT = False  # expands all expanders, except single article summaries (controlled by SHOW_SUMMARIES)
+MAX_WEBPAGE_URL_LEN = 70  # This excludes short urls in search unrelated to search subject
+PROMPT_SUMMARY_REQUEST = f"Please provide a detailed summary of the following article:"
+ARTICLE_AUTHOR = "William W. Collins"
+ARTICLE_RIGHTS = "CR William W Collins, All Rights Reserved"
+PROMPT_ARTICLE_REQUEST = f"Write an informational, detailed, professional news article by {ARTICLE_AUTHOR} " \
+                         f"using the following multi-article content. Create title and markdown the title in bold blue, headers, sub-headers in " \
+                         f"the article.  Also Create and introduction and a summary and use examples:"
+NOTICE_APP_INFO = ":blue[Free Limited Research Preview]. This app may produce inaccurate information " \
+                  "about people, places, or facts"
+
 # Load the dotenv file
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
@@ -130,6 +150,7 @@ hide_menu_style = """
         </style>
         """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
+
 
 # st.write(f'OPENAPI KEY: {OPENAI_API_KEY}')
 
@@ -150,6 +171,14 @@ def write2file(text, filename):  # writes to file locally here but only memory b
     else:
         with open(filename, "w") as file:
             file.write(text + "\n")
+
+def show_progress_bar(sleep_time=0.1):
+    progress_text = "Operation in progress. Please wait..."
+
+    my_bar = st.progress(0, text=progress_text)
+    for percent_complete in range(100):
+        time.sleep(sleep_time)
+        my_bar.progress(percent_complete + 1, text=f'Progress{percent_complete}%')
 
 # Function to send a request to ChatGPT and get the updated cover letter
 def generate_cover_letter(prompt, cover_letter):
@@ -199,18 +228,54 @@ def generate_chat_completion(messages, model=DEFAULT_MODEL, temperature=1, max_t
         response = requests.post(API_ENDPOINT, headers=headers, data=json.dumps(data))
     except Exception as e:
         st.caption(f'Error getting response back from request: {e}')
+        response = None
 
     # st.caption(response.status_code)
-    if response.status_code == 200:
-        return response.json()["choices"][0]["message"]["content"]
-    else:
+    try:
+        if response.status_code == 200:
+            return response.json()["choices"][0]["message"]["content"]
+    except Exception as e:
         st.caption(f'Error with API request: {e} : {response.status_code}')
+
+def read_python_file(filename):
+    # Allow the user to input the filename
+    # filename = st.text_input("Enter a Python filename")
+
+    if filename:
+        with st.expander("[code]", expanded=EXPANDER_DEFAULT):  # Read the file contents and display the code
+            st.title(f'View Python Code: {filename}')
+            st.caption(f'lines of code: {count_lines(filename)}')
+            with open(filename, "r", encoding="utf8") as f:
+                code = f.read()
+            try:
+                st.code(code, language="python")
+            except FileNotFoundError:
+                st.error("File not found. Please enter a valid filename.")
+
+# file = open(filename, encoding="utf8")
+def count_lines(file_name):
+    with open(file_name, 'r', encoding="utf8") as f:
+        # st.caption(f'Lines of code = {len(f.readlines())}')
+        return len(f.readlines())
 
 
 # Create the form using Streamlit
 def main():
-    st.title("Cover Letter Generator")
-    st.write("Please fill in the following information:")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=150)
+    with col2:
+        st.sidebar.caption(f'Free integrated key coming soon...')
+
+    col3, col4 = st.columns(2)
+    with col3:
+        st.image(f'./images/tech_image_7.jpg', '', width=350)
+    with col4:
+        with st.spinner(f'loading main...'):
+            time.sleep(1)
+            st.header(f':blue[Cover Letter Generator]')
+            st.caption(f'William Collins 2023, All Rights Reserved {NOTICE_APP_INFO}')
+
     with st.expander(f'What this app does...'):
         """
         This Streamlit Python code creates a web application for generating a cover letter. It uses the Streamlit library for building the user interface and interacts with the OpenAI API for generating the updated cover letter.
@@ -231,7 +296,9 @@ Here's a breakdown of the code:
 Overall, this code sets up a web application that allows users to generate an updated cover letter by interacting with the OpenAI API.
 """
 
-    # Create a session state to store the variables
+    st.caption(read_python_file('cover_letter_generator.py'))  # built in expander in def
+
+    # Create session state variables and assign defaults
     if "name" not in st.session_state:
         st.session_state.name = DEFAULT_USER_NAME
     if "prompt" not in st.session_state:
@@ -304,15 +371,6 @@ Overall, this code sets up a web application that allows users to generate an up
             write2file(updated_cover_letter, './output/cover_letter_updated.txt')
         except Exception as e:
             st.caption (f'Error writing to file: {e}')
-
-
-def show_progress_bar(sleep_time=0.1):
-    progress_text = "Operation in progress. Please wait..."
-
-    my_bar = st.progress(0, text=progress_text)
-    for percent_complete in range(100):
-        time.sleep(sleep_time)
-        my_bar.progress(percent_complete + 1, text=f'Progress{percent_complete}%')
 
 
 if __name__ == "__main__":
