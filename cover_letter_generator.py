@@ -265,7 +265,7 @@ def main():
     with col1:
         st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=150)
     with col2:
-        st.sidebar.caption(f'Location: Austin, TX'
+        st.sidebar.caption(f'Location: Austin, TX' + '\n' +
                            f'\n [Email]("mailto:williamwcollinsjr@gmail.com)'
                            f'\n Phone: 940.503.8195'
                            f'\n [Tech Profile including Projects/Demos](https://wwcollins-profile.streamlit.app)'
