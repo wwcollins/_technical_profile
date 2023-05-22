@@ -21,9 +21,9 @@ def home_page():
 
     st.title("Welcome")
     st.write(
-        """This profile site provides basic information about William and covers core beliefs with respect"
-             " to **Leadership** and **Technology** as well as thoughts and efforts regarding **Innovation** and "
-             "recent **Projects** William is and has been creating and fine tuning. Beyond understanding and implementing best of breed architecture and coding patterns, William 
+        """This profile site provides basic information about William and covers core beliefs with respect 
+        to **Leadership** and **Technology** as well as thoughts and efforts regarding **Innovation** and 
+        recent **Projects** William is and has been creating and fine tuning. Beyond understanding and implementing best of breed architecture and coding patterns, William 
              is focused on **architecting**, **integrating** and **building** out technologies related to **Generative 
              AI** as an extended platform across both engineering and non-engineering organizations.
         """
@@ -258,19 +258,22 @@ def project_page():
     st.subheader(f'AI including Generative AI')
     st.write(f'✅ Generative AI: Automated Coverletter Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
     st.write(f'✅ Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
-    st.write(f'✅ Demo: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
+    st.write(f'✅ Generative AI: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
+    st.write(f'🍵 Generative AI: Personal Job Search Assistant: Search, Match, Scoring and Reporting')
+
+    st.subheader(f'Microservices')
+    st.write(f'🍵 Weather and Geolocation Microservices ')
+    st.write(f'🍵 AWS Microservices: AWS S3 Microservice')
+    st.write(f'🧪 Rapid Prototyping Process and Framework: Microservices/FastAPI')
+    st.write(f'🍵 Building a Streamlit,Redis Application microservices Framework')
+
+    st.write(f'🧬 Generative AI: Creating Custom LLMs and Fine Tuning')
+    st.write(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
 
     st.subheader(f'Other Projects')
     st.write(f'✅ Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
 
-    st.write(f'🍵 AWS Microservices: AWS S3 Microservice')
-    st.write(f'🧪 Rapid Prototyping Process and Framework: Microservices/FastAPI')
-    st.write(f'🍵 Building a Streamlit,Redis Application Framework')
-    st.write(f'🍵 Personal Job Search Assistant: Search, Match and Scoring')
-    st.write(f'🧬 Generative AI: Creating Custom LLMs and Fine Tuning')
-    st.write(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
-
-    st.write(f'Legend: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
+    st.write(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
 
 def beliefs_page():
     st.image('./images/tech_image_3.jpg', width=250)
