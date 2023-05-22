@@ -256,13 +256,21 @@ def project_page():
     # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
 
     st.subheader(f'AI including Generative AI')
-    st.write(f'-Generative AI: Automated Coverletter Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
-    st.write(f'-Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
-    st.write(f'-Demo: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
+    st.write(f'✅ Generative AI: Automated Coverletter Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
+    st.write(f'✅ Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
+    st.write(f'✅ Demo: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
 
-    st.subheader(f'Other Proejects')
-    st.write(f'-Demo: Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
-    st.caption(f'More coming soon...')
+    st.subheader(f'Other Projects')
+    st.write(f'✅ Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
+
+    st.caption(f'🍵 AWS Microservices: AWS S3 Microservice')
+    st.caption(f'🧪 Rapid Prototyping Process and Framework: Microservices/FastAPI')
+    st.caption(f'🍵 Building a Streamlit,Redis Application Framework')
+    st.caption(f'🍵 Personal Job Search Assistant: Search, Match and Scoring')
+    st.caption(f'🧬 Generative AI: Creating Custom LLMs and Fine Tuning')
+    st.caption(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
+
+    st.caption(f'Legend: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
 
 def beliefs_page():
     st.image('./images/tech_image_3.jpg', width=250)
