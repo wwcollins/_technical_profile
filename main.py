@@ -491,7 +491,7 @@ pages = {
     "Home": home_page,
     "About": about_page,
     "📃Resume": resume_page,
-    "📃Technical Portfolio": project_page,
+    "📃Technology Portfolio": project_page,
     "💡Innovation": innovation_page,
     "📖Core Beliefs": beliefs_page,
     "⚙ Utilities": utilities_page,
