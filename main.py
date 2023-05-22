@@ -478,7 +478,7 @@ def app_todos():
 def contact_page():
     st.image('./images/tech_image_2.jpg', width=250)
     st.title("Contact Page")
-    st.image(f'./images/you_image.jpg', 'William Collins', width=100)
+    # st.image(f'./images/you_image.jpg', 'William Collins', width=100)
     download_resume()  # fn which downloads resume for the user
     st.write(f'Location: Austin, TX\n'
                        f' Email: [link](williamwcollinsjr@gmail.com)\n '
