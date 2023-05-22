@@ -266,11 +266,11 @@ def main():
         st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=150)
     with col2:
         st.sidebar.caption(f'Location: Austin, TX'
-                           f'\nEmail: [link]("mailto:williamwcollinsjr@gmail.com)'
-                           f'\nPhone: 940.503.8195'
-                           f'\nTech Profile: [link](https://wwcollins-profile.streamlit.app)'
-                           f'\nLinkedIn: [link](https://linkedin.com/in/williamwcollins)'
-                           f'\ndiscord server: [link](https://discord.com/channels/1108234455010787330/1108234455614754870)'
+                           f'\n [Email]("mailto:williamwcollinsjr@gmail.com)'
+                           f'\n Phone: 940.503.8195'
+                           f'\n [Tech Profile including Projects/Demos](https://wwcollins-profile.streamlit.app)'
+                           f'\n [LinkedIn](https://linkedin.com/in/williamwcollins)'
+                           f'\n [Discord server](https://discord.com/channels/1108234455010787330/1108234455614754870)'
                            )
 
     col3, col4 = st.columns(2)
