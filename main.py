@@ -1,11 +1,12 @@
+
+
+# ARTICLE_RIGHTS: CR 2022, 2023.  William W Collins, All Rights Reserved
 # This is a sample Python script.
 # This site: wwcollins-profile.streamlit.app
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
 import streamlit as st
 st.set_option('deprecation.showPyplotGlobalUse', False)
+
 import streamlit.components.v1 as components
 
 # Page functions
@@ -253,9 +254,14 @@ def project_page():
     st.header("Projects and Demos")
     # st.write("check out this [link](https://share.streamlit.io/mesmith027
     # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
+
+    st.subheader(f'AI including Generative AI')
+    st.write(f'-Generative AI: Automated Coverletter Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
     st.write(f'-Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
-    st.write(f'-Demo: Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
     st.write(f'-Demo: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
+
+    st.subheader(f'Other Proejects')
+    st.write(f'-Demo: Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
     st.caption(f'More coming soon...')
 
 def beliefs_page():
@@ -397,18 +403,55 @@ def utilities_page():
     st.image(f'./images/tech_image_innovation.jpg', width=250)
     st.title("Utilities")
     st.write("Useful utilities to manage your profile site...")
-    st.write (f'Convert docx file to markdown: [link](https://docx-to-markdown.streamlit.app)')
-    st.caption(f'Streamlit Deployment Options [link](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)')
+    st.write(f'Convert docx file to markdown: [link](https://docx-to-markdown.streamlit.app)')
+    st.write(f'Streamlit Deployment Options [link](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)')
 
 def articles_page():
     st.image('./images/tech_image_5.jpg', width=250)
+
     st.title("Articles:  Author:  William Collins")
-    st.write("Article 1: [IoT and Smart Dust](https://www.linkedin.com/pulse/internet-things-smart-dust-you-risk-william-collins-jr-/)")
-    st.write("Article 2: [The Internet of Things and its Application by Industry](https://www.linkedin.com/pulse/internet-things-its-application-industry-william-collins-jr-/)")
-    st.write("Article 3: [IoT Technologies and Communication Protocols - A Brief Overview and Reference](https://www.linkedin.com/pulse/iot-technologies-communication-protocols-brief-william-collins-jr-/)")
-    st.write("Article 4: [The Internet of Things and the Wine Industry - From Vineyard to Market](https://www.linkedin.com/pulse/internet-things-wine-industry-william-collins-jr-/)")
+    with st.expander(f'Article: Pandas AI: Revolutionizing Generative AI with a Powerful Python Library'):
+        st.write("""**Title: Pandas AI: Revolutionizing Generative AI with a Powerful Python Library**
+
+**Introduction**
+
+Generative Artificial Intelligence (AI) has emerged as a groundbreaking technology, enabling machines to create new and original content. It has found applications in various domains, including art, music, and text generation. Pandas AI, a Python library, has rapidly gained recognition for its ability to support Generative AI tasks. This article explores the impact of Pandas AI on the field of Generative AI, highlighting its capabilities and discussing its potential for revolutionizing data analysis and content generation.
+
+**1. Understanding Pandas AI and Its Key Features**
+
+Pandas AI is an open-source Python library developed specifically to facilitate Generative AI tasks. It builds upon the foundation of the popular pandas library, which is widely used for data manipulation and analysis. Pandas AI extends pandas' capabilities by incorporating advanced algorithms for generative modeling, making it an ideal tool for generating new data based on existing patterns and structures.
+
+The key features of Pandas AI include:
+a) Generative Models: Pandas AI provides implementations of various generative models, including autoencoders, generative adversarial networks (GANs), and variational autoencoders (VAEs). These models enable the generation of realistic and high-quality content by learning the underlying patterns from a given dataset.
+b) Deep Learning Integration: The library seamlessly integrates with deep learning frameworks like TensorFlow and PyTorch, allowing users to leverage the power of deep neural networks for generative modeling.
+c) Data Manipulation: Leveraging the core functionalities of pandas, Pandas AI offers comprehensive data manipulation tools that facilitate preprocessing and transformation tasks essential for generative modeling.
+d) Evaluation Metrics: The library incorporates evaluation metrics such as inception score, Frechet Inception Distance (FID), and reconstruction loss, enabling users to assess the quality and performance of generated content.
+
+**2. Impact of Pandas AI on Generative AI**
+
+Pandas AI has had a significant impact on the field of Generative AI, revolutionizing the way data analysis and content generation are approached. Here are some key areas where Pandas AI has made a difference:
+
+**a) Enhanced Data Analysis:** By combining the power of pandas for data manipulation and Pandas AI for generative modeling, analysts and data scientists can gain deeper insights into their datasets. Pandas AI enables the generation of synthetic data that follows similar patterns as the original data, helping to expand limited datasets for more robust analysis.
+
+**b) Creative Content Generation:** Generative AI is not limited to data analysis alone; it has opened up new avenues for creative content generation. With Pandas AI, artists, musicians, and writers can harness the potential of generative models to create unique and novel content. For instance, musicians can generate melodies, writers can create stories, and artists can produce original artwork, all based on existing patterns and styles.
+
+**c) Rapid Prototyping and Simulation:** Pandas AI simplifies the process of prototyping and simulating data-driven systems. It allows developers and researchers to generate synthetic datasets that resemble real-world data, facilitating testing and evaluation of algorithms and models before deployment. This feature is particularly valuable in domains such as autonomous driving, robotics, and simulations.
+
+**d) Democratization of Generative AI:** Pandas AI's user-friendly interface and extensive documentation make it accessible to a wide range of users, including those without extensive machine learning expertise. This democratization of Generative AI empowers professionals from diverse backgrounds to leverage the capabilities of generative modeling, thereby fostering innovation and creativity.
+
+**3. Future Implications and Conclusion**
+
+Pandas AI has already made a significant impact on Generative AI by enabling enhanced data analysis, creative content generation, rapid prototyping, and democratization of generative modeling. Looking ahead, it is""")
+    st.write("Article: [IoT and Smart Dust](https://www.linkedin.com/pulse/internet-things-smart-dust-you-risk-william-collins-jr-/)")
+    st.write("Article: [The Internet of Things and its Application by Industry](https://www.linkedin.com/pulse/internet-things-its-application-industry-william-collins-jr-/)")
+    st.write("Article: [IoT Technologies and Communication Protocols - A Brief Overview and Reference](https://www.linkedin.com/pulse/iot-technologies-communication-protocols-brief-william-collins-jr-/)")
+    st.write("Article: [The Internet of Things and the Wine Industry - From Vineyard to Market](https://www.linkedin.com/pulse/internet-things-wine-industry-william-collins-jr-/)")
+
+def app_todos():
+    """
 
 
+    """
 
 def contact_page():
     st.image('./images/tech_image_2.jpg', width=250)
@@ -431,7 +474,7 @@ pages = {
     "📃Technical Portfolio": project_page,
     "💡Innovation": innovation_page,
     "📖Core Beliefs": beliefs_page,
-    "⚙Utilities": utilities_page,
+    "⚙ Utilities": utilities_page,
     "📑Articles": articles_page,
     "✍Contact": contact_page
 
@@ -453,6 +496,17 @@ def main():
 
     # st.sidebar.title("Navigation")
     page = st.sidebar.radio(f"**Navigation**", tuple(pages.keys()))
+
+
+    # Styles Modifications
+    expander = """
+    <style>
+    ul.streamlit-expander {
+        border: 0 !important;
+    </style>
+    """
+
+    st.markdown(expander, unsafe_allow_html=True)
 
     # Execute the selected page function
     pages[page]()
