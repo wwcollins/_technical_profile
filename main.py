@@ -282,16 +282,6 @@ def beliefs_page():
     st.subheader("On Leadership")
     components.html(
         """
-        <p><strong>William W. Collins, Jr.</strong><br>
-Austin, TX 78717<br>
-Email: williamwcollinsjr@gmail.com<br>
-Phone: 940-503-8195<br>
-LinkedIn: <a href="http://www.linkedin.com/in/williamwcollins">http://www.linkedin.com/in/williamwcollins</a></p>
-
-<h2>Technology and Software Engineering Executive Management</h2>
-<p>15+ years’ success leading global product, software/solutions development, and pre-sales engineering support teams.</p>
-<p>Management | Web App Development | APIs | Cloud | AI Machine Learning | IoT | Sales Engineering Support | Innovation</p>
-
 <h2>On Leadership Principles</h2>
 
 <p>Leadership Principles are not just a list of business objectives, but rather, they are foundational beliefs that are ingrained in how we operate in our daily lives. As a leader, it is important to start with the customer and obsess over their needs. Additionally, leaders must be owners who think long term and seek to innovate and automate wherever possible. They should always strive to simplify and streamline processes while also seeking insight from others to broaden their perspective.</p>
