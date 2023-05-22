@@ -272,6 +272,7 @@ def project_page():
     st.write(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
 
     st.subheader(f'Other Projects')
+    st.write(f'✅ Convert docx file to markdown: [link](https://docx-to-markdown.streamlit.app)')
     st.write(f'✅ Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
 
     st.write(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
