@@ -63,6 +63,7 @@ def resume_page():
         st.image(f'./images/you_image.jpg', 'William Collins', width=200)
     with col2:
         st.write(f'')
+        download_resume()  # fn which downloads resume for the user
 
     st.write(
         """
@@ -477,7 +478,7 @@ def contact_page():
     st.image('./images/tech_image_2.jpg', width=250)
     st.title("Contact Page")
     st.image(f'./images/you_image.jpg', 'William Collins', width=100)
-
+    download_resume()  # fn which downloads resume for the user
     st.write(f'Location: Austin, TX\n'
                        f' Email: [link](williamwcollinsjr@gmail.com)\n '
                        f' Phone: 940.503.8195\n'
@@ -485,6 +486,28 @@ def contact_page():
                        f' discord server: [link](discord.com/channels/1108234455010787330/1108234455614754870)'
                        f' This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
 
+# Other functions
+def download_resume(filename="./resumes/Resume_WCollins_04_2023.2_TechMgmt.pdf", loc='main'""):
+    with open(filename, "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+
+        if loc == "sidebar" or loc == None:
+            resume_download = st.sidebar.download_button(label="Download Resume",key='dufhqiew',
+                           data=PDFbyte,
+                           file_name="Resume_WCollins_04_2023.2_TechMgmt.pdf",
+                           mime='application/octet-stream')
+        else:
+            resume_download = st.download_button(label="Download Resume",
+                             data=PDFbyte,
+                             file_name="Resume_WCollins_04_2023.2_TechMgmt.pdf",
+                             mime='application/octet-stream')
+
+
+        if resume_download:
+            st.caption(f"Thank you! William Collin's resume will be in your downloads folder.")
+
+# Call the function to execute the code
+# download_resume()
 
 # Sidebar navigation
 pages = {
@@ -504,9 +527,8 @@ pages = {
 def main():
     # st.image(f'./images/home_sidebar_img.jpg')
 
-
     st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=100)
-
+    download_resume(loc='sidebar')
     st.sidebar.caption(f'Location: Austin, TX    '
                f'[Email]("mailto:williamwcollinsjr@gmail.com)    '
                f'Phone: 940.503.8195  '
@@ -516,7 +538,6 @@ def main():
 
     # st.sidebar.title("Navigation")
     page = st.sidebar.radio(f"**Navigation**", tuple(pages.keys()))
-
 
     # Styles Modifications
     expander = """
