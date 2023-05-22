@@ -265,7 +265,13 @@ def main():
     with col1:
         st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=150)
     with col2:
-        st.sidebar.caption(f'Free integrated key coming soon...')
+        st.sidebar.caption(f'Location: Austin, TX\n'
+                           f'Email: [link]("mailto:williamwcollinsjr@gmail.com)'
+                           f'Phone: 940.503.8195'
+                           f'Tech Profile: [link](https://wwcollins-profile.streamlit.app)'
+                           f'LinkedIn: [link](https://linkedin.com/in/williamwcollins)'
+                           f'discord server: [link](https://discord.com/channels/1108234455010787330/1108234455614754870)'
+                           )
 
     col3, col4 = st.columns(2)
     with col3:
