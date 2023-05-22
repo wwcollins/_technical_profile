@@ -263,14 +263,14 @@ def project_page():
     st.subheader(f'Other Projects')
     st.write(f'✅ Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
 
-    st.caption(f'🍵 AWS Microservices: AWS S3 Microservice')
-    st.caption(f'🧪 Rapid Prototyping Process and Framework: Microservices/FastAPI')
-    st.caption(f'🍵 Building a Streamlit,Redis Application Framework')
-    st.caption(f'🍵 Personal Job Search Assistant: Search, Match and Scoring')
-    st.caption(f'🧬 Generative AI: Creating Custom LLMs and Fine Tuning')
-    st.caption(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
+    st.write(f'🍵 AWS Microservices: AWS S3 Microservice')
+    st.write(f'🧪 Rapid Prototyping Process and Framework: Microservices/FastAPI')
+    st.write(f'🍵 Building a Streamlit,Redis Application Framework')
+    st.write(f'🍵 Personal Job Search Assistant: Search, Match and Scoring')
+    st.write(f'🧬 Generative AI: Creating Custom LLMs and Fine Tuning')
+    st.write(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
 
-    st.caption(f'Legend: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
+    st.write(f'Legend: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
 
 def beliefs_page():
     st.image('./images/tech_image_3.jpg', width=250)
@@ -495,12 +495,12 @@ def main():
 
     st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=100)
 
-    st.sidebar.caption(f'Location: Austin, TX\n'
-               f'Email: [link]("mailto:williamwcollinsjr@gmail.com)'
-               f'Phone: 940.503.8195'
-               f'LinkedIn: [link](https://linkedin.com/in/williamwcollins)'
-               f'discord server: [link](https://discord.com/channels/1108234455010787330/1108234455614754870)'
-               f'This application: [link](https://wwcollins-profile.streamlit.app)')
+    st.sidebar.caption(f'Location: Austin, TX    '
+               f'[Email]("mailto:williamwcollinsjr@gmail.com)    '
+               f'Phone: 940.503.8195  '
+               f'[LinkedIn](https://linkedin.com/in/williamwcollins)    '
+               f'[Discord server](https://discord.com/channels/1108234455010787330/1108234455614754870)  '
+               f'[Technical Profile](https://wwcollins-profile.streamlit.app)  ')
 
     # st.sidebar.title("Navigation")
     page = st.sidebar.radio(f"**Navigation**", tuple(pages.keys()))
