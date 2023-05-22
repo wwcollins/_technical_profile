@@ -261,7 +261,7 @@ def project_page():
     st.write(f'✅ Generative AI: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
     st.write(f'🍵 Generative AI: Personal Job Search Assistant: Search, Match, Scoring and Reporting')
 
-    st.subheader(f'Microservices')
+    st.subheader(f'Microservices and APIs')
     st.write(f'🍵 Weather and Geolocation Microservices ')
     st.write(f'🍵 AWS Microservices: AWS S3 Microservice')
     st.write(f'🧪 Rapid Prototyping Process and Framework: Microservices/FastAPI')
