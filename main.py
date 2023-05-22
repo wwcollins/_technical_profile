@@ -251,7 +251,7 @@ def resume_page():
 
 def project_page():
     st.image('./images/tech_image_4.jpg', width=250)
-    st.title("Technical Portfolio")
+    st.title("Technology Portfolio")
     st.header("Projects and Demos")
     # st.write("check out this [link](https://share.streamlit.io/mesmith027
     # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
