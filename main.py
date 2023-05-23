@@ -541,7 +541,10 @@ def download_resume(filename="./resumes/Resume_WCollins_04_2023.2_TechMgmt.pdf",
 
 
         if resume_download:
-            st.caption(f"Thank you! William Collin's resume will be in your downloads folder.")
+            if loc == 'sidebar':
+                st.sidebar.caption(f"Thank you! William Collin's resume will be in your downloads folder.")
+            else:
+                st.caption(f"Thank you! William Collin's resume will be in your downloads folder.")
 
 # Call the function to execute the code
 # download_resume()
