@@ -528,7 +528,7 @@ def innovation_page():
     <p>"Innovation distinguishes between a leader and a follower." - Steve Jobs</p>
   </blockquote>
 
-  <p>As we strive toward having an innovate mindset, it is good to also remember the words of Steve Jobs, "Innovation is not about saying yes to everything. It's about saying no to all but the most crucial features." Embracing this mindset, innovation technology leaders can guide their teams towards transformative breakthroughs, driving organizations to new heights of achievement and excellence.</p>
+  <p>Finally, as we strive toward having an innovative and collective mindset, it's good to also remember the words of Steve Jobs, "Innovation is not about saying yes to everything. It's about saying no to all but the most crucial features." Embracing this mindset, innovation technology leaders can guide their teams towards transformative breakthroughs, driving organizations to new heights of achievement and excellence.</p>
 
   <div class="signature">
     <span class="name">-William Collins, 2023</span>
