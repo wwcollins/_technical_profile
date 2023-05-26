@@ -1,5 +1,5 @@
 
-
+ARTICLE_RIGHTS = f'CR 2022, 2023.  William W Collins, All Rights Reserved'
 # ARTICLE_RIGHTS: CR 2022, 2023.  William W Collins, All Rights Reserved
 # This is a sample Python script.
 # This site: wwcollins-profile.streamlit.app
@@ -405,65 +405,116 @@ def innovation_page():
     st.write("Innovative moments and thoughts on innovation.")
 
     components.html(
-        """
-        
-        
-        <figure>
-    <blockquote cite="https://www.brainyquote.com/authors/steve-jobs-quotes">
-        <p>"Innovation distinguishes between a leader and a follower."</p>
-    </blockquote>
-    <figcaption>—Steve Jobs</figcaption>
-</figure>
-<figure>
-    <blockquote cite="https://www.brainyquote.com/authors/elon-musk-quotes">
-        <p>"I think it's very important to have a feedback loop where you're constantly thinking about what you've done and how you could be doing it better."</p>
-    </blockquote>
-    <figcaption>—Elon Musk</figcaption>
-</figure>
-<figure>
-    <blockquote cite="https://www.brainyquote.com/authors/steve-jobs-quotes">
-        <p>"Creativity is just connecting things."</p>
-    </blockquote>
-    <figcaption>—Steve Jobs</figcaption>
-</figure>
-<figure>
-    <blockquote cite="https://www.brainyquote.com/authors/thomas-edison-quotes">
-        <p>"I have not failed. I've just found 10,000 ways that won't work."</p>
-    </blockquote>
-    <figcaption>—Thomas Edison</figcaption>
-</figure>
-<figure>
-    <blockquote cite="https://www.brainyquote.com/authors/bill-gates-quotes">
-        <p>"Your most unhappy customers are your greatest source of learning."</p>
-    </blockquote>
-    <figcaption>—Bill Gates</figcaption>
-</figure>
-<figure>
-    <blockquote cite="https://www.brainyquote.com/authors/jeff-bezos-quotes">
-        <p>"Constraints drive innovation."</p>
-    </blockquote>
-    <figcaption>—Jeff Bezos</figcaption>
-</figure>
-<figure>
-    <blockquote cite="https://www.brainyquote.com/authors/satya-nadella-quotes">
-        <p>"The industry does not respect tradition; it only respects innovation."</p>
-    </blockquote>
-    <figcaption>—Satya Nadella</figcaption>
-</figure>
-<figure>
-    <blockquote cite="https://www.brainyquote.com/authors/peter-drucker-quotes">
-        <p>"Culture eats strategy for breakfast."</p>
-    </blockquote>
-    <figcaption>—Peter Drucker</figcaption>
-</figure>
-<figure>
-    <blockquote cite="https://www.brainyquote.com/authors/albert-einstein-quotes">
-        <p>"We cannot solve our problems with the same thinking we used when we created them."</p>
-    </blockquote>
-    <figcaption>—Albert Einstein</figcaption>
-</figure>
+        """<!DOCTYPE html>
+<html>
 
-""", height=1000
+<head>
+  <title>Nurturing Innovation Technology Leadership: Balancing Continuous Progress and Core Deliverables</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    h3 {
+      color: blue;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    blockquote {
+      background-color: #f9f9f9;
+      border-left: 10px solid #333;
+      padding: 15px;
+      margin: 0 0 20px;
+      
+    }
+
+    blockquote:before {
+      color: #777;
+      content: open-quote;
+      font-size: 80px;
+      line-height: 0.1em;
+      margin-right: 5px;
+      vertical-align: -0.4em;
+    }
+
+    blockquote p {
+      display: inline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Technology Leadership and Nurturing Innovation : Balancing Continuous Progress and Core Deliverables</h1>
+    <h3>William Collins, 2022</h3>
+  <p>Introduction:</p>
+  
+  <blockquote>
+    <p>"Innovation is seeing what everybody has seen and thinking what nobody has thought." - Elon Musk</p>
+  </blockquote>  
+
+  <p>These words epitomize the essence of technological progress and the critical role of innovation in driving growth and success. In today's fast-paced and competitive landscape, organizations need visionary leaders who can foster a culture of constant innovation while effectively managing the delivery of core engineering and product commitments. This article explores the significance of innovation technology leadership and how collaboration with engineering and other teams can ensure a seamless integration of innovation into everyday workflows.</p>
+
+  <h2>The Role of Innovation Technology Leadership</h2>
+
+  <p>Innovation technology leadership encompasses the ability to identify emerging trends, leverage cutting-edge technologies, and create an environment that encourages experimentation and breakthrough thinking. It requires a visionary mindset, strategic decision-making, and effective communication to align diverse teams towards a common goal. A strong innovation leader understands the importance of balancing the pursuit of new ideas with the need to deliver on existing commitments.</p>
+
+  <h2>Cultivating a Culture of Innovation</h2>
+  
+  <blockquote>
+    <p>  "Leadership in the digital age requires a deep understanding of technology and the ability to leverage it to create new opportunities and value for the organization." - Sheryl Sandberg</p>
+  </blockquote>
+
+  <p>To foster a culture of innovation, leaders must create an environment that encourages curiosity, risk-taking, and collaboration. This can be achieved through initiatives such as dedicated innovation labs, cross-functional brainstorming sessions, hackathons, or regular knowledge-sharing forums. By empowering team members to explore new possibilities and providing them with the necessary resources and support, leaders can unleash their creative potential.</p>
+
+  <h2>Collaboration on Innovation between External and Engineering Teams</h2>
+  
+    <blockquote>
+  <p>"A leader's role is not to control people or outcomes, but to create an environment where innovation and creativity can flourish." - Richard Branson</p>
+  </blockquote>
+    
+  <p>Collaboration between external and engineering teams is crucial for seamless integration of new ideas into existing products and processes. Regular communication and alignment of goals help ensure that innovation initiatives are in sync with engineering timelines and milestones. Leaders can facilitate collaboration by promoting open dialogue, establishing feedback loops, and fostering a culture of mutual respect and trust. Engaging engineering teams early in the innovation process allows for efficient planning and resource allocation.</p>
+
+  <h2>Agile Frameworks for Innovation</h2>
+
+  <p>Adopting agile methodologies can significantly enhance innovation while minimizing disruption to core deliverables. Agile frameworks, such as Scrum or Kanban, enable iterative development, continuous feedback, and rapid prototyping. By breaking down innovation projects into smaller, manageable tasks, leaders can facilitate parallel progress, allowing engineering teams to balance their commitments effectively. Regular retrospectives and adaptability to changing priorities ensure that innovation efforts remain aligned with organizational objectives.</p>
+
+  <h2>Maintaining Focus on Core Engineering and Product Deliverables</h2>
+
+  <p>While fostering innovation is crucial, leaders must not lose sight of the importance of delivering on core engineering and product commitments. Striking the right balance requires effective prioritization, resource allocation, and clear communication of expectations. Leaders should set realistic timelines, ensure sufficient support for ongoing projects, and empower teams to manage their workloads effectively. By establishing a culture of accountability and providing necessary tools and frameworks, leaders can maintain momentum in innovation while ensuring timely delivery of key deliverables.</p>
+
+  <p>Conclusion:</p>
+  <blockquote>
+    <p>"Innovation distinguishes between a leader and a follower." - Steve Jobs</p>
+  </blockquote>
+
+  <p>As we strive toward having an innovate mindset, it is good to also remember the words of Steve Jobs, "Innovation is not about saying yes to everything. It's about saying no to all but the most crucial features." Embracing this mindset, innovation technology leaders can guide their teams towards transformative breakthroughs, driving organizations to new heights of achievement and excellence.</p>
+
+</body>
+
+</html>
+""", height=10000
     )
 
 def utilities_page():
