@@ -462,6 +462,25 @@ def innovation_page():
     blockquote p {
       display: inline;
     }
+    
+        .signature {
+      font-family: cursive;
+      font-size: 18px;
+      padding: 10px;
+      display: inline-block;
+
+    }
+    
+    .name {
+      display: block;
+    }
+    
+    .date {
+      display: block;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+
   </style>
 </head>
 
@@ -511,6 +530,10 @@ def innovation_page():
 
   <p>As we strive toward having an innovate mindset, it is good to also remember the words of Steve Jobs, "Innovation is not about saying yes to everything. It's about saying no to all but the most crucial features." Embracing this mindset, innovation technology leaders can guide their teams towards transformative breakthroughs, driving organizations to new heights of achievement and excellence.</p>
 
+  <div class="signature">
+    <span class="name">-William Collins, 2023</span>
+  </div>
+  
 </body>
 
 </html>
