@@ -570,19 +570,20 @@ def contact_page():
                        f' This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
 
 # Other functions
-def download_resume(filename="./resumes/Resume_WCollins_04_2023.2_TechMgmt.pdf", loc='main'""):
+filename = "./resumes/Resume_WCollins_05_2023.3_TechMgmt.pdf"
+def download_resume(filename=filename, loc='main'""):
     with open(filename, "rb") as pdf_file:
         PDFbyte = pdf_file.read()
 
         if loc == "sidebar" or loc == None:
             resume_download = st.sidebar.download_button(label="Download Resume",key='dufhqiew',
                            data=PDFbyte,
-                           file_name="Resume_WCollins_04_2023.2_TechMgmt.pdf",
+                           file_name=filename,
                            mime='application/octet-stream')
         else:
             resume_download = st.download_button(label="Download Resume",
                              data=PDFbyte,
-                             file_name="Resume_WCollins_04_2023.2_TechMgmt.pdf",
+                             file_name=filename,
                              mime='application/octet-stream')
 
         if resume_download:
