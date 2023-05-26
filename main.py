@@ -6,7 +6,6 @@
 
 import streamlit as st
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
 import streamlit.components.v1 as components
 
 # Page functions
@@ -413,65 +412,81 @@ def innovation_page():
 
     components.html(
         """
-        <h1>The Art of Innovation in Technology: Forging the Path of Endless Possibilities - William Collins</h1>
+        
+        
+        <figure>
+    <blockquote cite="https://www.brainyquote.com/authors/steve-jobs-quotes">
+        <p>"Innovation distinguishes between a leader and a follower."</p>
+    </blockquote>
+    <figcaption>—Steve Jobs</figcaption>
+</figure>
+<figure>
+    <blockquote cite="https://www.brainyquote.com/authors/elon-musk-quotes">
+        <p>"I think it's very important to have a feedback loop where you're constantly thinking about what you've done and how you could be doing it better."</p>
+    </blockquote>
+    <figcaption>—Elon Musk</figcaption>
+</figure>
+<figure>
+    <blockquote cite="https://www.brainyquote.com/authors/steve-jobs-quotes">
+        <p>"Creativity is just connecting things."</p>
+    </blockquote>
+    <figcaption>—Steve Jobs</figcaption>
+</figure>
+<figure>
+    <blockquote cite="https://www.brainyquote.com/authors/thomas-edison-quotes">
+        <p>"I have not failed. I've just found 10,000 ways that won't work."</p>
+    </blockquote>
+    <figcaption>—Thomas Edison</figcaption>
+</figure>
+<figure>
+    <blockquote cite="https://www.brainyquote.com/authors/bill-gates-quotes">
+        <p>"Your most unhappy customers are your greatest source of learning."</p>
+    </blockquote>
+    <figcaption>—Bill Gates</figcaption>
+</figure>
+<figure>
+    <blockquote cite="https://www.brainyquote.com/authors/jeff-bezos-quotes">
+        <p>"Constraints drive innovation."</p>
+    </blockquote>
+    <figcaption>—Jeff Bezos</figcaption>
+</figure>
+<figure>
+    <blockquote cite="https://www.brainyquote.com/authors/satya-nadella-quotes">
+        <p>"The industry does not respect tradition; it only respects innovation."</p>
+    </blockquote>
+    <figcaption>—Satya Nadella</figcaption>
+</figure>
+<figure>
+    <blockquote cite="https://www.brainyquote.com/authors/peter-drucker-quotes">
+        <p>"Culture eats strategy for breakfast."</p>
+    </blockquote>
+    <figcaption>—Peter Drucker</figcaption>
+</figure>
+<figure>
+    <blockquote cite="https://www.brainyquote.com/authors/albert-einstein-quotes">
+        <p>"We cannot solve our problems with the same thinking we used when we created them."</p>
+    </blockquote>
+    <figcaption>—Albert Einstein</figcaption>
+</figure>
 
-<p>Innovation in technology is not just about creating something new; it's about pushing the boundaries of what is possible, disrupting the status quo, and shaping the future. Being an innovator requires a unique set of qualities, a relentless pursuit of excellence, and the ability to navigate through challenges. Let's explore what it means to be an innovator in technology and how it can transform industries and change the world.</p>
-
-<h2>Vision, Passion, and Connecting the Dots</h2>
-
-<p>At the heart of innovation lies vision. Innovators have the ability to see beyond the present and envision a future that others may not yet perceive. As Steve Jobs once said, "Innovation distinguishes between a leader and a follower." Visionaries are not afraid to challenge conventional wisdom and imagine new possibilities.</p>
-
-<p>Passion fuels innovation. It is the burning desire to make a difference, to solve complex problems, and to improve the world through technology. As Elon Musk once said, "I think it's very important to have a feedback loop where you're constantly thinking about what you've done and how you could be doing it better."</p>
-
-<p>Connecting the dots is another critical aspect of innovation. Innovators have the ability to identify patterns, draw insights from diverse sources, and synthesize information to create breakthrough solutions. As Steve Jobs famously said, "Creativity is just connecting things."</p>
-
-<h2>Overcoming Challenges: Embracing the Unknown</h2>
-
-<p>Innovation is not without its challenges. It requires stepping into the unknown, taking risks, and embracing failure as a learning opportunity. Thomas Edison once said, "I have not failed. I've just found 10,000 ways that won't work." Innovators persevere through setbacks and setbacks, using them as stepping stones to further refine their ideas.</p>
-
-<p>Moreover, innovators must navigate through resistance and skepticism. As Bill Gates once said, "Your most unhappy customers are your greatest source of learning." They listen to feedback, adapt their approaches, and continuously iterate to meet evolving needs.</p>
-
-<p>Resource constraints can also pose challenges. Innovators must find creative solutions within limited resources, leveraging their ingenuity and thinking outside the box. As Jeff Bezos once said, "Constraints drive innovation."</p>
-
-<h2>Marrying Innovation with Business Goals: Staying Relevant and Competitive</h2>
-
-<p>Innovation should not exist in a vacuum; it must be aligned with business goals. Innovators understand the importance of creating solutions that add value to customers and drive growth. They constantly evaluate the market landscape, identify emerging trends, and seek opportunities to disrupt and innovate.</p>
-
-<p>In today's rapidly changing technology industry, staying relevant and competitive is crucial. Innovators must continuously learn, adapt, and evolve. As Satya Nadella once said, "The industry does not respect tradition; it only respects innovation."</p>
-
-<h2>Innovation as Part of our DNA: Collaboration and Culture</h2>
-
-<p>Innovation cannot thrive in isolation. Leaders must foster a culture of innovation within their organizations, where it becomes ingrained in the DNA of the company. This requires collaboration, open communication, and an environment that encourages experimentation and taking risks.</p>
-
-<p>Leaders must work closely with their teams, peers, and engineering teams to create a collective mindset that embraces innovation. As Peter Drucker once said, "Culture eats strategy for breakfast." Innovation should not be something we plan on doing; it should be an integral part of who we are, how we think, and how we approach challenges.</p>
-
-<p>Innovation requires a diverse and inclusive environment that embraces different
-
- perspectives and ideas. As Albert Einstein once said, "We cannot solve our problems with the same thinking we used when we created them." By fostering a culture of diversity and inclusion, leaders can unlock the full potential of their teams and drive innovation.</p>
-
-<h2>Conclusion</h2>
-
-<p>Being an innovator in technology goes beyond creating something new; it is about envisioning a better future, challenging the status quo, and making a lasting impact. Innovators possess vision, passion, and the ability to connect the dots. They overcome challenges, marry innovation with business goals, and remain relevant and competitive in a rapidly changing industry.</p>
-
-<p>By nurturing a culture of collaboration and innovation, leaders can inspire their teams to push the boundaries of what is possible and create transformative solutions. Together, we can shape the future and leave a lasting legacy in the world of technology.</p>
 """, height=1000
     )
 
 def utilities_page():
     st.image(f'./images/tech_image_innovation.jpg', width=250)
     st.title("Utilities")
-    st.write("Useful utilities to manage your profile site...")
+    st.write("Useful utilities/code to manage your site...")
     st.write(f'Convert docx file to markdown: [link](https://docx-to-markdown.streamlit.app)')
     st.write(f'Streamlit Deployment Options [link](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)')
+    st.caption(f'...more coming soon!')
 
 def articles_page():
     st.image('./images/tech_image_5.jpg', width=250)
 
     st.title("Articles:  Author:  William Collins")
-    with st.expander(f'Article: Pandas AI: Revolutionizing Generative AI with a Powerful Python Library'):
+    with st.expander(f'Article: :blue[Pandas AI: Revolutionizing Generative AI with a Powerful Python Library]'):
         st.write("""**Title: Pandas AI: Revolutionizing Generative AI with a Powerful Python Library**
-
-**Introduction**
+over**Introduction**
 
 Generative Artificial Intelligence (AI) has emerged as a groundbreaking technology, enabling machines to create new and original content. It has found applications in various domains, including art, music, and text generation. Pandas AI, a Python library, has rapidly gained recognition for its ability to support Generative AI tasks. This article explores the impact of Pandas AI on the field of Generative AI, highlighting its capabilities and discussing its potential for revolutionizing data analysis and content generation.
 
@@ -500,6 +515,37 @@ Pandas AI has had a significant impact on the field of Generative AI, revolution
 **3. Future Implications and Conclusion**
 
 Pandas AI has already made a significant impact on Generative AI by enabling enhanced data analysis, creative content generation, rapid prototyping, and democratization of generative modeling. Looking ahead, it is""")
+    with st.expander(f'Article: :blue[Harnessing the Power of Generative AI]: Revolutionizing Collaboration between Product and Engineering Teams'):
+        st.write("""Harnessing the Power of Generative AI: Revolutionizing Collaboration between Product and Engineering Teams
+
+Accelerating Iterative Processes, Visualization, and Stakeholder Engagement
+
+William Collins, CR 2023 – All Rights Reserved.  Publish date: 05/26/2023
+
+Introduction:
+Effective collaboration between product and engineering teams is the backbone of successful product development. With the advent of generative AI, this collaboration can reach new heights, enabling accelerated iteration, enhanced visualization, and deeper engagement with stakeholders and customers. In this article, we will explore how generative AI can revolutionize the way product and engineering teams work together, fostering innovation, efficiency, and customer-centricity.
+
+Streamlining Iterative Processes:
+Generative AI tools offer a transformative way to streamline iterative processes within product and engineering teams. By leveraging machine learning algorithms, these tools can analyze vast amounts of data, user feedback, and market trends to generate valuable insights and recommendations. Product managers can use generative AI to uncover patterns, identify user preferences, and refine product requirements with greater precision.
+
+Through iterative discussions facilitated by generative AI, product managers and engineering teams can quickly iterate on design concepts, features, and functionality. Real-time collaboration platforms powered by generative AI allow for seamless communication and feedback exchange, enabling teams to iterate rapidly and make informed decisions throughout the product development lifecycle.
+
+Rapid Prototyping and Visualization:
+Generative AI tools provide powerful capabilities for rapid prototyping and visualization, enabling product and engineering teams to bring concepts to life swiftly. With the ability to generate visual representations of product features, interfaces, and user interactions, teams can better understand the proposed solutions and identify potential issues early on.
+
+Using generative AI, product managers and engineering teams can create interactive prototypes that simulate user experiences, allowing stakeholders and customers to provide valuable feedback. These prototypes can be iteratively refined based on feedback, ensuring that the final product meets user expectations.
+
+Enhanced Stakeholder and Customer Engagement:
+Generative AI facilitates deeper engagement with stakeholders and customers throughout the product development process. By generating data-driven insights, product managers can present compelling arguments to stakeholders, backed by quantitative evidence. This empowers them to advocate for product decisions and secure buy-in from key stakeholders.
+
+Furthermore, generative AI tools can help product managers capture and analyze user feedback at scale, enabling them to identify emerging trends, pain points, and areas for improvement. By integrating this feedback into the development cycle, product and engineering teams can enhance the user experience and ensure that the final product aligns with customer needs.
+
+Conclusion:
+Generative AI represents a paradigm shift in how product and engineering teams collaborate, iterate, and engage with stakeholders and customers. By harnessing the power of machine learning and data-driven insights, teams can streamline iterative processes, rapidly prototype and visualize solutions, and create stronger connections with stakeholders and customers.
+
+The adoption of generative AI empowers product and engineering teams to drive innovation, make informed decisions, and deliver products that truly meet customer expectations. As the possibilities of generative AI continue to expand, the collaboration between product and engineering teams will become even more efficient, leading to groundbreaking products that shape the future.
+
+""")
     st.write("Article: [IoT and Smart Dust](https://www.linkedin.com/pulse/internet-things-smart-dust-you-risk-william-collins-jr-/)")
     st.write("Article: [The Internet of Things and its Application by Industry](https://www.linkedin.com/pulse/internet-things-its-application-industry-william-collins-jr-/)")
     st.write("Article: [IoT Technologies and Communication Protocols - A Brief Overview and Reference](https://www.linkedin.com/pulse/iot-technologies-communication-protocols-brief-william-collins-jr-/)")
@@ -538,7 +584,6 @@ def download_resume(filename="./resumes/Resume_WCollins_04_2023.2_TechMgmt.pdf",
                              data=PDFbyte,
                              file_name="Resume_WCollins_04_2023.2_TechMgmt.pdf",
                              mime='application/octet-stream')
-
 
         if resume_download:
             if loc == 'sidebar':
