@@ -56,7 +56,6 @@ def about_page():
         In summary, William W. Collins Jr. is a seasoned technology and software engineering management professional with a diverse skillset and extensive experience leading global teams and driving innovation in various industries. He is a strategic thinker, hands-on leader, and expert in emerging technologies, and he has a strong track record of success in product development, software engineering, and pre-sales support.
          """)
 
-@st.cache_data
 def resume_page():
     col1, col2 = st.columns(2, gap='small')
     with col1:
