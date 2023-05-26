@@ -486,7 +486,7 @@ def innovation_page():
 
 <body>
   <h1>Technology Leadership and Nurturing Innovation : Balancing Continuous Progress and Core Deliverables</h1>
-    <h3>William Collins, 2022</h3>
+    <h3>William Collins, 2023</h3>
   <p>Introduction:</p>
   
   <blockquote>
