@@ -72,11 +72,11 @@ python-docx==0.8.11
 python-dotenv==1.0.0
 python-pptx==0.6.21
 pytz==2023.3
+pywin32==306
 PyYAML==6.0
 regex==2023.5.5
 requests==2.30.0
 rich==13.3.5
-six==1.12.0
 smart-open==6.3.0
 smmap==5.0.0
 sortedcontainers==2.4.0
