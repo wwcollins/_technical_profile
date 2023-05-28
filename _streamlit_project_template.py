@@ -2,8 +2,6 @@
 import os
 import time
 import streamlit as st
-import requests
-import json
 from dotenv import load_dotenv
 
 PAGE_TITLE = "Template"
