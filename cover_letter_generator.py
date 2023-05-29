@@ -139,7 +139,7 @@ NOTICE_APP_INFO = ":blue[Free Limited Research Preview]. This app may produce in
 
 # Load the dotenv file
 load_dotenv()
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
 
 # Set Styles refs: https://medium.com/@avra42/streamlit-python-cool-tricks-to-make-your-web-application-look-better-8abfc3763a5b
 st.set_option('deprecation.showPyplotGlobalUse', False)  # disable error gen
@@ -210,6 +210,7 @@ def generate_cover_letter(prompt, cover_letter):
     return updated_cover_letter
 
 def generate_chat_completion(messages, model=DEFAULT_MODEL, temperature=1, max_tokens=None):
+
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {st.session_state.open_api_key}",
@@ -261,6 +262,14 @@ def count_lines(file_name):
 
 # Create the form using Streamlit
 def main():
+
+    st.sidebar.subheader(f'Settings')
+
+    open_api_key_input = st.sidebar.text_input(f':green[Enter your OpenAPI key if you have one or get one at: https://platform.openai.com/account/api-keys]', type='password') # text_input("Enter a password", type="password")
+    if open_api_key_input:  # https://platform.openai.com/account/api-keys
+        st.session_state.open_api_key = open_api_key_input
+        st.sidebar.caption(f'Key added..')
+
     col1, col2 = st.columns(2)
     with col1:
         st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=150)
@@ -284,19 +293,28 @@ def main():
 
     with st.expander(f'What this app does...'):
         """
-        This Streamlit Python code creates a web application for generating a cover letter. It uses the Streamlit library for building the user interface and interacts with the OpenAI API for generating the updated cover letter.
+        This code is a Python script that creates a web application for generating an updated cover letter. The application uses the Streamlit library for building the user interface and interacts with the OpenAI API to generate the updated cover letter.
 
 Here's a breakdown of the code:
 
-1. The code imports necessary modules, including `os`, `time`, `streamlit`, `requests`, `json`, and `dotenv`.
+1. The necessary modules are imported, including `os`, `time`, `streamlit`, `requests`, `json`, and `dotenv`.
+
 2. Several constants are defined, such as the API endpoint for the OpenAI API, default prompts and user information, and sample cover letter and job description texts.
+
 3. The code loads environment variables from a `.env` file using the `load_dotenv()` function.
+
 4. Some Streamlit configurations are set to hide the menu and footer.
+
 5. Utility functions are defined for generating a random string and writing text to a file.
+
 6. The `generate_cover_letter` function sends a request to the ChatGPT API to generate an updated cover letter based on a given prompt and the current cover letter. The response is parsed, and the updated cover letter is extracted.
+
 7. The `generate_chat_completion` function sends a request to the OpenAI API to generate a chat completion based on the provided messages, model, temperature, and max tokens. The response is parsed, and the generated message content is returned.
-8. The `main` function creates the user interface using Streamlit. It includes input fields for name, engineering prompt, current cover letter, and job description. When the "Generate Cover Letter" button is clicked, the `generate_chat_completion` function is called to generate the updated cover letter. The original and revised cover letters are displayed in separate columns, and the updated cover letter is also written to a file.
+
+8. The `main` function creates the user interface using Streamlit. It includes input fields for the name, engineering prompt, current cover letter, and job description. When the "Generate Cover Letter" button is clicked, the `generate_chat_completion` function is called to generate the updated cover letter. The original and revised cover letters are displayed in separate columns, and the updated cover letter is also written to a file.
+
 9. The `show_progress_bar` function displays a progress bar during long-running operations.
+
 10. Finally, the `main` function is called to run the application.
 
 Overall, this code sets up a web application that allows users to generate an updated cover letter by interacting with the OpenAI API.
@@ -312,40 +330,47 @@ Overall, this code sets up a web application that allows users to generate an up
     if "cover_letter" not in st.session_state:
         st.session_state.cover_letter = CURRENT_COVERLETTER
     if "job_description" not in st.session_state:
-        st.session_state.job_description = TEST_JOB_DESCRIPTION
+        # st.session_state.job_description = TEST_JOB_DESCRIPTION
+        st.session_state.job_description = ""
+
+
+    OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+    if OPENAI_API_KEY:
+        st.session_state.open_api_key = OPENAI_API_KEY
+        # st.sidebar.caption(f'key={OPENAI_API_KEY}')
+
     if "open_api_key" not in st.session_state:  # TODO looking at bitwarden for secrets solution
         st.session_state.open_api_key = ""
+        st.sidebar.caption(f'API key not found')
 
     # Input fields
 
     # initialize session variables and assign values
 
-    st.write("Name:")
+    st.subheader("Name:")
     # st.session_state.name = st.text_input("", st.session_state.name)
-    st.session_state.name = st.text_input("Enter your first and last name...", st.session_state.name)
+    st.session_state.name = st.text_input(f':blue[Enter your first and last name...]', st.session_state.name)
 
-    st.write("Engineering Prompt:")
+    st.subheader("Engineering Prompt:")
     # st.session_state.prompt = st.text_area("prompt", st.session_state.prompt, value=DEFAULT_ENGINEERING_PROMPT)
-    st.session_state.prompt = st.text_area("You can use this prompt as is or edit it...", st.session_state.prompt, key=generate_random_string(10))
+    st.session_state.prompt = st.text_area(f':blue[You can use this prompt as is or edit it...]', st.session_state.prompt, key='adfkasdf')
 
-    st.write("Current Cover Letter:")
+    st.subheader("Current Cover Letter:")
     # st.session_state.cover_letter = st.text_area("Paste your existing coverletter here or edit...", st.session_state.cover_letter, key=generate_random_string(10))
-    st.session_state.cover_letter = st.text_area("Paste your existing coverletter here or edit...", st.session_state.cover_letter, key=generate_random_string(10))
+    st.session_state.cover_letter = st.text_area(f':blue[Paste your existing coverletter here or edit...]', st.session_state.cover_letter, key='werwer')
 
-    st.write("Job Description:")
+    st.subheader("Job Description:")
     # st.session_state.job_description = st.text_area("Paste the job description here", st.session_state.job_description, key=generate_random_string(10))
-    st.session_state.job_description = st.text_area("Paste the job description here", st.session_state.job_description, key=generate_random_string(10))
+    st.session_state.job_description = st.text_area(f":blue[Paste the job description here]", st.session_state.job_description, key='rnfenrj')
 
-    st.sidebar.subheader(f'Settings')
+   # st.sidebar.caption(f':blue[job description]: {st.session_state.job_description}')
 
-    open_api_key_input = st.sidebar.text_input(f'Enter your OpenAPI key if you have one or get one at https://platform.openai.com/account/api-keys', type='password') # text_input("Enter a password", type="password")
-    if open_api_key_input:  # https://platform.openai.com/account/api-keys
-        st.session_state.open_api_key = open_api_key_input
-        st.sidebar.caption(f'Key added..')
 
     # Generate updated cover letter when the button is clicked
 
     if st.button("Generate My Cover Letter"):
+        # st.sidebar.caption(f':blue[job description]: {st.session_state.job_description}')
+
         messages = [
             {"role": "system", "content": "You are the candidate."},
             {"role": "user", "content": st.session_state.prompt}, # {"role": "user", "content": DEFAULT_ENGINEERING_PROMPT}
