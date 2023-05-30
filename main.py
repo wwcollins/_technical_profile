@@ -688,6 +688,7 @@ def main():
     st.sidebar.caption(f'Location: Austin, TX    '
                f'[Email]("mailto:williamwcollinsjr@gmail.com)    '
                f'Phone: 940.503.8195  '
+               f' Schedule a meeting on my calendar: [link](https://calendly.com/wwcjr/meeting)'
                f'[LinkedIn](https://linkedin.com/in/williamwcollins)    '
                f'[Discord server](https://discord.com/channels/1108234455010787330/1108234455614754870)  '
                f'[Technical Profile](https://wwcollins-profile.streamlit.app)  ')
