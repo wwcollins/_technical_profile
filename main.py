@@ -634,6 +634,7 @@ def contact_page():
                        f' Email: [link](williamwcollinsjr@gmail.com)\n '
                        f' Phone: 940.503.8195\n'
                        f' LinkedIn: LinkedIn [link](linkedin.com/in/williamwcollins)\n'
+                       f' Schedule a meeting on my calendar: [link](https://calendly.com/wwcjr/meeting)'
                        f' discord server: [link](discord.com/channels/1108234455010787330/1108234455614754870)'
                        f' This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
 
