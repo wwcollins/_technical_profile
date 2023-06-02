@@ -351,9 +351,37 @@ Overall, this code sets up a web application that allows users to generate an up
     # st.session_state.name = st.text_input("", st.session_state.name)
     st.session_state.name = st.text_input(f':blue[Enter your first and last name...]', st.session_state.name)
 
-    st.subheader("Engineering Prompt:")
+    def on_button1_clicked():
+        st.session_state.prompt = f'create a professional updated Cover Letter from the current ' \
+                                  f'cover letter and the job description'
+
+    def on_button2_clicked():
+        st.session_state.prompt = f'create a professional Message from the job description and the ' \
+                                  f'current cover letter regarding why {st.session_state.name} would want to in this role work at this company'
+
+    def on_button3_clicked():
+        st.session_state.prompt = 'create a 100 word or less professional THANK YOU letter regarding ' \
+                                  'the role and the company'
+
+    def on_button4_clicked():
+        st.session_state.prompt = 'create a 100 word or less professional THANK YOU letter on NOT being selected for the role at company'
+
+    # st.text_area("Enter text", key="text")
+
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.button("Cover Letter", on_click=on_button1_clicked)
+    with col2:
+        st.button("Why this Role", on_click=on_button2_clicked)
+    with col3:
+        st.button("Thanks-Selected", on_click=on_button3_clicked)
+    with col4:
+        st.button("Thank-NotSel", on_click=on_button4_clicked)
+
+    # st.subheader("Engineering Prompt:")
     # st.session_state.prompt = st.text_area("prompt", st.session_state.prompt, value=DEFAULT_ENGINEERING_PROMPT)
-    st.session_state.prompt = st.text_area(f':blue[You can use this prompt as is or edit it...]', st.session_state.prompt, key='adfkasdf')
+    st.session_state.prompt = st.text_area(f"':blue[You can use this prompt as is or edit it...']", st.session_state.prompt, key='adfkasdf')
+
 
     st.subheader("Current Cover Letter:")
     # st.session_state.cover_letter = st.text_area("Paste your existing coverletter here or edit...", st.session_state.cover_letter, key=generate_random_string(10))
@@ -368,7 +396,7 @@ Overall, this code sets up a web application that allows users to generate an up
 
     # Generate updated cover letter when the button is clicked
 
-    if st.button("Generate My Cover Letter"):
+    if st.button("Generate My Cover Letter/Other"):
         # st.sidebar.caption(f':blue[job description]: {st.session_state.job_description}')
 
         messages = [
