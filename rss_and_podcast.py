@@ -339,6 +339,7 @@ def display_feed(feed):
             st.subheader(f'Article {i}. {entry.title}')
             st.write(f'**:blue[URL:]** {entry.link}')
             st.sidebar.caption(f'Article {i}. {entry.title} [link]({entry.link})')
+            st.caption(f'Summary: {entry.summary}')
 
             with st.expander(f'full report...'):
                 html = f'{entry.content[0].value}'
@@ -362,6 +363,7 @@ def display_rss_feed_xml(url):
         st.subheader(entry.title)
         st.write(entry.published)
         st.write(entry.summary)
+        # st.write(entry.value)  # throws exception
         st.write(entry.link)
         with st.expander("full report..."):
             st.caption(entry)  #  todo feature enhance -
