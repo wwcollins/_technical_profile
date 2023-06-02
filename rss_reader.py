@@ -1,48 +1,35 @@
+import os
 import feedparser
 import streamlit as st
 import streamlit.components.v1 as components
 
+import dotenv
+
+
 hide_streamlit_style = """
-                <style>
-                ul.streamlit-expander {
-                border: 0 !important;}
-                
-                div[data-testid="stToolbar"] {
-                visibility: hidden;
-                height: 0%;
-                position: fixed;
-                }
-                div[data-testid="stDecoration"] {
-                visibility: hidden;
-                height: 0%;
-                position: fixed;
-                }
-                div[data-testid="stStatusWidget"] {
-                visibility: hidden;
-                height: 0%;
-                position: fixed;
-                }
-                #MainMenu {
-                visibility: hidden;
-                height: 0%;
-                }
-                header {
-                visibility: hidden;
-                height: 0%;
-                }
-                footer {
-                visibility: hidden;
-                height: 0%;
-                }
-                </style>
-                """
+<style>
+ul.streamlit-expander {
+    border: 0 !important;
+}
+div[data-testid="stToolbar"],
+div[data-testid="stDecoration"],
+div[data-testid="stStatusWidget"],
+#MainMenu,
+header,
+footer {
+    visibility: hidden;
+    height: 0%;
+    position: fixed;
+}
+</style>
+"""
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 
 # Function to fetch and parse the RSS feed
 def parse_feed(feed_url):
     feed = feedparser.parse(feed_url)
     return feed
-
 
 def split_string(string):
     # Split the string into sentences
@@ -70,46 +57,85 @@ def split_string(string):
     return first_100_words.strip(), remainder.strip()
 
 
-# Example usage
-# input_string = "This is the first sentence. This is the second sentence. This is the third sentence. This is the fourth sentence."
-# first_100, remaining = split_string(input_string)
-# print("First 100 words:", first_100)
-# print("Remaining sentences:", remaining)
-
-
 # Function to display the parsed feed
 def display_feed(feed):
-    # st.write(f'{feed}')
-
     st.caption(f'{len(feed.entries)} feeds found...')
-    i=1
+    i = 1
     try:
         for entry in feed.entries:
             first_100, remaining = split_string(entry.content[0].value)
             st.subheader(f'Article {i}. {entry.title}')
             st.write(f'**:blue[URL:]** {entry.link}')
-            # st.subheader(f'{i}. {first_100}')
-            # st.markdown(f'{first_100}...', unsafe_allow_html=True)
             st.sidebar.caption(f'Article {i}. {entry.title} [link]({entry.link})')
-            #     st.write(f'Streamlit Deployment Options [link](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)')
-
-            # components.html(entry.content[0].value)  # Display the HTML content of the entry
-            # st.write(f'{entry.content[0].value}')
-            # only return the first sentence or 2 from content then more... for expander
 
             with st.expander(f'full report...'):
                 html = f'{entry.content[0].value}'
                 st.markdown(f'{html}', unsafe_allow_html=True)
-                i+=1
+                i += 1
             st.caption('---')
     except Exception as e:
         st.caption(f'Error: {e}')
 
 
+def display_rss_feed_xml(url):
+    # Parsing the RSS feed
+    feed = feedparser.parse(url)
+
+    # Displaying feed information
+    st.title(feed.feed.title)
+    st.write(feed.feed.description)
+
+    # Displaying feed items
+    for entry in feed.entries:
+        st.subheader(entry.title)
+        st.write(entry.published)
+        st.write(entry.summary)
+        st.write("---")
+
+def check_url_xml(url):
+    if url.endswith(".xml"):
+        #display_rss_feed_xml(url)
+        st.sidebar.error("xml type URL '.xml'. found")
+        return True
+    else:
+        return False
+
+
+# todo https://podcastindex.org
+# todo research https://github.com/tbowers/python-podcastindex-org-lambda/blob/main/README.md
+# todo https://podcastindex-org.github.io/docs-api/#overview--example-code
+
 # Main function
 def main():
     st.title("RSS Feed Reader")
-    # Enter the RSS feed URL
+    uploaded_files = st.file_uploader("Upload RSS feed files", accept_multiple_files=True)
+    st.caption(f'{len(uploaded_files)} files selected')
+    if uploaded_files:
+        for file in uploaded_files:
+
+            if file.type:  # todo a check for this initially did not work. create more elegant code if poss
+                content = file.read().decode('utf-8')
+                urls = content.split('\n')
+                st.caption(f'{len(urls)} urls found in file {file}')
+                for url in urls:
+                    st.caption(f'processing {url}...')
+                    # check to see if url ends with .xml
+                    if check_url_xml(url):
+                        display_rss_feed_xml(url)
+                        continue
+                    url = url.strip()
+                    if url:
+
+                        try:
+                            feed = parse_feed(url)
+                            display_feed(feed)
+                        except Exception as e:
+                            st.caption(f'Error: {e}')
+                    else:
+                        st.warning("Empty URL found in the file.")
+            else:
+                st.warning("Invalid file format. Please upload a text file.")
+
     feed_url = st.text_input("Enter RSS feed URL")
     st.sidebar.caption(f'Articles for {feed_url}')
 
@@ -122,6 +148,7 @@ def main():
                 st.caption(f'Error: {e}')
         else:
             st.warning("Please enter a valid RSS feed URL")
+
 
 if __name__ == "__main__":
     main()
