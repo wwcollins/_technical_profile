@@ -540,6 +540,68 @@ def innovation_page():
 """, height=10000
     )
 
+def cybersecurity_page():
+    st.image(f'./images/cyber-security.jpg', width=250)
+    st.title("CyberSecurity")
+    st.write("CyberSecurity Focus Areas and Experience.")
+    st.write(f"""## Cyber Security Focus Areas and Experience:
+
+In Leadership Roles supporting Software Engineering, especially in the SaaS and software engineering space, I brought valuable cybersecurity leadership experience to ensure the protection and integrity of our software products and systems. In my role, I had the following cybersecurity leadership experiences:
+
+1. **Setting Strategic Vision:**
+   - Developed and communicated a clear cybersecurity vision and strategy aligned with the organization's goals.
+   - Stayed updated on the latest cybersecurity trends, threats, and industry best practices to drive continuous improvement.
+   - Defined and prioritized cybersecurity initiatives based on risk assessments and business requirements.
+
+2. **Team Management:**
+   - Built and led high-performing teams which included cybersecurity responsibility, fostering a culture of collaboration, innovation, and accountability.
+   - Provided mentorship and professional development opportunities to team members, ensuring they had the necessary skills to excel in their roles.
+   - Established effective communication channels within the team and across departments to facilitate knowledge sharing and collaboration.
+
+3. **Risk Management:**
+   - Identified and assessed cybersecurity risks across software engineering processes, infrastructure, and products.
+   - Implemented risk mitigation strategies, controls, and frameworks to protect critical assets and data.
+   - Collaborated with stakeholders to ensure a comprehensive understanding of risk appetite and prioritized risk mitigation efforts accordingly.
+
+4. **Compliance and Governance:**
+   - Developed and enforced cybersecurity policies, procedures, and guidelines in alignment with regulatory requirements and industry standards.
+   - Oversaw compliance audits and ensured adherence to relevant frameworks such as ISO 27001, NIST Cybersecurity Framework, and GDPR.
+   - Maintained a strong governance framework, including clear roles and responsibilities, to ensure accountability and oversight of cybersecurity practices.
+
+5. **Collaboration and Communication:**
+   - Collaborated with cross-functional teams, including software development, operations, legal, and executive leadership, to integrate cybersecurity into all aspects of software engineering.
+   - Effectively communicated cybersecurity risks, initiatives, and progress to executive stakeholders and board members.
+   - Served as a cybersecurity advocate and educator, promoting awareness and understanding of cybersecurity principles and best practices throughout the organization.
+
+At the code level, in the area of cybersecurity, there are several important responsibilities related to telemetry, observability, Site Reliability Engineering (SRE), and monitoring. These responsibilities help ensure the security of software systems and enable proactive detection and response to potential security incidents. Let's explore each of these areas:
+
+1. **Telemetry:**
+   - Implementing telemetry mechanisms in the codebase to gather relevant security-related data and metrics.
+   - Capturing and logging security events, such as authentication failures, access control violations, and suspicious activities.
+   - Aggregating telemetry data for analysis, correlation, and identification of potential security threats or anomalies.
+   - Leveraging telemetry to support incident response and forensic investigations.
+
+2. **Observability:**
+   - Building observability capabilities into the code to gain insights into the security posture of the software systems.
+   - Instrumenting the code to generate meaningful logs, metrics, and traces related to security events and behaviors.
+   - Using observability tools and techniques to monitor and analyze the security state of the application in real-time.
+   - Employing anomaly detection algorithms to identify abnormal patterns and potential security breaches.
+
+3. **Site Reliability Engineering (SRE):**
+   - Collaborating with SRE teams to ensure security considerations are integrated into the software development and deployment lifecycle.
+   - Implementing security controls and practices, such as secure configurations, monitoring, and incident response, as part of SRE processes.
+   - Conducting security assessments and testing in SRE environments to identify vulnerabilities and weaknesses.
+   - Collaborating with SRE teams to establish disaster recovery plans and incident response procedures for security incidents.
+
+4. **Monitoring:**
+   - Defining and implementing a comprehensive monitoring strategy for security-related events and indicators.
+   - Utilizing security monitoring tools to collect and analyze logs, network traffic, and system activity for potential security threats.
+   - Setting up alerts and notifications to promptly respond to security incidents and breaches.
+   - Conducting regular audits and reviews of security logs and monitoring systems to ensure their effectiveness and accuracy.
+
+These responsibilities at the code level play a crucial role in enhancing the security posture of software systems. By incorporating telemetry, observability, SRE practices, and monitoring, organizations can gain valuable insights into the security of their applications, detect security incidents in real-time, and respond effectively to mitigate risks. It is important to continually evaluate and improve these processes to stay ahead of emerging security threats and maintain a robust security posture.')
+""")
+
 def utilities_page():
     st.image(f'./images/tech_image_innovation.jpg', width=250)
     st.title("Utilities")
@@ -672,6 +734,7 @@ pages = {
     "📖Questions Answered": questions_answered,
     "📃Technology Portfolio": project_page,
     "💡Innovation": innovation_page,
+    "🔐CyberSecurity": cybersecurity_page,
     "📖Core Beliefs": beliefs_page,
     "⚙ Utilities": utilities_page,
     "📑Articles": articles_page,
