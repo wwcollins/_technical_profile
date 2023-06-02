@@ -301,7 +301,7 @@ def main():
     open_api_key_input = st.sidebar.text_input(f':green[Enter your OpenAPI key if you have one or get one at: https://platform.openai.com/account/api-keys]', type='password') # text_input("Enter a password", type="password")
     if open_api_key_input:  # https://platform.openai.com/account/api-keys
         st.session_state.open_api_key = open_api_key_input
-        st.sidebar.caption(f'Key added..')
+        st.sidebar.caption(f'✅Key added..')
 
     col1, col2 = st.columns(2)
     with col1:
@@ -327,7 +327,7 @@ def main():
     with st.expander(f'What this app does...'):
         """
         Overall, this code creates a web application that utilizes the OpenAI API to generate updated 
-        cover letters and other communications with a prospective empoyer. It provides a user-friendly 
+        cover letters and other communications with a prospective employer. It provides a user-friendly 
         interface for inputting information and displays the 
         original and revised cover letters for comparison. The application aims to assist users in 
         creating professional and tailored cover letters by leveraging a generative AI (AIG) 
