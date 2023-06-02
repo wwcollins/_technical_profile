@@ -250,10 +250,12 @@ def project_page():
     # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
 
     st.subheader(f'AI including Generative AI')
-    st.write(f'✅ Generative AI: Automated Coverletter Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
+    st.write(f'✅ Generative AI: Automated Coverletter and App Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
     st.write(f'✅ Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
     st.write(f'✅ Generative AI: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
     st.write(f'🍵 Generative AI: Personal Job Search Assistant: Search, Match, Scoring and Reporting')
+    st.write(f'✅ Generative AI: Rss and Podcast Automation [link](https://wwcollins-rss-podcast-automation.streamlit.app)')
+
 
     st.subheader(f'Microservices and APIs')
     st.write(f'🍵 Weather and Geolocation Microservices ')
