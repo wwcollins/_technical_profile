@@ -383,7 +383,7 @@ def main():
 
     st.sidebar.subheader(f'Settings')
 
-    open_api_key_input = st.sidebar.text_input(f':green[Enter your OpenAPI key if you have one or get one at: https://platform.openai.com/account/api-keys]', type='password') # text_input("Enter a password", type="password")
+    open_api_key_input = st.sidebar.text_input(f':green[Optional: Enter your OpenAPI key if you have one or get one at: https://platform.openai.com/account/api-keys]', type='password') # text_input("Enter a password", type="password")
     if open_api_key_input:  # https://platform.openai.com/account/api-keys
         st.session_state.open_api_key = open_api_key_input
         st.sidebar.caption(f'✅Key added..')
