@@ -314,6 +314,16 @@ def download_resume(filename=filename, loc='main'):
             else:
                 st.caption(f"Thank you! William Collin's resume will be in your downloads folder.")
 
+import random
+
+def generate_random_numbers(num_digits):
+    random_numbers = [str(random.randint(1, 10)) for _ in range(num_digits)]
+    return ''.join(random_numbers)
+
+# Example usage
+# random_string = generate_random_numbers(5)
+# print(random_string)
+
 
 # Create the form using Streamlit
 def main():
@@ -448,7 +458,7 @@ def main():
 
     st.subheader("Job Description:")
     # st.session_state.job_description = st.text_area("Paste the job description here", st.session_state.job_description, key=generate_random_string(10))
-    st.session_state.job_description = st.text_area(f":blue[Paste the job description here]", st.session_state.job_description, key='rnfenrj')
+    st.session_state.job_description = st.text_area(f":blue[Paste the job description here...]", st.session_state.job_description, key='rnfenrj')
 
    # st.sidebar.caption(f':blue[job description]: {st.session_state.job_description}')
 
@@ -479,9 +489,9 @@ def main():
         with col2:
             # text_area(self, label: str, value: SupportsStr = "")
             st.header("Revised")
-            st.code(label='updated cover letter...', value=updated_cover_letter)
-
-
+            st.text_area(label='updated cover letter...', value=updated_cover_letter)
+            st.button(label='download',key='download_cl',on_click=write2file(updated_cover_letter,
+                filename=f'./resumes/cover_letter_custom.{generate_random_numbers(5)}.txt'))
         with col1:
             st.header("Original Coverleter")
             st.write(CURRENT_COVERLETTER)
