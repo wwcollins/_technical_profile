@@ -453,8 +453,9 @@ def main():
         st.write(f'Engineering Prompt: {st.session_state.prompt}')
 
         with col2:
+            # text_area(self, label: str, value: SupportsStr = "")
             st.header("Revised")
-            st.text_area(updated_cover_letter)
+            st.text_area(label='updated cover letter...', value=updated_cover_letter)
             # todo add download button here? or ?
 
         with col1:
