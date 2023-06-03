@@ -249,6 +249,8 @@ def project_page():
     # st.write("check out this [link](https://share.streamlit.io/mesmith027
     # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
 
+    st.write(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
+
     st.subheader(f'AI including Generative AI')
     st.write(f'✅ Generative AI: Automated Coverletter and App Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
     st.write(f'✅ Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
