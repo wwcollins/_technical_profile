@@ -293,7 +293,7 @@ def count_lines(file_name):
         return len(f.readlines())
 
 filename = "./resumes/Resume_WCollins_05_2023.5_TechMgmt.pdf"
-def download_resume(filename=filename, loc='main'""):
+def download_resume(filename=filename, loc='main'):
     with open(filename, "rb") as pdf_file:
         PDFbyte = pdf_file.read()
 
@@ -329,7 +329,7 @@ def main():
     col1, col2 = st.columns(2)
     with col1:
         st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=150)
-        download_resume("", loc='sidebar')
+        download_resume(loc='sidebar')
     with col2:
         st.sidebar.caption(f'Location: Austin, TX' + '\n' +
                            f'\n [Email]("mailto:williamwcollinsjr@gmail.com)'
