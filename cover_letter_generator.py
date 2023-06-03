@@ -329,7 +329,7 @@ def main():
     col1, col2 = st.columns(2)
     with col1:
         st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=150)
-        download_resume(loc='sidebar')
+        download_resume("", loc='sidebar')
     with col2:
         st.sidebar.caption(f'Location: Austin, TX' + '\n' +
                            f'\n [Email]("mailto:williamwcollinsjr@gmail.com)'
