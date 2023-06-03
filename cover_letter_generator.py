@@ -345,7 +345,7 @@ def main():
     with col4:
         with st.spinner(f'loading main...'):
             time.sleep(1)
-            st.header(f':blue[Cover Letter Generator]')
+            st.header(f':blue[AIG (Generative) Assisted Cover Letter Generator]')
             st.caption(f'William Collins 2023, All Rights Reserved {NOTICE_APP_INFO}')
 
     with st.expander(f'What this app does...'):
