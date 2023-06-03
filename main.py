@@ -257,7 +257,8 @@ def project_page():
     st.write(f'✅ Generative AI: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
     st.write(f'🍵 Generative AI: Personal Job Search Assistant: Search, Match, Scoring and Reporting')
     st.write(f'✅ Generative AI: Rss and Podcast Automation [link](https://wwcollins-rss-podcast-automation.streamlit.app)')
-
+    # https://wwcollins--technical-pr-aig-url-search-and-list-selector-8rsn03.streamlit.app
+    st.write(f'✅ Generative AI: URl search + austo-gen list Selector [link](https://wwcollins--technical-pr-aig-url-search-and-list-selector-8rsn03.streamlit.app)')
 
     st.subheader(f'Microservices and APIs')
     st.write(f'🍵 Weather and Geolocation Microservices ')
