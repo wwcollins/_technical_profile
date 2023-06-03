@@ -30,7 +30,6 @@ USER_AGENTS = [
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 OPR/76.0.4017.123",
 ]
 
-openai.api_key = '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'
 
 hide_streamlit_style = """
                 <style>
@@ -185,13 +184,11 @@ PROMPT_ARTICLE_REQUEST = f"Write an informational, detailed, professional news a
 NOTICE_APP_INFO = ":blue[Free Limited Research Preview]. This app may produce inaccurate information " \
                   "about people, places, or facts"
 
-
 # Load the dotenv file
 load_dotenv()
 
 PODCAST_INDEX_API_KEY = os.getenv("PODCAST_INDEX_API_KEY")
 PODCAST_INDEX_API_SECRET = os.getenv("PODCAST_INDEX_API_SECRET")
-
 
 # Set Styles refs: https://medium.com/@avra42/streamlit-python-cool-tricks-to-make-your-web-application-look-better-8abfc3763a5b
 st.set_option('deprecation.showPyplotGlobalUse', False)  # disable error gen
@@ -266,14 +263,12 @@ def generate_summary_with_gpt(text):
 
 import random
 import string
-
 def generate_random_string(length):
     characters = string.ascii_letters + string.punctuation
     random_string = ''.join(random.choice(characters) for _ in range(length))
     return random_string
 
 import os
-
 def write2file(text, filename):  # writes to file locally here but only memory based in cloud, use S3 etc
     if os.path.exists(filename):
         with open(filename, "w") as file:  #overwrite, not apppend.  "a" for append
@@ -400,7 +395,6 @@ def split_string(string):
 
     return first_100_words.strip(), remainder.strip()
 
-
 # Function to display the parsed feed
 def display_feed(feed):
     st.caption(f'{len(feed.entries)} feeds found...')
@@ -420,7 +414,6 @@ def display_feed(feed):
             st.caption('---')
     except Exception as e:
         st.caption(f'Error: {e}')
-
 
 def display_rss_feed_xml(url):
     # Parsing the RSS feed
