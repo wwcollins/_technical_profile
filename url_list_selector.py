@@ -13,7 +13,7 @@ USER_AGENTS = [
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 OPR/76.0.4017.123",
 ]
 
-openai.api_key = 'YOUR_OPENAI_API_KEY'
+openai.api_key = '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'
 
 def generate_checkbox_list(urls):
     checkbox_list = []
@@ -75,10 +75,11 @@ def generate_summary_with_gpt(text):
     return summary
 
 def main():
-    st.title("URL Checkbox List")
+    st.title("URL Select List and Summarizer")
 
     # URL of the webpage to scrape for URLs
-    webpage_url = "https://www.vic.ai/resources/the-must-listen-to-ai-and-ai-generative-podcasts-2023"
+    # webpage_url = "https://www.vic.ai/resources/the-must-listen-to-ai-and-ai-generative-podcasts-2023"
+    webpage_url = 'https://podcasts.apple.com/us/podcast/the-ai-in-business-podcast/id670771965'
 
     urls = get_urls_from_webpage(webpage_url)
     if not urls:
