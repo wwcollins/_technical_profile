@@ -1,4 +1,6 @@
 # ARTICLE_RIGHTS: CR 2022, 2023.  William W Collins, All Rights Reserved
+# existing apps - https://podcastindex.org/apps
+
 import os
 import time
 import streamlit as st
@@ -82,10 +84,6 @@ William W. Collins, Jr.
 """
 TEST_JOB_DESCRIPTION = """Full Job Description
 Title: Director of Engineering
-Reports to: CTO
-Location: Austin, TX (in-office ~3 days per week)
-
-About CharterUP
 
 If you’ve been searching for a career with a company that values creativity, innovation and teamwork, consider this your ticket to ride.
 
@@ -132,7 +130,7 @@ Step 4 - Offer, reference & background check
 Welcome aboard!
 CharterUP Principles
 
-At CharterUP, we don’t compromise on quality. We hire smart, high-energy, trustworthy people and keep them as motivated and happy as possible. We do that by adhering to our principles, which are:
+At Company, we don’t compromise on quality. We hire smart, high-energy, trustworthy people and keep them as motivated and happy as possible. We do that by adhering to our principles, which are:
 
 Customer First
 We always think about how our decisions will impact our clients; earning and keeping customer trust is our top priority
@@ -339,7 +337,7 @@ def display_feed(feed):
             st.subheader(f'Article {i}. {entry.title}')
             st.write(f'**:blue[URL:]** {entry.link}')
             st.sidebar.caption(f'Article {i}. {entry.title} [link]({entry.link})')
-            st.caption(f'Summary: {entry.summary}')
+            # st.caption(f'Summary: {entry.summary}')
 
             with st.expander(f'full report...'):
                 html = f'{entry.content[0].value}'
