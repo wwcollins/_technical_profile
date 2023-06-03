@@ -563,7 +563,6 @@ The generated summaries are displayed in expandable sections using the `st.expan
         # st.session_state.job_description = TEST_JOB_DESCRIPTION
         st.session_state.job_description = ""
 
-
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
     if OPENAI_API_KEY:
         st.session_state.open_api_key = OPENAI_API_KEY
@@ -573,40 +572,46 @@ The generated summaries are displayed in expandable sections using the `st.expan
         st.session_state.open_api_key = ""
         st.sidebar.caption(f'API key not found')
 
-    st.title("URL Select List and Summarizer")
+    # st.title("URL Select List and Summarizer")
 
     # URL of the webpage to scrape for URLs
-    # webpage_url = "https://www.vic.ai/resources/the-must-listen-to-ai-and-ai-generative-podcasts-2023"
-    webpage_url = 'https://podcasts.apple.com/us/podcast/the-ai-in-business-podcast/id670771965'
+    webpage_url = "https://www.vic.ai/resources/the-must-listen-to-ai-and-ai-generative-podcasts-2023"
+    webpage_url = 'https://dlabs.ai/blog/top-ai-blogs-and-websites-to-follow/'
+    webpage_url = 'https://www.google.com/search?q=latest+in+artificial+intelligence&rlz=1C1UEAD_enUS1030US1030&sxsrf=APwXEdfMEK_pOShDoedm0OdDKpIQ_q91NA:1685766703567&source=lnms&tbm=nws&tbs=qdr:w&sa=X&ved=2ahUKEwjb8Kisoqb_AhVVO0QIHQ4hBXUQ0pQJKAR6BAgCEAc&biw=1266&bih=553&dpr=1.5'
 
-    urls = get_urls_from_webpage(webpage_url)
-    if not urls:
-        st.write("Error retrieving URLs from the webpage.")
+    if "url" not in st.session_state:
+        st.session_state.url = webpage_url
 
-    checkbox_list = generate_checkbox_list(urls)
+    url_input = st.text_input('webpage url', st.session_state.url)
 
-    # You can access the checkbox values
-    selected_urls = [url for url, checkbox in zip(urls, checkbox_list) if checkbox]
-    st.write("Selected URLs:", selected_urls)
+    if url_input:
+        # webpage_url = 'https://podcasts.apple.com/us/podcast/the-ai-in-business-podcast/id670771965'
 
-    # Sidebar for API Key
-    st.sidebar.title("OpenAI API Key")
-    api_key = st.sidebar.text_input("Enter your OpenAI API key", type="password")
+        urls = get_urls_from_webpage(st.session_state.url)
+        if not urls:
+            st.write("Error retrieving URLs from the webpage.")
 
-    if st.button("Create Summary"):
-        openai.api_key = api_key
+        checkbox_list = generate_checkbox_list(urls)
 
-        for url in selected_urls:
-            with st.expander("Summary for {}".format(url)):
-                # Retrieve the URL content and generate summary
-                text = get_summary(url)
-                summary = generate_summary_with_gpt(text)
-                st.write(summary)
+        # You can access the checkbox values
+        selected_urls = [url for url, checkbox in zip(urls, checkbox_list) if checkbox]
+        st.write("Selected URLs:", selected_urls)
 
+        # Sidebar for API Key
+        st.sidebar.title("OpenAI API Key")
+        api_key = st.sidebar.text_input("Enter your OpenAI API key", type="password")
 
+        if st.button("Create Summary"):
+            openai.api_key = st.session_state.open_api_key
 
-
-
+            for url in selected_urls:
+                with st.expander("Summary for {}".format(url)):
+                    # Retrieve the URL content and generate summary
+                    text = get_summary(url)
+                    with st.spinner(f'⏳processing...'):
+                        summary = generate_summary_with_gpt(text)
+                        time.sleep(2)
+                        st.write(summary)
 
 
 if __name__ == "__main__":
