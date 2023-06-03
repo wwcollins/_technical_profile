@@ -455,7 +455,7 @@ def main():
         with col2:
             # text_area(self, label: str, value: SupportsStr = "")
             st.header("Revised")
-            st.code(label='updated cover letter...', value=updated_cover_letter)
+            st.code(updated_cover_letter)
             # todo add download button here? or ?
 
         with col1:
