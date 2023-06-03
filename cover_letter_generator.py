@@ -454,7 +454,8 @@ def main():
 
         with col2:
             st.header("Revised")
-            st.write(updated_cover_letter)
+            st.text_area(updated_cover_letter)
+            # todo add download button here? or ?
 
         with col1:
             st.header("Original Coverleter")
