@@ -8,7 +8,6 @@ import requests
 import json
 from dotenv import load_dotenv
 
-
 # Set page config
 st.set_page_config(
     page_title="AGI Assisted RSS Feeds and Podcast with AIG (Generative AI)",
@@ -376,6 +375,31 @@ def check_url_xml(url):
     else:
         return False
 
+filename = "./resumes/Resume_WCollins_05_2023.3_TechMgmt.pdf"
+def download_resume(filename=filename, loc='main'""):
+    with open(filename, "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+
+        if loc == "sidebar" or loc == None:
+            resume_download = st.sidebar.download_button(label="Download Resume",key='dufhqiew',
+                           data=PDFbyte,
+                           file_name=filename,
+                           mime='application/octet-stream')
+        else:
+            resume_download = st.download_button(label="Download Resume",
+                             data=PDFbyte,
+                             file_name=filename,
+                             mime='application/octet-stream')
+
+        if resume_download:
+            if loc == 'sidebar':
+                st.sidebar.caption(f"Thank you! William Collin's resume will be in your downloads folder.")
+            else:
+                st.caption(f"Thank you! William Collin's resume will be in your downloads folder.")
+
+# Call the function to execute the code
+# download_resume()
+
 
 # Create the form using Streamlit
 
@@ -399,6 +423,7 @@ def main():
                            f'\n [LinkedIn](https://linkedin.com/in/williamwcollins)'
                            f'\n [Discord server](https://discord.com/channels/1108234455010787330/1108234455614754870)'
                            )
+        download_resume(loc='sidebar')
 
     col3, col4 = st.columns(2)
     with col3:
@@ -456,7 +481,8 @@ Overall, this code provides a simple and interactive web application for reading
     # initialize session variables and assign values
 
     st.title("RSS Feed Reader")
-    uploaded_files = st.file_uploader("Upload RSS feed files", accept_multiple_files=True)
+    uploaded_files = st.file_uploader("📂Upload RSS feed files.  Note that you will need to "
+                                      "create local file(s) with your target rss feed urls", accept_multiple_files=True)
     st.caption(f'{len(uploaded_files)} files selected')
     if uploaded_files:
         for file in uploaded_files:
@@ -486,8 +512,9 @@ Overall, this code provides a simple and interactive web application for reading
             else:
                 st.warning("Invalid file format. Please upload a text file.")
 
+    st.write(f'**:blue[OR...]**')
+
     feed_url = st.text_input("Enter RSS feed URL")
-    st.sidebar.caption(f'Articles for {feed_url}')
 
     if st.button("Fetch"):
         if feed_url:
