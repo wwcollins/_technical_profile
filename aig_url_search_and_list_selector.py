@@ -577,7 +577,7 @@ The generated summaries are displayed in expandable sections using the `st.expan
     # URL of the webpage to scrape for URLs
     webpage_url = "https://www.vic.ai/resources/the-must-listen-to-ai-and-ai-generative-podcasts-2023"
     webpage_url = 'https://dlabs.ai/blog/top-ai-blogs-and-websites-to-follow/'
-    webpage_url = 'https://www.google.com/search?q=latest+in+artificial+intelligence&rlz=1C1UEAD_enUS1030US1030&sxsrf=APwXEdfMEK_pOShDoedm0OdDKpIQ_q91NA:1685766703567&source=lnms&tbm=nws&tbs=qdr:w&sa=X&ved=2ahUKEwjb8Kisoqb_AhVVO0QIHQ4hBXUQ0pQJKAR6BAgCEAc&biw=1266&bih=553&dpr=1.5'
+    # webpage_url = 'https://www.google.com/search?q=latest+in+artificial+intelligence&rlz=1C1UEAD_enUS1030US1030&sxsrf=APwXEdfMEK_pOShDoedm0OdDKpIQ_q91NA:1685766703567&source=lnms&tbm=nws&tbs=qdr:w&sa=X&ved=2ahUKEwjb8Kisoqb_AhVVO0QIHQ4hBXUQ0pQJKAR6BAgCEAc&biw=1266&bih=553&dpr=1.5'
 
     if "url" not in st.session_state:
         st.session_state.url = webpage_url
