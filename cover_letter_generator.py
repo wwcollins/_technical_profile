@@ -292,6 +292,28 @@ def count_lines(file_name):
         # st.caption(f'Lines of code = {len(f.readlines())}')
         return len(f.readlines())
 
+filename = "./resumes/Resume_WCollins_05_2023.5_TechMgmt.pdf"
+def download_resume(filename=filename, loc='main'""):
+    with open(filename, "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+
+        if loc == "sidebar" or loc == None:
+            resume_download = st.sidebar.download_button(label="Download Resume",key='dufhqiew',
+                           data=PDFbyte,
+                           file_name=filename,
+                           mime='application/octet-stream')
+        else:
+            resume_download = st.download_button(label="Download Resume",
+                             data=PDFbyte,
+                             file_name=filename,
+                             mime='application/octet-stream')
+
+        if resume_download:
+            if loc == 'sidebar':
+                st.sidebar.caption(f"Thank you! William Collin's resume will be in your downloads folder.")
+            else:
+                st.caption(f"Thank you! William Collin's resume will be in your downloads folder.")
+
 
 # Create the form using Streamlit
 def main():
@@ -299,6 +321,7 @@ def main():
     st.sidebar.subheader(f'Settings')
 
     open_api_key_input = st.sidebar.text_input(f':green[Enter your OpenAPI key if you have one or get one at: https://platform.openai.com/account/api-keys]', type='password') # text_input("Enter a password", type="password")
+
     if open_api_key_input:  # https://platform.openai.com/account/api-keys
         st.session_state.open_api_key = open_api_key_input
         st.sidebar.caption(f'✅Key added..')
@@ -306,6 +329,7 @@ def main():
     col1, col2 = st.columns(2)
     with col1:
         st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=150)
+        download_resume(loc='sidebar')
     with col2:
         st.sidebar.caption(f'Location: Austin, TX' + '\n' +
                            f'\n [Email]("mailto:williamwcollinsjr@gmail.com)'
@@ -455,8 +479,8 @@ def main():
         with col2:
             # text_area(self, label: str, value: SupportsStr = "")
             st.header("Revised")
-            st.code(updated_cover_letter)
-            # todo add download button here? or ?
+            st.code(label='updated cover letter...', value=updated_cover_letter)
+
 
         with col1:
             st.header("Original Coverleter")
