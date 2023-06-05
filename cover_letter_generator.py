@@ -84,26 +84,26 @@ Title: Director of Engineering
 Reports to: CTO
 Location: Austin, TX (in-office ~3 days per week)
 
-About CharterUP
+About Blue Boxing Fish
 
 If you’ve been searching for a career with a company that values creativity, innovation and teamwork, consider this your ticket to ride.
 
-CharterUP is on a mission to shake up the fragmented $15 billion charter bus industry by offering the first online marketplace that connects customers to a network of more than 600 bus operators from coast to coast. Our revolutionary platform makes it possible to book a bus in just 60 seconds – eliminating the stress and hassle of coordinating group transportation for anyone from wedding parties to Fortune 500 companies. We’re introducing transparency, accountability and accessibility to an industry as archaic as phone books. By delivering real-time availability and pricing, customers can use the CharterUP marketplace to easily compare quotes, vehicles, safety records and reviews.
+Blue Boxing Fish is on a mission to shake up the fragmented $15 billion charter bus industry by offering the first online marketplace that connects customers to a network of more than 600 bus operators from coast to coast. Our revolutionary platform makes it possible to book a bus in just 60 seconds – eliminating the stress and hassle of coordinating group transportation for anyone from wedding parties to Fortune 500 companies. We’re introducing transparency, accountability and accessibility to an industry as archaic as phone books. By delivering real-time availability and pricing, customers can use the Blue Boxing Fish marketplace to easily compare quotes, vehicles, safety records and reviews.
 
-We're seeking team members who are revved up and ready to use technology to make a positive impact. As part of the CharterUP team, you'll work alongside some of the brightest minds in the technology and transportation industries. You'll help drive the future of group travel and help raise the bar for service standards in the industry, so customers can always ride with confidence.
+We're seeking team members who are revved up and ready to use technology to make a positive impact. As part of the Blue Boxing Fish team, you'll work alongside some of the brightest minds in the technology and transportation industries. You'll help drive the future of group travel and help raise the bar for service standards in the industry, so customers can always ride with confidence.
 
-But we're not just about getting from point A to point B – CharterUP is also committed to sustainability. By promoting group travel, we can significantly reduce carbon emissions and help steer our planet towards a greener future. In 2022 alone, we eliminated over 1 billion miles worth of carbon emissions with 25 million miles driven.
+But we're not just about getting from point A to point B – Blue Boxing Fish is also committed to sustainability. By promoting group travel, we can significantly reduce carbon emissions and help steer our planet towards a greener future. In 2022 alone, we eliminated over 1 billion miles worth of carbon emissions with 25 million miles driven.
 
-CharterUP is looking for passionate and driven individuals to join our team and help steer us towards a better future for group transportation. On the heels of a $60 million Series A funding round, we’re ready to kick our growth into overdrive – and we want you to be part of the ride.
+Blue Boxing Fish is looking for passionate and driven individuals to join our team and help steer us towards a better future for group transportation. On the heels of a $60 million Series A funding round, we’re ready to kick our growth into overdrive – and we want you to be part of the ride.
 
 About this role
 
-CharterUP is seeking a Director of Engineering to manage and grow a world-class team of software engineers, devops engineers, data engineers, and QA. You will be responsible for driving alignment towards critical objectives, prioritizing and sequencing team efforts, and providing direction and mentorship to team members. In this role, you will work closely with our CTO, VP of Product Management, and customer stakeholders to deliver a wide variety of customer facing and back-office software systems powering our two-sided marketplace business. Our ideal candidate has experience not only managing teams of engineers, but also experience managing engineering managers and driving engineering culture at the organization.
+Blue Boxing Fish is seeking a Director of Engineering to manage and grow a world-class team of software engineers, devops engineers, data engineers, and QA. You will be responsible for driving alignment towards critical objectives, prioritizing and sequencing team efforts, and providing direction and mentorship to team members. In this role, you will work closely with our CTO, VP of Product Management, and customer stakeholders to deliver a wide variety of customer facing and back-office software systems powering our two-sided marketplace business. Our ideal candidate has experience not only managing teams of engineers, but also experience managing engineering managers and driving engineering culture at the organization.
 
 Compensation
 
 Estimated base salary for this role is $175,000-$215,000
-Comprehensive benefits package, including fully subsidized medical insurance for CharterUP employees and 401(k)
+Comprehensive benefits package, including fully subsidized medical insurance for Blue Boxing Fish employees and 401(k)
 Responsibilities
 
 Ensure the team consistently achieves timeline commitments with high quality products
@@ -129,9 +129,9 @@ Step 2 - Hiring Manager interview
 Step 3 - Team interviews
 Step 4 - Offer, reference & background check
 Welcome aboard!
-CharterUP Principles
+Blue Boxing Fish Principles
 
-At CharterUP, we don’t compromise on quality. We hire smart, high-energy, trustworthy people and keep them as motivated and happy as possible. We do that by adhering to our principles, which are:
+At Blue Boxing Fish, we don’t compromise on quality. We hire smart, high-energy, trustworthy people and keep them as motivated and happy as possible. We do that by adhering to our principles, which are:
 
 Customer First
 We always think about how our decisions will impact our clients; earning and keeping customer trust is our top priority
@@ -429,12 +429,36 @@ def main():
                                   f'current cover letter regarding why {st.session_state.name} would want to in this role work at this company'
 
     def on_button3_clicked():
-        st.session_state.prompt = 'create a 100 word or less professional THANK YOU letter regarding ' \
-                                  'the role and the company'
+        st.session_state.prompt = f'create a 100 word or less professional THANK YOU letter regarding ' \
+                                  f'from {st.session_state.name}  ' \
+                                  ' regarding the role and the company'
 
     def on_button4_clicked():
-        st.session_state.prompt = 'create a 100 word or less professional THANK YOU letter on NOT being selected for the role at company'
+        st.session_state.prompt = f'using the Current Coverletter and Job Description create a 100 word or ' \
+                                  f'less professional THANK YOU letter from {st.session_state.name} on NOT being selected for the role at company'
 
+    def on_button5_clicked():
+        st.session_state.prompt = f'using the Current Coverletter and Job Description create a 300 ' \
+                                  f'word professional letter from {st.session_state.name} that answers ' \
+                                  f'the question: What type of special training or certifications do you possess? for the role at company'
+
+    def on_button6_clicked():
+        st.session_state.prompt = f'using the Current Coverletter and Job Description create a 300 ' \
+                                  f'word professional letter from {st.session_state.name} that answers ' \
+                                  f'the question: What type of special training or certifications do you possess? for the role at company'
+
+    def on_button7_clicked():
+        st.session_state.prompt = f'using the Current Coverletter and Job Description create a 300 ' \
+                                  f'word professional letter from {st.session_state.name} that answers ' \
+                                  f'the question: What type of special training or certifications do you possess? for the role at company'
+
+    def on_button8_clicked():
+        st.session_state.prompt = f'using the Current Coverletter and Job Description create a 300 ' \
+                                  f'word professional letter from {st.session_state.name} that answers ' \
+                                  f'the question: What type of special training or certifications do you possess? for the role at company'
+
+    def on_buttonJD_clicked():
+        st.session_state.job_description = TEST_JOB_DESCRIPTION
     # st.text_area("Enter text", key="text")
 
     col1, col2, col3, col4 = st.columns(4)
@@ -447,16 +471,26 @@ def main():
     with col4:
         st.button("Thank-NotSel", on_click=on_button4_clicked)
 
+    col5, col6, col7, col8 = st.columns(4)
+    with col5:
+        st.button("Special training", on_click=on_button5_clicked, key='col5')
+    with col6:
+        st.button("TBD6", on_click=on_button6_clicked, key='col6')
+    with col7:
+        st.button("TBD7", on_click=on_button7_clicked, key='col7')
+    with col8:
+        st.button("TBD8", on_click=on_button8_clicked, key='col8')
+
     # st.subheader("Engineering Prompt:")
     # st.session_state.prompt = st.text_area("prompt", st.session_state.prompt, value=DEFAULT_ENGINEERING_PROMPT)
     st.session_state.prompt = st.text_area(f"':blue[You can use this prompt as is or edit it...']", st.session_state.prompt, key='adfkasdf')
-
 
     st.subheader("Current Cover Letter:")
     # st.session_state.cover_letter = st.text_area("Paste your existing coverletter here or edit...", st.session_state.cover_letter, key=generate_random_string(10))
     st.session_state.cover_letter = st.text_area(f':blue[Paste your existing coverletter here or edit...]', st.session_state.cover_letter, key='werwer')
 
-    st.subheader("Job Description:")
+    st.button("Use Example JD", on_click=on_buttonJD_clicked, key='example_jd')
+
     # st.session_state.job_description = st.text_area("Paste the job description here", st.session_state.job_description, key=generate_random_string(10))
     st.session_state.job_description = st.text_area(f":blue[Paste the job description here...]", st.session_state.job_description, key='rnfenrj')
 
