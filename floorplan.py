@@ -1,130 +1,82 @@
 import streamlit as st
+from PIL import Image
+import pytesseract # https://github.com/UB-Mannheim/tesseract/wiki to install app
 import cv2
 import numpy as np
-import base64
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
-# Function to encode the image as base64
-def get_base64_of_array(arr):
-    _, im_arr = cv2.imencode('.png', arr)
-    im_bytes = im_arr.tobytes()
-    im_b64 = base64.b64encode(im_bytes).decode("utf-8")
-    return im_b64
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-# Class representing the floorplan
-class Floorplan:
-    def __init__(self, image, rows, cols):
-        self.image = image
-        self.rows = rows
-        self.cols = cols
-        self.grid = self.create_grid()
+class FloorplanApp:
+    def __init__(self):
+        self.floorplan_image = None
+        self.grid_system = None
+        self.text_data = None
+        self.text_locations = []
+
+    def run(self):
+        st.title("Floorplan Analysis App")
+        self.upload_image()
+        self.create_grid()
+        self.extract_text()
+        self.visualize_locations()
+
+    def upload_image(self):
+        st.header("Upload Floorplan Image")
+        self.floorplan_image = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
+
+        if self.floorplan_image is not None:
+            self.floorplan_image = Image.open(self.floorplan_image)
+            st.image(self.floorplan_image, caption='Uploaded Image', use_column_width=True)
 
     def create_grid(self):
-        height, width = self.image.shape[:2]
-        row_height = height // self.rows
-        col_width = width // self.cols
+        if self.floorplan_image is None:
+            st.warning("Please upload a floorplan image first.")
+            return
 
-        grid = np.zeros((self.rows, self.cols), dtype=int)
-        for i in range(self.rows):
-            for j in range(self.cols):
-                grid[i, j] = i * self.cols + j
+        st.header("Create Locational Grid System")
+        # Add code to create the grid system for the image
 
-        return grid
+    def extract_text(self):
+        if self.floorplan_image is None:
+            st.warning("Please upload a floorplan image first.")
+            return
 
-    def move_object(self, obj, new_position):
-        old_position = obj.position
-        if old_position != new_position:
-            self.grid[old_position[0], old_position[1]] = -1
-            self.grid[new_position[0], new_position[1]] = obj.id
-            obj.position = new_position
+        st.header("Extract Text from Image")
+        # Convert the floorplan image to grayscale
+        gray_image = self.floorplan_image.convert("L")
 
-    def render(self):
-        # Draw grid lines on the image
-        image_with_grid = self.draw_grid()
+        # Perform thresholding or other image processing operations as needed
+        # ...
 
-        # Display the image with grid
-        st.image(image_with_grid, channels="BGR")
+        # Use Tesseract OCR to extract text from the image
+        self.text_data = pytesseract.image_to_string(gray_image)
 
-        # Convert the image with grid to base64 for JavaScript integration
-        encoded_image = get_base64_of_array(image_with_grid)
-        js_code = f"""
-            <script>
-            const img = new Image();
-            img.src = 'data:image/png;base64,{encoded_image}';
-            img.onload = function () {{
-                const canvas = document.getElementById("grid-canvas");
-                const ctx = canvas.getContext("2d");
-                ctx.drawImage(img, 0, 0);
-            }};
-            </script>
-        """
-        st.markdown(js_code, unsafe_allow_html=True)
+        st.write("Text extracted from the image:")
+        st.write(self.text_data)
 
-        # Display the grid coordinate system
-        st.markdown('<canvas id="grid-canvas"></canvas>', unsafe_allow_html=True)
+    def visualize_locations(self):
+        if self.text_data is None or self.grid_system is None:
+            st.warning("Please create a locational grid system and extract text first.")
+            return
 
-    def draw_grid(self):
-        image = self.image.copy()
-        height, width = image.shape[:2]
-        row_height = height // self.rows
-        col_width = width // self.cols
+        st.header("Visualize Text Locations")
+        # Add code to process the text data and determine its locations in the grid system
 
-        for i in range(1, self.rows):
-            cv2.line(image, (0, i * row_height), (width, i * row_height), (255, 0, 0), 1)
-        for j in range(1, self.cols):
-            cv2.line(image, (j * col_width, 0), (j * col_width, height), (255, 0, 0), 1)
+        # Example code to display the floorplan image with text locations marked
+        fig, ax = plt.subplots()
+        img = mpimg.imread(self.floorplan_image)
+        ax.imshow(img)
 
-        return image
+        # Plot icons at the determined text locations
+        for location in self.text_locations:
+            ax.plot(location[0], location[1], 'ro')  # Use a red circle as the icon
+
+        ax.axis('off')
+        st.pyplot(fig)
 
 
-# Class representing a fire alarm
-class FireAlarm:
-    def __init__(self, id, position):
-        self.id = id
-        self.position = position
-
-
-# Class representing a camera
-class Camera:
-    def __init__(self, id, position):
-        self.id = id
-        self.position = position
-
-
-# Streamlit app
-def main():
-    st.title("Floorplan Grid Overlay")
-    uploaded_file = st.file_uploader("Upload a floorplan image", type=["jpg", "jpeg", "png"])
-
-    if uploaded_file is not None:
-        # Read the uploaded image
-        file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
-        image = cv2.imdecode(file_bytes, 1)
-
-        # Get grid parameters from the user
-        rows = st.number_input("Number of rows:", min_value=1, value=5)
-        cols = st.number_input("Number of columns:", min_value=1, value=5)
-
-        # Create a floorplan object
-        floorplan = Floorplan(image, rows, cols)
-
-        # Create fire alarm and camera objects
-        fire_alarm = FireAlarm(1, (0, 0))
-        camera = Camera(2, (0, 1))
-
-        # Get new positions for the objects
-        new_fire_alarm_pos = st.selectbox("Select new position for the fire alarm:", floorplan.grid.flatten(),
-                                          format_func=lambda val: f"({val // cols}, {val % cols})",
-                                          key="fire_alarm_pos")
-        new_camera_pos = st.selectbox("Select new position for the camera:", floorplan.grid.flatten(),
-                                      format_func=lambda val: f"({val // cols}, {val % cols})", key="camera_pos")
-
-        # Move objects to new positions
-        floorplan.move_object(fire_alarm, (new_fire_alarm_pos // cols, new_fire_alarm_pos % cols))
-        floorplan.move_object(camera, (new_camera_pos // cols, new_camera_pos % cols))
-
-        # Render the floorplan with objects
-        floorplan.render()
-
-
-if __name__ == "__main__":
-    main()
+# Create and run the app
+app = FloorplanApp()
+app.run()
