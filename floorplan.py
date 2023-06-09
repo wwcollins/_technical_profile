@@ -16,58 +16,79 @@ class Floorplan:
         self.image = image
         self.rows = rows
         self.cols = cols
-        self.objects = []
+        self.grid = self.create_grid()
 
-    def add_object(self, obj):
-        self.objects.append(obj)
+    def create_grid(self):
+        height, width = self.image.shape[:2]
+        row_height = height // self.rows
+        col_width = width // self.cols
 
-    def draw(self):
-        image_with_objects = self.image.copy()
-        for obj in self.objects:
-            image_with_objects = obj.draw(image_with_objects, self.rows, self.cols)
-        return image_with_objects
+        grid = np.zeros((self.rows, self.cols), dtype=int)
+        for i in range(self.rows):
+            for j in range(self.cols):
+                grid[i, j] = i * self.cols + j
 
-# Class representing a fire alarm object
+        return grid
+
+    def move_object(self, obj, new_position):
+        old_position = obj.position
+        if old_position != new_position:
+            self.grid[old_position[0], old_position[1]] = -1
+            self.grid[new_position[0], new_position[1]] = obj.id
+            obj.position = new_position
+
+    def render(self):
+        # Draw grid lines on the image
+        image_with_grid = self.draw_grid()
+
+        # Display the image with grid
+        st.image(image_with_grid, channels="BGR")
+
+        # Convert the image with grid to base64 for JavaScript integration
+        encoded_image = get_base64_of_array(image_with_grid)
+        js_code = f"""
+            <script>
+            const img = new Image();
+            img.src = 'data:image/png;base64,{encoded_image}';
+            img.onload = function () {{
+                const canvas = document.getElementById("grid-canvas");
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+            }};
+            </script>
+        """
+        st.markdown(js_code, unsafe_allow_html=True)
+
+        # Display the grid coordinate system
+        st.markdown('<canvas id="grid-canvas"></canvas>', unsafe_allow_html=True)
+
+    def draw_grid(self):
+        image = self.image.copy()
+        height, width = image.shape[:2]
+        row_height = height // self.rows
+        col_width = width // self.cols
+
+        for i in range(1, self.rows):
+            cv2.line(image, (0, i * row_height), (width, i * row_height), (255, 0, 0), 1)
+        for j in range(1, self.cols):
+            cv2.line(image, (j * col_width, 0), (j * col_width, height), (255, 0, 0), 1)
+
+        return image
+
+
+# Class representing a fire alarm
 class FireAlarm:
-    def __init__(self, row, col):
-        self.row = row
-        self.col = col
+    def __init__(self, id, position):
+        self.id = id
+        self.position = position
 
-    def draw(self, image, rows, cols):
-        height, width = image.shape[:2]
-        row_height = height // rows
-        col_width = width // cols
-        radius = min(row_height, col_width) // 4
-        center_x = self.col * col_width + col_width // 2
-        center_y = self.row * row_height + row_height // 2
 
-        cv2.circle(image, (center_x, center_y), radius, (0, 0, 255), -1)
-
-        return image
-
-# Class representing a camera object
+# Class representing a camera
 class Camera:
-    def __init__(self, row, col):
-        self.row = row
-        self.col = col
+    def __init__(self, id, position):
+        self.id = id
+        self.position = position
 
-    def draw(self, image, rows, cols):
-        height, width = image.shape[:2]
-        row_height = height // rows
-        col_width = width // cols
-        side_length = min(row_height, col_width) // 2
-        center_x = self.col * col_width + col_width // 2
-        center_y = self.row * row_height + row_height // 2
-
-        cv2.rectangle(
-            image,
-            (center_x - side_length, center_y - side_length),
-            (center_x + side_length, center_y + side_length),
-            (0, 255, 0),
-            -1,
-        )
-
-        return image
 
 # Streamlit app
 def main():
@@ -86,41 +107,24 @@ def main():
         # Create a floorplan object
         floorplan = Floorplan(image, rows, cols)
 
-        # Get object coordinates from the user
-        obj_row = st.number_input("Object Row:", min_value=0, max_value=rows - 1, value=0)
-        obj_col = st.number_input("Object Column:", min_value=0, max_value=cols - 1, value=0)
+        # Create fire alarm and camera objects
+        fire_alarm = FireAlarm(1, (0, 0))
+        camera = Camera(2, (0, 1))
 
-        # Add fire alarm and camera objects to the floorplan
-        if st.button("Add Fire Alarm"):
-            fire_alarm = FireAlarm(obj_row, obj_col)
-            floorplan.add_object(fire_alarm)
-        if st.button("Add Camera"):
-            camera = Camera(obj_row, obj_col)
-            floorplan.add_object(camera)
+        # Get new positions for the objects
+        new_fire_alarm_pos = st.selectbox("Select new position for the fire alarm:", floorplan.grid.flatten(),
+                                          format_func=lambda val: f"({val // cols}, {val % cols})",
+                                          key="fire_alarm_pos")
+        new_camera_pos = st.selectbox("Select new position for the camera:", floorplan.grid.flatten(),
+                                      format_func=lambda val: f"({val // cols}, {val % cols})", key="camera_pos")
 
-        # Draw the floorplan with objects
-        image_with_objects = floorplan.draw()
+        # Move objects to new positions
+        floorplan.move_object(fire_alarm, (new_fire_alarm_pos // cols, new_fire_alarm_pos % cols))
+        floorplan.move_object(camera, (new_camera_pos // cols, new_camera_pos % cols))
 
-        # Display the image with objects and grid
-        st.image(image_with_objects, channels="BGR")
+        # Render the floorplan with objects
+        floorplan.render()
 
-        # Convert the image with objects to base64 for JavaScript integration
-        encoded_image = get_base64_of_array(image_with_objects)
-        js_code = f"""
-            <script>
-            const img = new Image();
-            img.src = 'data:image/png;base64,{encoded_image}';
-            img.onload = function () {{
-                const canvas = document.getElementById("grid-canvas");
-                const ctx = canvas.getContext("2d");
-                ctx.drawImage(img, 0, 0);
-            }};
-            </script>
-        """
-        st.markdown(js_code, unsafe_allow_html=True)
-
-        # Display the grid coordinate system
-        st.markdown('<canvas id="grid-canvas"></canvas>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
