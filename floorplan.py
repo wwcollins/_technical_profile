@@ -12,8 +12,10 @@ def get_base64_of_array(arr):
 
 # Class representing the floorplan
 class Floorplan:
-    def __init__(self, image):
+    def __init__(self, image, rows, cols):
         self.image = image
+        self.rows = rows
+        self.cols = cols
         self.objects = []
 
     def add_object(self, obj):
@@ -22,7 +24,7 @@ class Floorplan:
     def draw(self):
         image_with_objects = self.image.copy()
         for obj in self.objects:
-            image_with_objects = obj.draw(image_with_objects)
+            image_with_objects = obj.draw(image_with_objects, self.rows, self.cols)
         return image_with_objects
 
 # Class representing a fire alarm object
@@ -31,7 +33,7 @@ class FireAlarm:
         self.row = row
         self.col = col
 
-    def draw(self, image):
+    def draw(self, image, rows, cols):
         height, width = image.shape[:2]
         row_height = height // rows
         col_width = width // cols
@@ -49,7 +51,7 @@ class Camera:
         self.row = row
         self.col = col
 
-    def draw(self, image):
+    def draw(self, image, rows, cols):
         height, width = image.shape[:2]
         row_height = height // rows
         col_width = width // cols
@@ -82,7 +84,7 @@ def main():
         cols = st.number_input("Number of columns:", min_value=1, value=5)
 
         # Create a floorplan object
-        floorplan = Floorplan(image)
+        floorplan = Floorplan(image, rows, cols)
 
         # Get object coordinates from the user
         obj_row = st.number_input("Object Row:", min_value=0, max_value=rows - 1, value=0)
