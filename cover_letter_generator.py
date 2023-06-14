@@ -532,7 +532,7 @@ def main():
         with col2:
             # text_area(self, label: str, value: SupportsStr = "")
             st.header("Revised")
-            st.text_area(label='updated cover letter...', height='600', value=updated_cover_letter)
+            st.text_area(label='updated cover letter...', height=600, value=updated_cover_letter)
             st.button(label='download',key='download_cl',on_click=write2file(updated_cover_letter,
                 filename=f'./resumes/cover_letter_custom.{generate_random_numbers(5)}.txt'))
         with col1:
