@@ -183,6 +183,15 @@ hide_menu_style = """
         </style>
         """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
+button_style = """
+        <style>
+        .stButton > button {
+            color: blue;
+            background: white;
+        }
+        </style>
+        """
+st.markdown(button_style, unsafe_allow_html=True)
 
 
 # st.write(f'OPENAPI KEY: {OPENAI_API_KEY}')
@@ -475,11 +484,11 @@ def main():
     with col5:
         st.button("Special training", on_click=on_button5_clicked, key='col5')
     with col6:
-        st.button("TBD6", on_click=on_button6_clicked, key='col6')
+        st.button("button6", on_click=on_button6_clicked, key='col6', disabled=True)
     with col7:
-        st.button("TBD7", on_click=on_button7_clicked, key='col7')
+        st.button("button7", on_click=on_button7_clicked, key='col7', disabled=True)
     with col8:
-        st.button("TBD8", on_click=on_button8_clicked, key='col8')
+        st.button("button8", on_click=on_button8_clicked, key='col8', disabled=True)
 
     # st.subheader("Engineering Prompt:")
     # st.session_state.prompt = st.text_area("prompt", st.session_state.prompt, value=DEFAULT_ENGINEERING_PROMPT)
@@ -528,7 +537,12 @@ def main():
                 filename=f'./resumes/cover_letter_custom.{generate_random_numbers(5)}.txt'))
         with col1:
             st.header("Original Coverleter")
-            st.write(CURRENT_COVERLETTER)
+            # 'latin-1' codec can't encode character '\u2019' in position 6154: todo bug
+            try:
+                st.write(CURRENT_COVERLETTER)
+            except Exception as e:
+                st.caption(f'st.write error:{e}')
+                # response.content.decode('latin-1')
 
         try:
             st.caption(f'writing to file...')
