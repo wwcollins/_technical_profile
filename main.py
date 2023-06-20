@@ -37,6 +37,7 @@ def about_page():
         **Innovative Transformational Leader | Multi-Industry Experience | AI & SaaS Expert | Generative AI | DevOps, AIOps, SRE & Cloud Technologies**
         """
     )
+
     st.write(f'**William Collins** is a highly experienced executive with a proven track record in building and managing software engineering teams and delivering complex applications. He has worked with both VC-funded startups and large enterprises, and has expertise in AI platform development, cloud operations, and various coding languages. His skills include managing engineering processes, leading international teams, and translating product requirements into technical deliverables. William is an excellent communicator and has a strong focus on innovation and protecting intellectual property. He is well-suited for roles requiring leadership, technical expertise, and the ability to drive results.')
     with st.expander(f'more...'):
         st.write(
@@ -259,6 +260,8 @@ def project_page():
     st.write(f'✅ Generative AI: Rss and Podcast Automation [link](https://wwcollins-rss-podcast-automation.streamlit.app)')
     # https://wwcollins--technical-pr-aig-url-search-and-list-selector-8rsn03.streamlit.app
     st.write(f'✅ Generative AI: URl search + austo-gen list Selector [link](https://wwcollins--technical-pr-aig-url-search-and-list-selector-8rsn03.streamlit.app)')
+    st.write(f'✅💭 Generative AI: Writers Story Worksheet Generator [link](https://the-writers-ai.onrender.com)')
+
 
     st.subheader(f'Microservices and APIs')
     st.write(f'🍵 Weather and Geolocation Microservices ')
@@ -732,12 +735,14 @@ def download_resume(filename=filename, loc='main'""):
 # download_resume()
 
 # Sidebar navigation
+
+# Sidebar navigation
 pages = {
     "Home": home_page,
     "About": about_page,
     "📃Resume": resume_page,
     "📖Questions Answered": questions_answered,
-    "📃Technology Portfolio": project_page,
+    "⭐Technology Portfolio": project_page,
     "💡Innovation": innovation_page,
     "🔐CyberSecurity": cybersecurity_page,
     "📖Core Beliefs": beliefs_page,
@@ -747,12 +752,16 @@ pages = {
 
 }
 
+
 # Streamlit app
 def main():
     # st.image(f'./images/home_sidebar_img.jpg')
 
     st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=100)
+    st.sidebar.caption(f'⭐ See Tech Portfolio below')
+
     download_resume(loc='sidebar')
+
     st.sidebar.caption(f'Location: Austin, TX    '
                f'[Email]("mailto:williamwcollinsjr@gmail.com)    '
                f'Phone: 940.503.8195  '
@@ -763,6 +772,8 @@ def main():
 
     # st.sidebar.title("Navigation")
     page = st.sidebar.radio(f"**Navigation**", tuple(pages.keys()))
+
+
 
     # Styles Modifications
     expander = """
@@ -776,6 +787,7 @@ def main():
 
     # Execute the selected page function
     pages[page]()
+
 
     hide_streamlit_style = """
                 <style>
