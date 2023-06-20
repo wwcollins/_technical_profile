@@ -484,7 +484,7 @@ def main():
     with col5:
         st.button("Special training", on_click=on_button5_clicked, key='col5')
     with col6:
-        st.button("button6", on_click=on_button6_clicked, key='col6', disabled=True)
+        st.button("Post Interview", on_click=on_button6_clicked, key='col6', disabled=False)
     with col7:
         st.button("button7", on_click=on_button7_clicked, key='col7', disabled=True)
     with col8:
