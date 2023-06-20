@@ -453,8 +453,10 @@ def main():
 
     def on_button6_clicked():
         st.session_state.prompt = f'using the Current Coverletter and Job Description create a 300 ' \
-                                  f'word professional letter from {st.session_state.name} that answers ' \
-                                  f'the question: What type of special training or certifications do you possess? for the role at company'
+                                  f'word professional interview follow-up letter from {st.session_state.name} ' \
+                                  f'that communicates ' \
+                                  f'a thank you for their time, getting to know them a bit and sharing ' \
+                                  f'about their company and how excited I am about the role at company'
 
     def on_button7_clicked():
         st.session_state.prompt = f'using the Current Coverletter and Job Description create a 300 ' \
