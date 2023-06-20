@@ -264,10 +264,12 @@ def project_page():
 
 
     st.subheader(f'Microservices and APIs')
+    st.write(f'🍵✅ Streamlint NOAA Weather')
     st.write(f'🍵 Weather and Geolocation Microservices ')
     st.write(f'🍵 AWS Microservices: AWS S3 Microservice')
     st.write(f'🧪 Rapid Prototyping Process and Framework: Microservices/FastAPI')
     st.write(f'🍵 Building a Streamlit,Redis Application microservices Framework')
+
 
     st.write(f'🧬 Generative AI: Creating Custom LLMs and Fine Tuning')
     st.write(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
