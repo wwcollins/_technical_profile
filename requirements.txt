@@ -62,7 +62,7 @@ numpy
 olefile==0.46
 openai==0.27.7
 packaging==23.1
-pandas==2.0.1
+pandas
 pathy==0.10.1
 pdfminer.six==20191110
 Pillow==9.5.0
