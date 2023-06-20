@@ -58,7 +58,7 @@ mss
 multidict==6.0.4
 murmurhash==1.0.9
 nltk==3.8.1
-numpy==1.24.3
+numpy
 olefile==0.46
 openai==0.27.7
 packaging==23.1
