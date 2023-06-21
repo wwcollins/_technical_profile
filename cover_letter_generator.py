@@ -547,7 +547,8 @@ def main():
                 # response.content.decode('latin-1')
 
         try:
-            st.caption(f'writing to file...')
+            with col2:
+                st.caption(f'writing to file...')
             write2file(updated_cover_letter, './output/cover_letter_updated.txt')
         except Exception as e:
             st.caption (f'Error writing to file: {e}')
