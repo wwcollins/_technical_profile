@@ -243,6 +243,28 @@ def resume_page():
     # embed streamlit docs in a streamlit app
     # components.iframe("https://docx-to-markdown.streamlit.app")
 
+import streamlit.components.v1 as components
+def show_project_monitor():
+    # st.title("Streamlit Iframe Example")
+
+    # URL of the webpage you want to embed in the iframe
+    iframe_url = "https://stats.uptimerobot.com/N71wRCVNyr/?embedded=true"  # uptime robot site statuses
+    # /?embedded=true
+    iframe_url = "https://stats.uptimerobot.com/N71wRCVNyr"  # uptime robot site statuses
+    iframe_url = "https://stats.uptimerobot.com/N71wRCVNyr/?embed=true"  # uptime robot site statuses
+
+
+
+    # Generate the HTML code for the iframe
+    iframe_code = f'<iframe src="{iframe_url}" width="800" height="600" frameborder="0"></iframe>'
+
+    # Render the iframe using the st.markdown function
+    # st.markdown(iframe_code, unsafe_allow_html=True)
+    html = components.html(iframe_code, height=700)
+    # st.caption(f'Sites Status:')
+    # st.write(f'{html}')   # Error on not resolving - temporarily removed
+
+
 def project_page():
     st.image('./images/tech_image_4.jpg', width=250)
     st.title("Technology Portfolio")
@@ -251,6 +273,8 @@ def project_page():
     # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
 
     st.write(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
+    st.write(f'📱 Site/Services Uptime Monitor [link](https://stats.uptimerobot.com/N71wRCVNyr)')
+    # st.write (show_project_monitor())
 
     st.subheader(f'AI including Generative AI')
     st.write(f'✅ Generative AI: Automated Coverletter and App Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
@@ -261,18 +285,15 @@ def project_page():
     # https://wwcollins--technical-pr-aig-url-search-and-list-selector-8rsn03.streamlit.app
     st.write(f'✅ Generative AI: URl search + austo-gen list Selector [link](https://wwcollins--technical-pr-aig-url-search-and-list-selector-8rsn03.streamlit.app)')
     st.write(f'✅💭 Generative AI: Writers Story Worksheet Generator [link](https://the-writers-ai.onrender.com)')
-
+    st.write(f'🧬 Generative AI: Creating Custom LLMs and Fine Tuning')
+    st.write(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
 
     st.subheader(f'Microservices and APIs')
     st.write(f'🍵✅ Streamlint NOAA Weather')
     st.write(f'🍵 Weather and Geolocation Microservices ')
-    st.write(f'🍵 AWS Microservices: AWS S3 Microservice')
+    st.write(f'🍵🧪 AWS Microservices: AWS S3 Microservice')
     st.write(f'🧪 Rapid Prototyping Process and Framework: Microservices/FastAPI')
     st.write(f'🍵 Building a Streamlit,Redis Application microservices Framework')
-
-
-    st.write(f'🧬 Generative AI: Creating Custom LLMs and Fine Tuning')
-    st.write(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
 
     st.subheader(f'Other Projects')
     st.write(f'✅ Convert docx file to markdown: [link](https://docx-to-markdown.streamlit.app)')
