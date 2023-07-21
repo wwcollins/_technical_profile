@@ -4,6 +4,7 @@ ARTICLE_RIGHTS = f'CR 2022, 2023.  William W Collins, All Rights Reserved'
 # This is a sample Python script.
 # This site: wwcollins-profile.streamlit.app
 TECHNICAL_PROFILE_URL = 'http://williamcollins.devfolio.site/'
+DEFAULT_RESUME = f'Resume_WCollins_Technology_Management.pdf'
 
 
 import streamlit as st
@@ -733,7 +734,8 @@ def contact_page():
 
 # Other functions
 filename = "./resumes/Resume_WCollins_05_2023.3_TechMgmt.pdf"
-def download_resume(filename=filename, loc='main'""):
+def download_resume(filename=filename, loc='main'"")
+    filename = DEFAULT_RESUME
     with open(filename, "rb") as pdf_file:
         PDFbyte = pdf_file.read()
 
@@ -795,7 +797,6 @@ def main():
 
     # st.sidebar.title("Navigation")
     page = st.sidebar.radio(f"**Navigation**", tuple(pages.keys()))
-
 
 
     # Styles Modifications
