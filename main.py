@@ -3,6 +3,8 @@ ARTICLE_RIGHTS = f'CR 2022, 2023.  William W Collins, All Rights Reserved'
 # ARTICLE_RIGHTS: CR 2022, 2023.  William W Collins, All Rights Reserved
 # This is a sample Python script.
 # This site: wwcollins-profile.streamlit.app
+TECHNICAL_PROFILE_URL = 'http://williamcollins.devfolio.site/'
+
 
 import streamlit as st
 st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -252,8 +254,6 @@ def show_project_monitor():
     # /?embedded=true
     iframe_url = "https://stats.uptimerobot.com/N71wRCVNyr"  # uptime robot site statuses
     iframe_url = "https://stats.uptimerobot.com/N71wRCVNyr/?embed=true"  # uptime robot site statuses
-
-
 
     # Generate the HTML code for the iframe
     iframe_code = f'<iframe src="{iframe_url}" width="800" height="600" frameborder="0"></iframe>'
@@ -791,7 +791,7 @@ def main():
                f' Schedule a meeting on my calendar: [link](https://calendly.com/wwcjr/meeting)   \n'
                f'[LinkedIn](https://linkedin.com/in/williamwcollins)    '
                f'[Discord server](https://discord.com/channels/1108234455010787330/1108234455614754870)  '
-               f'[Technical Profile](https://wwcollins-profile.streamlit.app)   ')
+               f'[Technical Profile]({TECHNICAL_PROFILE_URL})   ')
 
     # st.sidebar.title("Navigation")
     page = st.sidebar.radio(f"**Navigation**", tuple(pages.keys()))
