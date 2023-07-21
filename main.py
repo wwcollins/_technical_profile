@@ -733,7 +733,7 @@ def contact_page():
                        f' This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
 
 # Other functions
-def download_resume(filename=filename, loc='main'""):
+def download_resume(filename=DEFAULT_RESUME, loc='main'""):
     filename = DEFAULT_RESUME
     with open(filename, "rb") as pdf_file:
         PDFbyte = pdf_file.read()
