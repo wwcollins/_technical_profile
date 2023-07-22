@@ -6,8 +6,9 @@ ARTICLE_RIGHTS = f'CR 2022, 2023.  William W Collins, All Rights Reserved'
 TECHNICAL_PROFILE_URL = 'http://williamcollins.devfolio.site/'
 DEFAULT_RESUME = f'./resumes/Resume_WCollins_Technology_Management.pdf'
 
-
 import streamlit as st
+
+# css mods and mute deprecations warnings...
 st.set_option('deprecation.showPyplotGlobalUse', False)
 import streamlit.components.v1 as components
 st.write('<style>div.block-container{padding-top:2rem;}</style>', unsafe_allow_html=True) # Minimize padding, header footer
@@ -282,9 +283,15 @@ def project_page():
     # st.write (show_project_monitor())  # blocked by uptime robot - try scrape potentially at some point...
 
     st.subheader(f'AI including Generative AI')
+    st.write(f'🧬🍵 Generative AI: LLM Chat and Writing Style Duplication ')
+    st.write(f'🧬🍵 Generative AI: Prompt Engineering Implications ')
+    st.write(f'🍵 Generative AI: Streamlit for ChatGPT Fictional Writers Assistant ')
     st.write(f'✅ Generative AI: Automated Coverletter and App Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
+
+    https: // resume - services.onrender.com /
     st.write(f'✅ Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
-    st.write(f'✅ Generative AI: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
+    st.write(f'✅ Generative AI-Streamlit Cloud: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
+    st.write(f'✅ Generative AI-Render Cloud: Generative AI Search with Context Awareness [link](https://resume-services.onrender.com)')
     st.write(f'🍵 Generative AI: Personal Job Search Assistant: Search, Match, Scoring and Reporting')
     st.write(f'✅ Generative AI: Rss and Podcast Automation [link](https://wwcollins-rss-podcast-automation.streamlit.app)')
     # https://wwcollins--technical-pr-aig-url-search-and-list-selector-8rsn03.streamlit.app
@@ -294,6 +301,7 @@ def project_page():
     st.write(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
 
     st.subheader(f'Microservices and APIs')
+    st.write(f'🧬 FastAPI Text Preprocessing Microservice')
     st.write(f'🍵✅ Streamlint NOAA Weather')
     st.write(f'🍵 Weather and Geolocation Microservices ')
     st.write(f'🍵🧪 AWS Microservices: AWS S3 Microservice')
@@ -301,10 +309,14 @@ def project_page():
     st.write(f'🍵 Building a Streamlit,Redis Application microservices Framework')
 
     st.subheader(f'Other Projects')
+    st.write(f'🧬🍵 Streamlit Oauth Integrations')
+    st.write(f'🧬🍵 Prometheus/Grafana Integrations')
     st.write(f'✅ Convert docx file to markdown: [link](https://docx-to-markdown.streamlit.app)')
     st.write(f'✅ Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
     st.write("""🧬 [Modal App Integration](https://modal.com/docs/guide/web-scraper): Low cost option for running LX cron jobs.""")
     st.write(f'🧬 Discord Server: Continued Leverage/Work where needed')
+    st.write(f'🧬 Pandas EDA (Exploratory Data Analysis/Profiling)')
+
 
     st.write(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
 
