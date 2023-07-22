@@ -11,6 +11,8 @@ import streamlit as st
 st.set_option('deprecation.showPyplotGlobalUse', False)
 import streamlit.components.v1 as components
 
+st.write('<style>div.block-container{padding-top:2rem;}</style>', unsafe_allow_html=True) # Minimize padding, header footer
+
 # Page functions
 def home_page():
     col1, col2, col3 = st.columns(3, gap="large")
@@ -735,7 +737,7 @@ def contact_page():
                        f' Phone: 940.503.8195\n'
                        f' LinkedIn: LinkedIn [link](linkedin.com/in/williamwcollins)\n'
                        f' Schedule a meeting on my calendar: [link](https://calendly.com/wwcjr/meeting)'
-                       f' discord server: [link](discord.com/channels/1108234455010787330/1108234455614754870)'
+                       f' [Discord Server](discord.com/channels/1108234455010787330/1108234455614754870)'
                        f' This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
 
 # Other functions
@@ -788,27 +790,28 @@ pages = {
 def main():
     # st.image(f'./images/home_sidebar_img.jpg')
 
+
+    st.sidebar.header(f'🏠[Technical Profile]({TECHNICAL_PROFILE_URL})')
+
     st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=100)
     st.sidebar.caption(f'⭐ See Tech Portfolio below')
 
     download_resume(loc='sidebar')
 
-    st.sidebar.caption(f"""Location: Austin, TX  [Email]("mailto:williamwcollinsjr@gmail.com)  
+    st.sidebar.caption("""Location: Austin, TX  [Email]("mailto:williamwcollinsjr@gmail.com)  
                Phone: 940.503.8195  
-               Schedule a meeting on my calendar: [link](https://calendly.com/wwcjr/meeting)  
+               Schedule a [meeting](https://calendly.com/wwcjr/meeting) on my calendar:   
                [LinkedIn](https://linkedin.com/in/williamwcollins)
-               [Discord Server](https://discord.com/channels/1108234455010787330/1108234455614754870)
-               🏠[Technical Profile]({TECHNICAL_PROFILE_URL})   """)
+               [Discord Server](https://discord.com/channels/1108234455010787330/1108234455614754870)""")
 
     # st.sidebar.title("Navigation")
     page = st.sidebar.radio(f"**Navigation**", tuple(pages.keys()))
-
 
     # Styles Modifications
     expander = """
     <style>
     ul.streamlit-expander {
-        border: 0 !important;
+        border: 0 !important};
     </style>
     """
 
