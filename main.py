@@ -276,13 +276,15 @@ def project_page():
 
     st.info(f'Note that Projects below may also be used for educational purposes and example references')
 
-    st.write(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
+    st.warning(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= In development 🧪=In Test/Review ✅=Released')
 
     # Uptime Status
     st.write(f'📱 Site/Services Uptime Monitor [link](https://stats.uptimerobot.com/N71wRCVNyr)')
     # st.write (show_project_monitor())  # blocked by uptime robot - try scrape potentially at some point...
 
     st.subheader(f'AI including Generative AI')
+    st.write(f'🧬🍵 Generative AI: Ongoing Investigation/Assessment/Proto of emerging LLMs e.g. Claude ')
+    st.caption(f'     Claude is a next-generation AI assistant based on Anthropics research into training helpful, honest, and harmless AI systems')
     st.write(f'🧬🍵 Generative AI: OCR Image to Text Implementation and Integrations ')
     st.write(f'🧬🍵 Generative AI: Screen Video Analysis and Summarization ')
     st.write(f'🧬🍵 Generative AI: Text to Voice, Voice to Text  Implementation and Integrations ')
@@ -291,7 +293,6 @@ def project_page():
     st.write(f'🍵 Generative AI: Streamlit for ChatGPT Fictional Writers Assistant ')
     st.write(f'✅ Generative AI: Automated Cover Letter and App Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
     st.write(f'✅ Generative AI: Resume Services [link](https://resume-services.onrender.com)')
-
     st.write(f'✅ Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
     st.write(f'✅ Generative AI-Streamlit Cloud: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
     st.write(f'✅ Generative AI-Render Cloud: Generative AI Search with Context Awareness [link](https://resume-services.onrender.com)')
@@ -303,6 +304,8 @@ def project_page():
     st.write(f'🧬 Generative AI: Creating Custom LLMs and Fine Tuning')
     st.write(f'💭🧬 Generative AI: LLM models in a Hybrid/Distributed Infrastructure')
 
+    st.warning(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= In development 🧪=In Test/Review ✅=Released')
+
     st.subheader(f'Microservices and APIs')
     st.write(f'🧬 FastAPI Text Preprocessing Microservice')
     st.write(f'🍵✅ Streamlint NOAA Weather')
@@ -311,8 +314,11 @@ def project_page():
     st.write(f'🧪 Rapid Prototyping Process and Framework: Microservices/FastAPI')
     st.write(f'🍵 Building a Streamlit,Redis Application microservices Framework')
 
+    st.warning(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= In development 🧪=In Test/Review ✅=Released')
+
     st.subheader(f'Other Projects')
     st.write(f'🧬🍵 Streamlit Oauth Integrations')
+    st.write(f'🧬 Streamlit Medium, Ghost, or Notion Integration with oEmbed')
     st.write(f'🧬🍵 Prometheus/Grafana Integrations')
     st.write(f'✅ Convert docx file to markdown: [link](https://docx-to-markdown.streamlit.app)')
     st.write(f'✅ Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
@@ -320,8 +326,7 @@ def project_page():
     st.write(f'🧬 Discord Server: Continued Leverage/Work where needed')
     st.write(f'🧬 Pandas EDA (Exploratory Data Analysis/Profiling)')
 
-
-    st.write(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
+    st.warning(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= In development 🧪=In Test/Review ✅=Released')
 
 def questions_answered():
     st.image('./images/tech_image_3.jpg', width=250)
