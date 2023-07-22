@@ -323,7 +323,7 @@ def project_page():
     st.subheader(f'Other Projects')
     st.write(f'🧬🍵 Streamlit Oauth Integrations')
     st.write(f'🧬 Streamlit Medium, Ghost, or Notion Integration with oEmbed')
-    st.write(f'🧬🍵 Prometheus/Grafana Integrations')
+    st.write(f'🧬🍵 Prometheus/Grafana Telemetry/Instrumentation/Observation Integrations')
     st.write(f'✅ Convert docx file to markdown: [link](https://docx-to-markdown.streamlit.app)')
     st.write(f'✅ Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
     st.write("""🧬 [Modal App Integration](https://modal.com/docs/guide/web-scraper): Low cost option for running LX cron jobs.""")
