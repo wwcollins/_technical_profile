@@ -10,7 +10,6 @@ DEFAULT_RESUME = f'./resumes/Resume_WCollins_Technology_Management.pdf'
 import streamlit as st
 st.set_option('deprecation.showPyplotGlobalUse', False)
 import streamlit.components.v1 as components
-
 st.write('<style>div.block-container{padding-top:2rem;}</style>', unsafe_allow_html=True) # Minimize padding, header footer
 
 # Page functions
@@ -267,7 +266,6 @@ def show_project_monitor():
     # st.caption(f'Sites Status:')
     # st.write(f'{html}')   # Error on not resolving - temporarily removed
 
-
 def project_page():
     st.image('./images/tech_image_4.jpg', width=250)
     st.title("Technology Portfolio")
@@ -275,9 +273,13 @@ def project_page():
     # st.write("check out this [link](https://share.streamlit.io/mesmith027
     # /streamlit_webapps/main/MC_pi/streamlit_app.py)")
 
+    st.info(f'Note that Projects below may also be used for educational purposes and example references')
+
     st.write(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
+
+    # Uptime Status
     st.write(f'📱 Site/Services Uptime Monitor [link](https://stats.uptimerobot.com/N71wRCVNyr)')
-    # st.write (show_project_monitor())
+    # st.write (show_project_monitor())  # blocked by uptime robot - try scrape potentially at some point...
 
     st.subheader(f'AI including Generative AI')
     st.write(f'✅ Generative AI: Automated Coverletter and App Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
@@ -301,6 +303,8 @@ def project_page():
     st.subheader(f'Other Projects')
     st.write(f'✅ Convert docx file to markdown: [link](https://docx-to-markdown.streamlit.app)')
     st.write(f'✅ Streamlit Geodataframe and Plot of Weather Stations: [link](https://wwcollins-sl-noaa-weather-and-tides-plot-stations-pbwehq.streamlit.app)')
+    st.write("""🧬 [Modal App Integration](https://modal.com/docs/guide/web-scraper): Low cost option for running LX cron jobs.""")
+    st.write(f'🧬 Discord Server: Continued Leverage/Work where needed')
 
     st.write(f':green[Legend]: 💭=Innovating 🧬=In design 🍵= in development 🧪=in review ✅=Released')
 
@@ -770,11 +774,11 @@ def download_resume(filename=DEFAULT_RESUME, loc='main'""):
 
 # Sidebar navigation
 pages = {
-    "Home": home_page,
+    "⭐Technology Portfolio": project_page,
+    "Welcome": home_page,
     "About": about_page,
     "📃Resume": resume_page,
     "📖Questions Answered": questions_answered,
-    "⭐Technology Portfolio": project_page,
     "💡Innovation": innovation_page,
     "📟Dev/AIOps": tech_ops_page,
     "🔐CyberSecurity": cybersecurity_page,
@@ -794,7 +798,7 @@ def main():
     st.sidebar.header(f'🏠[Technical Profile]({TECHNICAL_PROFILE_URL})')
 
     st.sidebar.image(f'./images/you_image.jpg', 'William Collins', width=100)
-    st.sidebar.caption(f'⭐ See Tech Portfolio below')
+    # st.sidebar.caption(f'⭐ See Tech Portfolio below')
 
     download_resume(loc='sidebar')
 
@@ -802,6 +806,7 @@ def main():
                Phone: 940.503.8195  
                Schedule a [meeting](https://calendly.com/wwcjr/meeting) on my calendar:   
                [LinkedIn](https://linkedin.com/in/williamwcollins)
+               📱[Project Status Monitor](https://stats.uptimerobot.com/N71wRCVNyr)  
                [Discord Server](https://discord.com/channels/1108234455010787330/1108234455614754870)""")
 
     # st.sidebar.title("Navigation")
