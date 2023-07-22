@@ -572,6 +572,12 @@ def innovation_page():
 """, height=10000
     )
 
+def tech_ops_page():
+    st.image(f'./images/cyber-security.jpg', width=250)
+    st.title("Tech Ops (Dev, AIOps)")
+    st.write("CyberSecurity Focus Areas and Experience.")
+    st.write(f"""## TechOps Focus Areas and Experience:""")
+
 def cybersecurity_page():
     st.image(f'./images/cyber-security.jpg', width=250)
     st.title("CyberSecurity")
@@ -768,6 +774,7 @@ pages = {
     "📖Questions Answered": questions_answered,
     "⭐Technology Portfolio": project_page,
     "💡Innovation": innovation_page,
+    "📟Dev/AIOps": tech_ops_page,
     "🔐CyberSecurity": cybersecurity_page,
     "📖Core Beliefs": beliefs_page,
     "⚙ Utilities": utilities_page,
@@ -786,13 +793,12 @@ def main():
 
     download_resume(loc='sidebar')
 
-    st.sidebar.caption(f'Location: Austin, TX    '
-               f'[Email]("mailto:williamwcollinsjr@gmail.com)    '
-               f'Phone: 940.503.8195  '
-               f' Schedule a meeting on my calendar: [link](https://calendly.com/wwcjr/meeting)   \n'
-               f'[LinkedIn](https://linkedin.com/in/williamwcollins)    '
-               f'[Discord server](https://discord.com/channels/1108234455010787330/1108234455614754870)  '
-               f'[Technical Profile]({TECHNICAL_PROFILE_URL})   ')
+    st.sidebar.caption(f"""Location: Austin, TX  [Email]("mailto:williamwcollinsjr@gmail.com)  
+               Phone: 940.503.8195  
+               Schedule a meeting on my calendar: [link](https://calendly.com/wwcjr/meeting)  
+               [LinkedIn](https://linkedin.com/in/williamwcollins)
+               [Discord Server](https://discord.com/channels/1108234455010787330/1108234455614754870)
+               🏠[Technical Profile]({TECHNICAL_PROFILE_URL})   """)
 
     # st.sidebar.title("Navigation")
     page = st.sidebar.radio(f"**Navigation**", tuple(pages.keys()))
