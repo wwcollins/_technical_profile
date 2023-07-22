@@ -1,3 +1,4 @@
+import time
 
 ARTICLE_RIGHTS = f'CR 2022, 2023.  William W Collins, All Rights Reserved'
 # ARTICLE_RIGHTS: CR 2022, 2023.  William W Collins, All Rights Reserved
@@ -12,6 +13,9 @@ import streamlit as st
 st.set_option('deprecation.showPyplotGlobalUse', False)
 import streamlit.components.v1 as components
 st.write('<style>div.block-container{padding-top:2rem;}</style>', unsafe_allow_html=True) # Minimize padding, header footer
+
+with st.spinner(f'loading site...'):
+    time.sleep(5)
 
 # Page functions
 def home_page():
