@@ -290,8 +290,8 @@ def project_page():
     st.write(f'🧬 Generative AI: Prompt Engineering Implications: Study and Reference - Document and make available ')
     st.write(f'🍵 Generative AI: Streamlit for ChatGPT Fictional Writers Assistant ')
     st.write(f'✅ Generative AI: Automated Cover Letter and App Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
+    st.write(f'✅ Generative AI: Resume Services [link](https://resume-services.onrender.com)')
 
-    https: // resume - services.onrender.com /
     st.write(f'✅ Generative AI: Automated Article Generation [link](https://summaries.streamlit.app)')
     st.write(f'✅ Generative AI-Streamlit Cloud: Generative AI Search with Context Awareness [link](https://genchat.streamlit.app)')
     st.write(f'✅ Generative AI-Render Cloud: Generative AI Search with Context Awareness [link](https://resume-services.onrender.com)')
