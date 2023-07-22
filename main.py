@@ -283,8 +283,11 @@ def project_page():
     # st.write (show_project_monitor())  # blocked by uptime robot - try scrape potentially at some point...
 
     st.subheader(f'AI including Generative AI')
+    st.write(f'🧬🍵 Generative AI: OCR Image to Text Implementation and Integrations ')
+    st.write(f'🧬🍵 Generative AI: Screen Video Analysis and Summarization ')
+    st.write(f'🧬🍵 Generative AI: Text to Voice, Voice to Text  Implementation and Integrations ')
     st.write(f'🧬🍵 Generative AI: LLM Chat and Writing Style Duplication ')
-    st.write(f'🧬🍵 Generative AI: Prompt Engineering Implications ')
+    st.write(f'🧬 Generative AI: Prompt Engineering Implications: Study and Reference - Document and make available ')
     st.write(f'🍵 Generative AI: Streamlit for ChatGPT Fictional Writers Assistant ')
     st.write(f'✅ Generative AI: Automated Coverletter and App Generation [link](https://wwcollins--technical-profile-cover-letter-generator-45le46.streamlit.app)')
 
