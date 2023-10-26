@@ -288,7 +288,7 @@ def project_page():
 
     st.subheader(f'AI including Generative AI')
     st.write(f'🧬🍵 Generative AI: Ongoing Investigation/Assessment/Proto of emerging LLMs e.g. Claude ')
-    st.caption(f'     Claude is a next-generation AI assistant based on Anthropics research into training helpful, honest, and harmless AI systems')
+    st.caption(f'    Claude is a next-generation AI assistant based on Anthropics research into training helpful, honest, and harmless AI systems')
     st.write(f'🧬🍵 Generative AI: OCR Image to Text Implementation and Integrations ')
     st.write(f'🧬🍵 Generative AI: Screen Video Analysis and Summarization ')
     st.write(f'🧬🍵 Generative AI: Text to Voice, Voice to Text Implementation and Integrations ')
