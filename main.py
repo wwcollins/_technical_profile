@@ -287,6 +287,11 @@ def project_page():
     # st.write (show_project_monitor())  # blocked by uptime robot - try scrape potentially at some point...
 
     st.subheader(f'AI including Generative AI')
+    st.write(f'✅ [AI Image Generator](https://ai-image-generator-ailr.onrender.com)')
+    st.write(f'✅ [AI Text to Speech Generator](https://text-to-speech-gtts.onrender.com)')
+    st.write(f'✅ [AI QR Code Generator](https://qr-code-generator-f7iz.onrender.com/)')
+    st.write(f'✅ [Youtube(googleAPI) Video Search & Data](https://youtube-data-r5rr.onrender.com)')
+
     st.write(f'🧬🍵 Generative AI: Ongoing Investigation/Assessment/Proto of emerging LLMs e.g. Claude ')
     st.caption(f'    Claude is a next-generation AI assistant based on Anthropics research into training helpful, honest, and harmless AI systems')
     st.write(f'🧬🍵 Generative AI: OCR Image to Text Implementation and Integrations ')
@@ -760,12 +765,12 @@ def contact_page():
     st.title("Contact Page")
     # st.image(f'./images/you_image.jpg', 'William Collins', width=100)
     download_resume()  # fn which downloads resume for the user
-    st.write(f'Location: Austin, TX\n'
-                       f' Email: [link](williamwcollinsjr@gmail.com)\n '
-                       f' Phone: 940.503.8195\n'
-                       f' LinkedIn: LinkedIn [link](linkedin.com/in/williamwcollins)\n'
-                       f' Schedule a meeting on my calendar: [link](https://calendly.com/wwcjr/meeting)'
-                       f' [Discord Server](discord.com/channels/1108234455010787330/1108234455614754870)'
+    st.write(f'Location: Austin, TX\n'  
+                       f' Email: [link](williamwcollinsjr@gmail.com)\n '  
+                       f' Phone: 512-294-7573\n'  
+                       f' LinkedIn: LinkedIn [link](linkedin.com/in/williamwcollins)\n'  
+                       f' Schedule a meeting on my calendar: [link](https://calendly.com/wwcjr/meeting)'  
+                       f' [Discord Server](discord.com/channels/1108234455010787330/1108234455614754870)'  
                        f' This application: [link](https://wwcollins--technical-profile-main-rtehnf.streamlit.app)')
 
 # Other functions
@@ -827,7 +832,7 @@ def main():
     download_resume(loc='sidebar')
 
     st.sidebar.caption("""Location: Austin, TX  [Email]("mailto:williamwcollinsjr@gmail.com)  
-               Phone: 940.503.8195  
+               Phone: 512-294-7573  
                Schedule a [meeting](https://calendly.com/wwcjr/meeting) on my calendar:   
                [LinkedIn](https://linkedin.com/in/williamwcollins)
                📱[Project Status Monitor](https://stats.uptimerobot.com/N71wRCVNyr)  
