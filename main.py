@@ -287,7 +287,7 @@ def project_page():
     # st.write (show_project_monitor())  # blocked by uptime robot - try scrape potentially at some point...
 
     st.subheader(f'AI including Generative AI')
-    st.write(f'✅ [AI Image Generator](https://ai-image-generator-ailr.onrender.com)')
+    st.write(f'✅ [AI Image Generator](https://generative-image-creator.onrender.com/)')
     st.write(f'✅ [AI Text to Speech Generator](https://text-to-speech-gtts.onrender.com)')
     st.write(f'✅ [AI QR Code Generator](https://qr-code-generator-f7iz.onrender.com/)')
     st.write(f'✅ [Youtube(googleAPI) Video Search & Data](https://youtube-data-r5rr.onrender.com)')
