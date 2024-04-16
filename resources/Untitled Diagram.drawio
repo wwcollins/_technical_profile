@@ -1,17 +1,17 @@
-<mxfile host="app.diagrams.net" modified="2024-04-16T08:02:50.303Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="ev-X9tOm5VKboXtwS_0d" version="24.2.5" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2024-04-16T15:35:24.204Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="AIeue8n5BhRqvCXVXita" version="24.2.5" type="github" pages="8">
   <diagram id="1jF-RS51OQadM6Jc0b3w" name="Requirements ">
-    <mxGraphModel dx="2071" dy="1696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2108" dy="1696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="EBVaZ5hd_3GFT1o1tJoB-2" value="&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;REQUIREMENTS&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Functional Requirements&lt;/li&gt;&lt;ul&gt;&lt;li&gt;In Scope&lt;/li&gt;&lt;li&gt;Out of Scope&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Non-Functional Requirements&lt;/li&gt;&lt;ul&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;System API Definition and Sequence of Events&lt;/li&gt;&lt;ul&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Software Architecture Diagram - Functional Requirements&lt;/li&gt;&lt;ul&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Software Architecture Diagram - Functional Requirements&lt;/li&gt;&lt;ul&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+        <mxCell id="EBVaZ5hd_3GFT1o1tJoB-2" value="&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;REQUIREMENTS&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Functional Requirements&lt;/li&gt;&lt;ul&gt;&lt;li&gt;In Scope&lt;/li&gt;&lt;li&gt;Out of Scope&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Gather Non-Functional Requirements&lt;/li&gt;&lt;ul&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;System API Definition and Sequence of Events&lt;/li&gt;&lt;ul&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Design: Software Architecture Diagram - Functional Requirements&lt;/li&gt;&lt;ul&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Addressing non-Functional Requirements&lt;/li&gt;&lt;ul&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;li&gt;xxx&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="-190" y="-90" width="1000" height="640" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="JQNeabYKbxnkerpicjTP" name="Functional Requirements">
-    <mxGraphModel dx="1221" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1258" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -23,6 +23,26 @@
         </mxCell>
         <mxCell id="nC7PFfRyo_FnfXw0GQyb-3" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;In Scope&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;xxx&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;xxx&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;xxx&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;xxx&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="20" y="150" width="320" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Z4BPew7zQlsy8Qqbs7nE" name="non-Functional Requirements">
+    <mxGraphModel dx="408" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oBf0x5LlgLkuGnZY-uVn-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Non-Functional Requirements&amp;nbsp;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="10" width="650" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="oBf0x5LlgLkuGnZY-uVn-3" value="Text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="270" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oBf0x5LlgLkuGnZY-uVn-5" value="Text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="270" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oBf0x5LlgLkuGnZY-uVn-7" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;Scalability&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;ul style=&quot;&quot;&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;E.g.&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;# Users per day =&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;# Hours Users Connected per Day =&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;#Messages per Second =&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Message Limited to n thousand characters&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;other&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Availability&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;99.99% Uptime&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Performance&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Messagge Delivery time of &amp;lt;1000ms at 99%&lt;/li&gt;&lt;li&gt;other&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="880" y="290" width="280" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -405,26 +425,6 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="Z4BPew7zQlsy8Qqbs7nE" name="non-Functional Requirements">
-    <mxGraphModel dx="371" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="oBf0x5LlgLkuGnZY-uVn-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Non-Functional Requirements&amp;nbsp;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="870" y="10" width="650" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="oBf0x5LlgLkuGnZY-uVn-3" value="Text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="1320" y="270" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="oBf0x5LlgLkuGnZY-uVn-5" value="Text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="1320" y="270" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="oBf0x5LlgLkuGnZY-uVn-7" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;Scalability&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;ul style=&quot;&quot;&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;E.g.&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;# Users per day =&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;# Hours Users Connected per Day =&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;#Messages per Second =&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Message Limited to n thousand characters&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;other&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Availability&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;99.99% Uptime&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Performance&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Messagge Delivery time of &amp;lt;1000ms at 99%&lt;/li&gt;&lt;li&gt;other&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="880" y="290" width="280" height="30" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
   <diagram id="SvyC5GDT_3X76r0Nqr7J" name="Systems API">
     <mxGraphModel dx="1221" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -451,7 +451,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Final SW Arch Diag" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="1221" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1258" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
