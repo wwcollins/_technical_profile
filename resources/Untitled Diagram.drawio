@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-16T07:23:34.653Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="dmfe8X9mt7Qn7oBuheY_" version="24.2.5" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2024-04-16T07:30:59.358Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="BbXmj8E5VMXmPzUE9Hl_" version="24.2.5" type="github" pages="8">
   <diagram id="1jF-RS51OQadM6Jc0b3w" name="Requirements ">
     <mxGraphModel dx="2071" dy="1696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -329,6 +329,24 @@
         </mxCell>
         <mxCell id="ZGKOLyfXvDFqiY9r2-lb-33" value="image&lt;div&gt;compression&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#ED7100;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.container_registry_image;" vertex="1" parent="1">
           <mxGeometry x="770" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZGKOLyfXvDFqiY9r2-lb-35" value="location&lt;div&gt;service&lt;/div&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#DD344C;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.location_service;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="-60" width="49" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="ZGKOLyfXvDFqiY9r2-lb-41" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="770" y="220" width="35.799999999999955" height="63.860000000000014" as="geometry" />
+        </mxCell>
+        <mxCell id="ZGKOLyfXvDFqiY9r2-lb-37" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/storage/Datacenter_Server_Rack_EoR.svg;" vertex="1" parent="ZGKOLyfXvDFqiY9r2-lb-41">
+          <mxGeometry width="15.8" height="31.93" as="geometry" />
+        </mxCell>
+        <mxCell id="ZGKOLyfXvDFqiY9r2-lb-38" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/storage/Datacenter_Server_Rack_EoR.svg;" vertex="1" parent="ZGKOLyfXvDFqiY9r2-lb-41">
+          <mxGeometry x="20" width="15.8" height="31.93" as="geometry" />
+        </mxCell>
+        <mxCell id="ZGKOLyfXvDFqiY9r2-lb-39" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/storage/Datacenter_Server_Rack_EoR.svg;" vertex="1" parent="ZGKOLyfXvDFqiY9r2-lb-41">
+          <mxGeometry y="31.930000000000007" width="15.8" height="31.93" as="geometry" />
+        </mxCell>
+        <mxCell id="ZGKOLyfXvDFqiY9r2-lb-40" value="geo&lt;div&gt;distrib&lt;/div&gt;&lt;div&gt;availability&lt;/div&gt;" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/storage/Datacenter_Server_Rack_EoR.svg;" vertex="1" parent="ZGKOLyfXvDFqiY9r2-lb-41">
+          <mxGeometry x="20" y="31.930000000000007" width="15.8" height="31.93" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
