@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-16T06:04:33.715Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="RjKGtRGyqzkgqk7VCEZb" version="24.2.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-04-16T06:09:27.909Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="3U_sC9QCy_sHxjUXxjQv" version="24.2.5" type="github" pages="5">
   <diagram id="1jF-RS51OQadM6Jc0b3w" name="REquirements ">
     <mxGraphModel dx="2071" dy="1696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -148,6 +148,44 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="M7Gsfz_M3K7bWsS5wAUx" name="Page-5">
+    <mxGraphModel dx="1221" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="o0wpMZnQwwL3nKNT__D6-1" value="SEQUENCE DIAGRAM AND API" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="o0wpMZnQwwL3nKNT__D6-2" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;UserA" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="o0wpMZnQwwL3nKNT__D6-3" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;UserB" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="70" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="o0wpMZnQwwL3nKNT__D6-4" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/other/Defender_Distributer_Control_System.svg;" vertex="1" parent="1">
+          <mxGeometry x="409" y="20" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="o0wpMZnQwwL3nKNT__D6-6" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="o0wpMZnQwwL3nKNT__D6-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="600" as="sourcePoint" />
+            <mxPoint x="410" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o0wpMZnQwwL3nKNT__D6-7" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="443" y="600" as="sourcePoint" />
+            <mxPoint x="442.5" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o0wpMZnQwwL3nKNT__D6-8" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="769.5" y="600" as="sourcePoint" />
+            <mxPoint x="769.5" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
