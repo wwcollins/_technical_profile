@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-16T17:08:58.289Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="IVgSoyJV2KVEgzpQ1s9n" version="24.2.5" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2024-04-16T17:09:32.320Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="P9Rl03zPjcdSZuFn09VW" version="24.2.5" type="github" pages="8">
   <diagram id="1jF-RS51OQadM6Jc0b3w" name="Requirements ">
     <mxGraphModel dx="2513" dy="1696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -427,8 +427,14 @@
         <mxCell id="kPxez0jGDxOzMkg6WcWG-2" value="Messaging Service" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="870" y="-60" width="80" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="R54qHgV4NR52JxQEqqgb-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="R54qHgV4NR52JxQEqqgb-1" target="R54qHgV4NR52JxQEqqgb-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="R54qHgV4NR52JxQEqqgb-1" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;UserA" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="160" width="40" height="60" as="geometry" />
+          <mxGeometry x="1040" y="160" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="R54qHgV4NR52JxQEqqgb-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="R54qHgV4NR52JxQEqqgb-2" target="R54qHgV4NR52JxQEqqgb-3">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="R54qHgV4NR52JxQEqqgb-2" value="API Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1180" y="170" width="80" height="40" as="geometry" />
@@ -440,12 +446,6 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="500" y="60" as="sourcePoint" />
             <mxPoint x="540" y="20.00000000000001" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="R54qHgV4NR52JxQEqqgb-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1190" y="230" as="sourcePoint" />
-            <mxPoint x="1240" y="180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="R54qHgV4NR52JxQEqqgb-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
