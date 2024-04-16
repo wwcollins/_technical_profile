@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-16T06:50:14.660Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="KhkOBY11q_yWRK9jcVxQ" version="24.2.5" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2024-04-16T06:55:51.387Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="ImU8pI7mrve9OtWWBCtO" version="24.2.5" type="github" pages="8">
   <diagram id="1jF-RS51OQadM6Jc0b3w" name="Requirements ">
     <mxGraphModel dx="2071" dy="1696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -317,6 +317,20 @@
         <mxCell id="1" parent="0" />
         <mxCell id="hUL5AZyiEn8sNXewYSck-2" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;SYSTEMS API&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;ul&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;signup(name, username, password, profile image) -&amp;gt; [auth token, userid]&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;login(username, pw) -&amp;gt; [auth token, userid]&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;get_homepage(user_id) -&amp;gt; [homepage, channels, etc]&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;user_search(user_name)&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;...&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;align=left;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=#b85450;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fillColor=#f8cecc;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="10" y="10" width="800" height="480" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="fdqb14XVROFKHuJQgcaL" name="Design Discussion/Strategy">
+    <mxGraphModel dx="2071" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jzWhe2hXN2C0SSFa1E2V-1" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;DESIGN DISCUSSION&lt;/font&gt;" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="20" width="340" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jzWhe2hXN2C0SSFa1E2V-2" value="&lt;ul&gt;&lt;li&gt;Any discussion points to bring up relevant to the system design and or considerations...&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;&lt;div&gt;&lt;ul&gt;&lt;ul&gt;&lt;li&gt;xxxxxxxxx&lt;/li&gt;&lt;li&gt;xxxxxxxxx&lt;/li&gt;&lt;li&gt;xxxxxxxxx&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="90" width="810" height="490" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
